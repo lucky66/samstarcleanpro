@@ -1,0 +1,3 @@
+Dark blue - #012390
+Linear blue - #0485bd
+Text sky blue - #00c8cf
