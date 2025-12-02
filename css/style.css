@@ -10022,6 +10022,21 @@ h6,
   background-size: cover;
 }
 
+.bg-bathroom {
+  background: url(../img/bathroom.jpg), no-repeat center center;
+  background-size: cover;
+}
+
+.bg-bedroom {
+  background: url(../img/bedroom.jpg), no-repeat center center;
+  background-size: cover;
+}
+
+.bg-living-area {
+  background: url(../img/living-area.jpg), no-repeat center center;
+  background-size: cover;
+}
+
 .owl-carousel .owl-nav {
   position: absolute;
   width: 100%;
