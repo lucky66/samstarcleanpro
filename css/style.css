@@ -2666,14 +2666,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary {
-  color: #FFC600;
-  border-color: #FFC600;
+  color: #012390;
+  border-color: #012390;
 }
 
 .btn-outline-primary:hover {
-  color: #212529;
-  background-color: #FFC600;
-  border-color: #FFC600;
+  color: #FFFFFF;
+  background-color: #0485bd;
+  border-color: #0485bd;
 }
 
 .btn-outline-primary:focus, .btn-outline-primary.focus {
@@ -10034,6 +10034,21 @@ h6,
 
 .bg-living-area {
   background: url(../img/living-area.jpg), no-repeat center center;
+  background-size: cover;
+}
+
+.bg-datacenter {
+  background: url(../img/datacenter.jpg), no-repeat center center;
+  background-size: cover;
+}
+
+.bg-datacenter1 {
+  background: url(../img/datacenter1.jpg), no-repeat center center;
+  background-size: cover;
+}
+
+.bg-datacentercleaning {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(../img/datacenter-cleaning.jpeg), no-repeat center center;
   background-size: cover;
 }
 
