@@ -10017,6 +10017,11 @@ h6,
   background-size: cover;
 }
 
+.bg-kitchen1 {
+  background: url(../img/kitchen-1.jpg), no-repeat center center;
+  background-size: cover;
+}
+
 .owl-carousel .owl-nav {
   position: absolute;
   width: 100%;
@@ -10177,4 +10182,28 @@ h6,
   list-style-type: none;
 }
 
+.top-service-portfolio i {
+  float: left;
+}
 
+.service-content-body {
+    position: relative;
+}
+
+.service-content-body::before {
+    position: absolute;
+    content: '';
+    background: url(../img/icon-circle-arrow.svg) no-repeat left bottom;
+    background-size: 100% auto;
+    filter: invert(0.45%) sepia(100%) saturate(4300%) hue-rotate(120deg) brightness(96%) contrast(101%);
+    width: 85px;
+    height: 85px;
+    bottom: 0px;
+    left: 0px;
+    animation: arrowmoveobjects 2s infinite linear alternate;
+}
+
+.service-content-body a{
+  position: relative;
+  left: 100px;
+}
