@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Get a Quote - Book Cleaning Services | SamstarCleanPro Virginia, DC & Maryland</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="cleaning quote Virginia, book cleaning DC, cleaning estimate Maryland, schedule cleaning DMV, cleaning prices, cleaning booking" name="keywords">
+    <meta content="Get an instant quote for professional cleaning services in Virginia, DC, and Maryland. Easy online booking with flexible scheduling and transparent pricing from SamstarCleanPro." name="description">
+    
+    <!-- Favicon -->
+    <link href="img/logo/just_logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Stripe JS -->
+    <script src="https://js.stripe.com/v3/"></script>
+    
+    <style>
+        .quote-step {
+            display: none;
+        }
+        .quote-step.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .service-option {
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid #e9ecef;
+        }
+        .service-option:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .service-option.selected {
+            border-color: var(--primary);
+            background-color: #f8f9fa;
+        }
+        .service-option .check-icon {
+            display: none;
+        }
+        .service-option.selected .check-icon {
+            display: inline-block;
+        }
+        .progress-bar-custom {
+            height: 4px;
+            background-color: #e9ecef;
+            position: relative;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            background-color: var(--primary);
+            transition: width 0.5s ease;
+        }
+        .pricing-summary {
+            position: sticky;
+            top: 100px;
+        }
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+        }
+        .addon-option {
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .addon-option:hover {
+            background-color: #f8f9fa;
+        }
+        .addon-option.selected {
+            background-color: #e7f3ff;
+            border-color: var(--primary) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Start -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 bg-white d-none d-lg-block">
+                <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <img class="m-0 display-3 img-fluid" src="img/logo/logo_with_text.png" style="width: 200px; padding: 20px;" alt="SamstarCleanPro">
+                </a>
+            </div>
+            <div class="col-lg-9">
+                <div class="row bg-dark d-none d-lg-flex top-bar">
+                    <div class="col-lg-7 text-left text-white">
+                        <a class="text-white" href="mailto:info@samstarcleanpro.com">
+                            <div class="h-100 d-inline-flex align-items-center border-right border-white py-2 px-3">
+                                <i class="fa fa-envelope mr-2"></i>
+                                <small>info@samstarcleanpro.com</small>
+                            </div>
+                        </a>
+                        <a class="text-white" href="tel:+012345678">
+                            <div class="h-100 d-inline-flex align-items-center py-2 px-2">
+                                <i class="fa fa-phone-alt mr-2"></i>
+                                <small>+012 345 6789</small>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-5 text-right">
+                        <div class="d-inline-flex align-items-center pr-2">
+                            <a class="text-white p-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="text-white p-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="text-white p-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="text-white p-2" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
+                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <img class="m-0 display-3 img-fluid" src="img/logo/logo_with_text.png" style="width: 120px; padding: 10px;" alt="SamstarCleanPro">
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="about.html" class="nav-item nav-link">About</a>
+                            <a href="service.html" class="nav-item nav-link">Services</a>
+                            <a href="project.html" class="nav-item nav-link">Projects</a>
+                            <a href="datacenter.html" class="nav-item nav-link">Data Center Cleaning</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Resources</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="blog.html" class="dropdown-item">Latest Blog</a>
+                                    <a href="blog-detail.html" class="dropdown-item">Blog Detail</a>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        </div>
+                        <a href="quote.html" class="btn btn-primary text-white mr-3 d-none d-lg-block active">Get Quote</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5">
+        <div class="container py-5">
+            <div class="row align-items-center py-4">
+                <div class="col-md-8 text-center text-md-left">
+                    <h1 class="display-4 mb-4 mb-md-0 text-white">Get Your Free Quote</h1>
+                    <p class="text-white mb-0">Quick, easy booking in just a few steps</p>
+                </div>
+                <div class="col-md-4 text-center text-md-right">
+                    <div class="bg-white rounded p-3 d-inline-block">
+                        <i class="fa fa-phone text-primary fa-2x mb-2"></i>
+                        <h5 class="mb-0">Call Us: +012 345 6789</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Quote Form Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <!-- Progress Bar -->
+            <div class="progress-bar-custom mb-5">
+                <div class="progress-bar-fill" id="progressBar" style="width: 20%;"></div>
+            </div>
+            
+            <div class="row">
+                <!-- Form Section -->
+                <div class="col-lg-8">
+                    <form id="quoteForm">
+                        
+                        <!-- Step 1: Service Type -->
+                        <div class="quote-step active" id="step1">
+                            <h2 class="mb-4">What type of service do you need?</h2>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="service-option p-4 rounded h-100" data-service="residential" data-price="150">
+                                        <i class="fa fa-check-circle check-icon text-primary fa-2x float-right"></i>
+                                        <i class="fa fa-home text-primary fa-3x mb-3"></i>
+                                        <h4>Residential Cleaning</h4>
+                                        <p class="mb-3">Perfect for homes, apartments, and condos</p>
+                                        <p class="text-primary font-weight-bold">Starting at $150</p>
+                                        <ul class="list-unstyled small">
+                                            <li><i class="fa fa-check text-primary mr-2"></i>All rooms and common areas</li>
+                                            <li><i class="fa fa-check text-primary mr-2"></i>Kitchen and bathrooms</li>
+                                            <li><i class="fa fa-check text-primary mr-2"></i>Flexible scheduling</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="service-option p-4 rounded h-100" data-service="commercial" data-price="300">
+                                        <i class="fa fa-check-circle check-icon text-primary fa-2x float-right"></i>
+                                        <i class="fa fa-building text-primary fa-3x mb-3"></i>
+                                        <h4>Commercial Cleaning</h4>
+                                        <p class="mb-3">Offices, retail spaces, and facilities</p>
+                                        <p class="text-primary font-weight-bold">Starting at $300</p>
+                                        <ul class="list-unstyled small">
+                                            <li><i class="fa fa-check text-primary mr-2"></i>Professional results</li>
+                                            <li><i class="fa fa-check text-primary mr-2"></i>After-hours available</li>
+                                            <li><i class="fa fa-check text-primary mr-2"></i>Customized plans</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="service-option p-4 rounded h-100" data-service="datacenter" data-price="500">
+                                        <i class="fa fa-check-circle check-icon text-primary fa-2x float-right"></i>
+                                        <i class="fa fa-server text-primary fa-3x mb-3"></i>
+                                        <h4>Data Center Cleaning</h4>
+                                        <p class="mb-3">Specialized cleaning for IT facilities</p>
+                                        <p class="text-primary font-weight-bold">Starting at $500</p>
+                                        <ul class="list-unstyled small">
+                                            <li><i class="fa fa-check text-primary mr-2"></i>Contamination control</li>
+                                            <li><i class="fa fa-check text-primary mr-2"></i>Certified technicians</li>
+                                            <li><i class="fa fa-check text-primary mr-2"></i>ESD-safe procedures</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="service-option p-4 rounded h-100" data-service="deep" data-price="250">
+                                        <i class="fa fa-check-circle check-icon text-primary fa-2x float-right"></i>
+                                        <i class="fa fa-broom text-primary fa-3x mb-3"></i>
+                                        <h4>Deep Cleaning</h4>
+                                        <p class="mb-3">Intensive cleaning for any space</p>
+                                        <p class="text-primary font-weight-bold">Starting at $250</p>
+                                        <ul class="list-unstyled small">
+                                            <li><i class="fa fa-check text-primary mr-2"></i>Move-in/move-out</li>
+                                            <li><i class="fa fa-check text-primary mr-2"></i>Post-construction</li>
+                                            <li><i class="fa fa-check text-primary mr-2"></i>Seasonal cleaning</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary text-white px-5 py-2" onclick="nextStep(2)" id="step1Next" disabled>Next Step <i class="fa fa-arrow-right ml-2"></i></button>
+                        </div>
+
+                        <!-- Step 2: Property Details -->
+                        <div class="quote-step" id="step2">
+                            <h2 class="mb-4">Tell us about your space</h2>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="font-weight-bold">Property Size <span class="text-danger">*</span></label>
+                                    <select class="form-control" id="propertySize" required>
+                                        <option value="">Select size</option>
+                                        <option value="small" data-multiplier="1">Small (up to 1,500 sq ft)</option>
+                                        <option value="medium" data-multiplier="1.5">Medium (1,500-3,000 sq ft)</option>
+                                        <option value="large" data-multiplier="2">Large (3,000-5,000 sq ft)</option>
+                                        <option value="xlarge" data-multiplier="2.5">Extra Large (5,000+ sq ft)</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="font-weight-bold">Number of Rooms</label>
+                                    <input type="number" class="form-control" id="numRooms" min="1" placeholder="Enter number of rooms">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="font-weight-bold">Number of Bathrooms</label>
+                                    <input type="number" class="form-control" id="numBathrooms" min="1" placeholder="Enter number of bathrooms">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="font-weight-bold">Property Condition</label>
+                                    <select class="form-control" id="propertyCondition">
+                                        <option value="normal" data-multiplier="1">Normal</option>
+                                        <option value="needsattention" data-multiplier="1.3">Needs Extra Attention</option>
+                                        <option value="heavy" data-multiplier="1.5">Heavy Cleaning Required</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <h4 class="mt-4 mb-3">Add-on Services</h4>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="addon-option border rounded p-3" data-addon="windows" data-price="50">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <i class="fa fa-window-maximize text-primary mr-2"></i>
+                                                <strong>Window Cleaning</strong>
+                                            </div>
+                                            <div>
+                                                <span class="badge badge-primary">+$50</span>
+                                                <input type="checkbox" class="ml-2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="addon-option border rounded p-3" data-addon="carpet" data-price="75">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <i class="fa fa-couch text-primary mr-2"></i>
+                                                <strong>Carpet Deep Clean</strong>
+                                            </div>
+                                            <div>
+                                                <span class="badge badge-primary">+$75</span>
+                                                <input type="checkbox" class="ml-2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="addon-option border rounded p-3" data-addon="appliances" data-price="40">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <i class="fa fa-blender text-primary mr-2"></i>
+                                                <strong>Appliance Interior</strong>
+                                            </div>
+                                            <div>
+                                                <span class="badge badge-primary">+$40</span>
+                                                <input type="checkbox" class="ml-2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="addon-option border rounded p-3" data-addon="walls" data-price="60">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <i class="fa fa-paint-roller text-primary mr-2"></i>
+                                                <strong>Wall Washing</strong>
+                                            </div>
+                                            <div>
+                                                <span class="badge badge-primary">+$60</span>
+                                                <input type="checkbox" class="ml-2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button type="button" class="btn btn-outline-secondary px-4 py-2 mr-2" onclick="prevStep(1)"><i class="fa fa-arrow-left mr-2"></i> Back</button>
+                                <button type="button" class="btn btn-primary text-white px-5 py-2" onclick="nextStep(3)">Next Step <i class="fa fa-arrow-right ml-2"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Schedule -->
+                        <div class="quote-step" id="step3">
+                            <h2 class="mb-4">When would you like us to come?</h2>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="font-weight-bold">Service Date <span class="text-danger">*</span></label>
+                                    <input type="date" class="form-control" id="serviceDate" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="font-weight-bold">Preferred Time <span class="text-danger">*</span></label>
+                                    <select class="form-control" id="serviceTime" required>
+                                        <option value="">Select time</option>
+                                        <option value="8am">8:00 AM - 10:00 AM</option>
+                                        <option value="10am">10:00 AM - 12:00 PM</option>
+                                        <option value="12pm">12:00 PM - 2:00 PM</option>
+                                        <option value="2pm">2:00 PM - 4:00 PM</option>
+                                        <option value="4pm">4:00 PM - 6:00 PM</option>
+                                        <option value="evening">Evening (After 6:00 PM)</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label class="font-weight-bold">Frequency</label>
+                                    <select class="form-control" id="frequency">
+                                        <option value="onetime" data-discount="0">One-Time Service</option>
+                                        <option value="weekly" data-discount="0.15">Weekly (Save 15%)</option>
+                                        <option value="biweekly" data-discount="0.10">Bi-Weekly (Save 10%)</option>
+                                        <option value="monthly" data-discount="0.05">Monthly (Save 5%)</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label class="font-weight-bold">Special Instructions or Notes</label>
+                                    <textarea class="form-control" id="specialInstructions" rows="3" placeholder="Any specific areas of concern or special requests?"></textarea>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button type="button" class="btn btn-outline-secondary px-4 py-2 mr-2" onclick="prevStep(2)"><i class="fa fa-arrow-left mr-2"></i> Back</button>
+                                <button type="button" class="btn btn-primary text-white px-5 py-2" onclick="nextStep(4)">Next Step <i class="fa fa-arrow-right ml-2"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Location & Contact -->
+                        <div class="quote-step" id="step4">
+                            <h2 class="mb-4">Where should we send your quote?</h2>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="font-weight-bold">First Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="font-weight-bold">Last Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="font-weight-bold">Email Address <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="font-weight-bold">Phone Number <span class="text-danger">*</span></label>
+                                    <input type="tel" class="form-control" id="phone" required>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label class="font-weight-bold">Service Address <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="address" placeholder="Street address" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="font-weight-bold">City <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="city" required>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label class="font-weight-bold">State <span class="text-danger">*</span></label>
+                                    <select class="form-control" id="state" required>
+                                        <option value="">Select</option>
+                                        <option value="VA">Virginia</option>
+                                        <option value="DC">Washington DC</option>
+                                        <option value="MD">Maryland</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label class="font-weight-bold">ZIP Code <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="zipcode" required>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button type="button" class="btn btn-outline-secondary px-4 py-2 mr-2" onclick="prevStep(3)"><i class="fa fa-arrow-left mr-2"></i> Back</button>
+                                <button type="button" class="btn btn-primary text-white px-5 py-2" onclick="nextStep(5)">Review & Pay <i class="fa fa-arrow-right ml-2"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Step 5: Review & Payment -->
+                        <div class="quote-step" id="step5">
+                            <h2 class="mb-4">Review Your Booking</h2>
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-3">Service Summary</h5>
+                                    <div id="reviewSummary"></div>
+                                </div>
+                            </div>
+                            
+                            <h4 class="mb-3">Payment Information</h4>
+                            <div class="alert alert-info">
+                                <i class="fa fa-info-circle mr-2"></i>
+                                Secure payment powered by Stripe. Your card will be charged after service completion.
+                            </div>
+                            
+                            <div id="card-element" class="form-control mb-3" style="height: 40px; padding-top: 10px;"></div>
+                            <div id="card-errors" class="text-danger mb-3"></div>
+                            
+                            <div class="form-check mb-4">
+                                <input type="checkbox" class="form-check-input" id="termsAgree" required>
+                                <label class="form-check-label" for="termsAgree">
+                                    I agree to the <a href="#">terms and conditions</a> and <a href="#">cancellation policy</a>
+                                </label>
+                            </div>
+                            
+                            <div class="mt-4">
+                                <button type="button" class="btn btn-outline-secondary px-4 py-2 mr-2" onclick="prevStep(4)"><i class="fa fa-arrow-left mr-2"></i> Back</button>
+                                <button type="submit" class="btn btn-success text-white px-5 py-2" id="submitBtn">
+                                    <i class="fa fa-lock mr-2"></i> Confirm & Book Now
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- Pricing Summary Sidebar -->
+                <div class="col-lg-4">
+                    <div class="pricing-summary bg-light p-4 rounded shadow-sm">
+                        <h4 class="mb-4">Quote Summary</h4>
+                        <div class="mb-3 pb-3 border-bottom">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Service Type:</span>
+                                <strong id="summaryService">-</strong>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Property Size:</span>
+                                <strong id="summarySize">-</strong>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span>Frequency:</span>
+                                <strong id="summaryFrequency">One-Time</strong>
+                            </div>
+                        </div>
+                        <div class="mb-3 pb-3 border-bottom">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Base Price:</span>
+                                <span id="summaryBasePrice">$0</span>
+                            </div>
+                            <div id="summaryAddons"></div>
+                            <div class="d-flex justify-content-between text-success" id="discountRow" style="display: none !important;">
+                                <span>Discount:</span>
+                                <span id="summaryDiscount">$0</span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <h5 class="mb-0">Total:</h5>
+                            <h5 class="mb-0 text-primary" id="summaryTotal">$0</h5>
+                        </div>
+                        <div class="alert alert-success small">
+                            <i class="fa fa-check-circle mr-2"></i>
+                            <strong>100% Satisfaction Guaranteed</strong><br>
+                            Not happy? We'll make it right!
+                        </div>
+                        <ul class="list-unstyled small text-muted">
+                            <li class="mb-2"><i class="fa fa-shield-alt text-primary mr-2"></i> Fully insured & bonded</li>
+                            <li class="mb-2"><i class="fa fa-user-check text-primary mr-2"></i> Background-checked cleaners</li>
+                            <li class="mb-2"><i class="fa fa-clock text-primary mr-2"></i> Flexible scheduling</li>
+                            <li><i class="fa fa-leaf text-primary mr-2"></i> Eco-friendly products</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quote Form End -->
+
+
+    <!-- Trust Badges Start -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <i class="fa fa-4x fa-award text-primary mb-3"></i>
+                    <h5>10+ Years Experience</h5>
+                    <p class="text-muted small">Trusted by 1000+ clients</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <i class="fa fa-4x fa-lock text-primary mb-3"></i>
+                    <h5>Secure Payment</h5>
+                    <p class="text-muted small">256-bit SSL encryption</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <i class="fa fa-4x fa-smile text-primary mb-3"></i>
+                    <h5>100% Satisfaction</h5>
+                    <p class="text-muted small">Or we'll make it right</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <i class="fa fa-4x fa-calendar-check text-primary mb-3"></i>
+                    <h5>Easy Booking</h5>
+                    <p class="text-muted small">Online scheduling 24/7</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Trust Badges End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-6 col-md-6 mb-5">
+                <h4 class="font-weight-semi-bold text-primary mb-4">Get In Touch</h4>
+                <p><i class="fa fa-map-marker-alt text-primary mr-2"></i>20132 Loudoun County, Virginia, USA</p>
+                <p><i class="fa fa-phone-alt text-primary mr-2"></i>+012 345 67890</p>
+                <p><i class="fa fa-envelope text-primary mr-2"></i>info@samstarcleanpro.com</p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-semi-bold text-primary mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                    <a class="text-white mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
+                    <a class="text-white mb-2" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="font-weight-semi-bold text-white mb-2">Opening Hours:</h5>
+                <p class="mb-1">Mon – Sat, 8AM – 5PM</p>
+                <p class="mb-0">Sunday: Closed</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: #3E3E4E !important;">
+        <div class="row">
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white">Serving: <span class="text-primary">Virginia | Washington DC | Maryland</span></p>
+            </div>
+            <div class="col-lg-6 text-center text-md-right">
+                <p class="m-0 text-white">&copy; <a href="#" class="text-primary">SamstarCleanPro</a>. All Rights Reserved. Designed by <a href="https://thebrandrex.netlify.com" class="text-primary">The Brand Rex</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary px-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Custom Quote Form Script -->
+    <script>
+        // Initialize Stripe
+        const stripe = Stripe('pk_test_YOUR_PUBLISHABLE_KEY'); // Replace with your actual Stripe publishable key
+        const elements = stripe.elements();
+        const cardElement = elements.create('card');
+        
+        // Quote calculation variables
+        let quoteData = {
+            serviceType: '',
+            basePrice: 0,
+            propertySize: '',
+            sizeMultiplier: 1,
+            conditionMultiplier: 1,
+            addons: [],
+            frequency: 'onetime',
+            discount: 0,
+            total: 0
+        };
+
+        // Service selection
+        document.querySelectorAll('.service-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.service-option').forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+                
+                quoteData.serviceType = this.dataset.service;
+                quoteData.basePrice = parseInt(this.dataset.price);
+                
+                document.getElementById('step1Next').disabled = false;
+                updateSummary();
+            });
+        });
+
+        // Property size change
+        document.getElementById('propertySize').addEventListener('change', function() {
+            quoteData.propertySize = this.value;
+            quoteData.sizeMultiplier = parseFloat(this.options[this.selectedIndex].dataset.multiplier) || 1;
+            updateSummary();
+        });
+
+        // Property condition change
+        document.getElementById('propertyCondition').addEventListener('change', function() {
+            quoteData.conditionMultiplier = parseFloat(this.options[this.selectedIndex].dataset.multiplier) || 1;
+            updateSummary();
+        });
+
+        // Addon selection
+        document.querySelectorAll('.addon-option').forEach(addon => {
+            addon.addEventListener('click', function() {
+                const checkbox = this.querySelector('input[type="checkbox"]');
+                checkbox.checked = !checkbox.checked;
+                
+                const addonName = this.dataset.addon;
+                const addonPrice = parseInt(this.dataset.price);
+                
+                if (checkbox.checked) {
+                    this.classList.add('selected');
+                    quoteData.addons.push({ name: addonName, price: addonPrice });
+                } else {
+                    this.classList.remove('selected');
+                    quoteData.addons = quoteData.addons.filter(a => a.name !== addonName);
+                }
+                
+                updateSummary();
+            });
+        });
+
+        // Frequency change
+        document.getElementById('frequency').addEventListener('change', function() {
+            quoteData.frequency = this.value;
+            quoteData.discount = parseFloat(this.options[this.selectedIndex].dataset.discount) || 0;
+            updateSummary();
+        });
+
+        // Set minimum date to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('serviceDate').setAttribute('min', today);
+
+        // Update summary function
+        function updateSummary() {
+            const serviceName = quoteData.serviceType.charAt(0).toUpperCase() + quoteData.serviceType.slice(1) + ' Cleaning';
+            const sizeText = quoteData.propertySize ? document.getElementById('propertySize').options[document.getElementById('propertySize').selectedIndex].text : '-';
+            const frequencyText = document.getElementById('frequency').options[document.getElementById('frequency').selectedIndex].text;
+            
+            // Calculate base price with multipliers
+            const calculatedBase = quoteData.basePrice * quoteData.sizeMultiplier * quoteData.conditionMultiplier;
+            
+            // Calculate addons total
+            const addonsTotal = quoteData.addons.reduce((sum, addon) => sum + addon.price, 0);
+            
+            // Calculate subtotal
+            const subtotal = calculatedBase + addonsTotal;
+            
+            // Calculate discount amount
+            const discountAmount = subtotal * quoteData.discount;
+            
+            // Calculate final total
+            quoteData.total = subtotal - discountAmount;
+            
+            // Update summary display
+            document.getElementById('summaryService').textContent = quoteData.serviceType ? serviceName : '-';
+            document.getElementById('summarySize').textContent = sizeText;
+            document.getElementById('summaryFrequency').textContent = frequencyText;
+            document.getElementById('summaryBasePrice').textContent = ' + calculatedBase.toFixed(2);
+            
+            // Display addons
+            let addonsHTML = '';
+            quoteData.addons.forEach(addon => {
+                addonsHTML += `
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="small">${addon.name}:</span>
+                        <span>+${addon.price}</span>
+                    </div>
+                `;
+            });
+            document.getElementById('summaryAddons').innerHTML = addonsHTML;
+            
+            // Display discount if applicable
+            if (quoteData.discount > 0) {
+                document.getElementById('discountRow').style.display = 'flex';
+                document.getElementById('summaryDiscount').textContent = '- + discountAmount.toFixed(2);
+            } else {
+                document.getElementById('discountRow').style.display = 'none';
+            }
+            
+            document.getElementById('summaryTotal').textContent = ' + quoteData.total.toFixed(2);
+        }
+
+        // Step navigation
+        function nextStep(stepNumber) {
+            // Validation for specific steps
+            if (stepNumber === 2 && !quoteData.serviceType) {
+                alert('Please select a service type');
+                return;
+            }
+            
+            if (stepNumber === 3 && !document.getElementById('propertySize').value) {
+                alert('Please select property size');
+                return;
+            }
+            
+            if (stepNumber === 4) {
+                if (!document.getElementById('serviceDate').value || !document.getElementById('serviceTime').value) {
+                    alert('Please select service date and time');
+                    return;
+                }
+            }
+            
+            if (stepNumber === 5) {
+                // Validate contact information
+                const firstName = document.getElementById('firstName').value;
+                const lastName = document.getElementById('lastName').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const address = document.getElementById('address').value;
+                const city = document.getElementById('city').value;
+                const state = document.getElementById('state').value;
+                const zipcode = document.getElementById('zipcode').value;
+                
+                if (!firstName || !lastName || !email || !phone || !address || !city || !state || !zipcode) {
+                    alert('Please fill in all required contact information');
+                    return;
+                }
+                
+                // Mount Stripe card element on step 5
+                setTimeout(() => {
+                    cardElement.mount('#card-element');
+                }, 100);
+                
+                // Generate review summary
+                generateReviewSummary();
+            }
+            
+            // Hide all steps
+            document.querySelectorAll('.quote-step').forEach(step => step.classList.remove('active'));
+            
+            // Show target step
+            document.getElementById('step' + stepNumber).classList.add('active');
+            
+            // Update progress bar
+            const progress = (stepNumber / 5) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function prevStep(stepNumber) {
+            nextStep(stepNumber);
+        }
+
+        // Generate review summary
+        function generateReviewSummary() {
+            const serviceName = quoteData.serviceType.charAt(0).toUpperCase() + quoteData.serviceType.slice(1) + ' Cleaning';
+            const date = document.getElementById('serviceDate').value;
+            const time = document.getElementById('serviceTime').options[document.getElementById('serviceTime').selectedIndex].text;
+            const address = document.getElementById('address').value;
+            const city = document.getElementById('city').value;
+            const state = document.getElementById('state').value;
+            const zipcode = document.getElementById('zipcode').value;
+            
+            let summaryHTML = `
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <strong>Service:</strong><br>
+                        ${serviceName}
+                    </div>
+                    <div class="col-md-6">
+                        <strong>Date & Time:</strong><br>
+                        ${new Date(date).toLocaleDateString()} at ${time}
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <strong>Service Address:</strong><br>
+                        ${address}, ${city}, ${state} ${zipcode}
+                    </div>
+                </div>
+            `;
+            
+            if (quoteData.addons.length > 0) {
+                summaryHTML += `
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <strong>Add-on Services:</strong><br>
+                            <ul class="mb-0">
+                `;
+                quoteData.addons.forEach(addon => {
+                    summaryHTML += `<li>${addon.name} (+${addon.price})</li>`;
+                });
+                summaryHTML += `
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            const specialInstructions = document.getElementById('specialInstructions').value;
+            if (specialInstructions) {
+                summaryHTML += `
+                    <div class="row">
+                        <div class="col-12">
+                            <strong>Special Instructions:</strong><br>
+                            ${specialInstructions}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            document.getElementById('reviewSummary').innerHTML = summaryHTML;
+        }
+
+        // Handle card errors
+        cardElement.on('change', function(event) {
+            const displayError = document.getElementById('card-errors');
+            if (event.error) {
+                displayError.textContent = event.error.message;
+            } else {
+                displayError.textContent = '';
+            }
+        });
+
+        // Form submission
+        document.getElementById('quoteForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            if (!document.getElementById('termsAgree').checked) {
+                alert('Please agree to the terms and conditions');
+                return;
+            }
+            
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin mr-2"></i> Processing...';
+            
+            try {
+                // Create payment method with Stripe
+                const {paymentMethod, error} = await stripe.createPaymentMethod({
+                    type: 'card',
+                    card: cardElement,
+                    billing_details: {
+                        name: document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value,
+                        email: document.getElementById('email').value,
+                        phone: document.getElementById('phone').value,
+                        address: {
+                            line1: document.getElementById('address').value,
+                            city: document.getElementById('city').value,
+                            state: document.getElementById('state').value,
+                            postal_code: document.getElementById('zipcode').value
+                        }
+                    }
+                });
+                
+                if (error) {
+                    document.getElementById('card-errors').textContent = error.message;
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fa fa-lock mr-2"></i> Confirm & Book Now';
+                    return;
+                }
+                
+                // Collect all form data
+                const bookingData = {
+                    serviceType: quoteData.serviceType,
+                    propertySize: document.getElementById('propertySize').value,
+                    numRooms: document.getElementById('numRooms').value,
+                    numBathrooms: document.getElementById('numBathrooms').value,
+                    propertyCondition: document.getElementById('propertyCondition').value,
+                    addons: quoteData.addons,
+                    serviceDate: document.getElementById('serviceDate').value,
+                    serviceTime: document.getElementById('serviceTime').value,
+                    frequency: document.getElementById('frequency').value,
+                    specialInstructions: document.getElementById('specialInstructions').value,
+                    firstName: document.getElementById('firstName').value,
+                    lastName: document.getElementById('lastName').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    address: document.getElementById('address').value,
+                    city: document.getElementById('city').value,
+                    state: document.getElementById('state').value,
+                    zipcode: document.getElementById('zipcode').value,
+                    total: quoteData.total,
+                    paymentMethodId: paymentMethod.id
+                };
+                
+                // Send booking data to your server
+                const response = await fetch('/api/create-booking', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(bookingData)
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    // Show success message
+                    alert('Booking confirmed! We will contact you shortly to confirm your appointment.');
+                    window.location.href = 'confirmation.html?booking=' + result.bookingId;
+                } else {
+                    throw new Error(result.message || 'Booking failed');
+                }
+                
+            } catch (error) {
+                alert('There was an error processing your booking. Please try again or call us at +012 345 6789');
+                console.error('Error:', error);
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fa fa-lock mr-2"></i> Confirm & Book Now';
+            }
+        });
+
+        // Initialize summary on page load
+        updateSummary();
+    </script>
+</body>
+
+</html>

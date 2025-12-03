@@ -3,13 +3,18 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Klean - Cleaning Services Website Template</title>
+    <title>Cleaning Tips & Insights Blog | SamstarCleanPro Virginia, DC & Maryland</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-
+    <meta content="cleaning tips, cleaning blog, home cleaning advice, commercial cleaning tips, data center maintenance, cleaning guides Virginia DC Maryland" name="keywords">
+    <meta content="Expert cleaning tips, industry insights, and maintenance guides from SamstarCleanPro. Learn how to maintain cleaner, healthier spaces in Virginia, DC, and Maryland." name="description">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Cleaning Insights & Tips Blog | SamstarCleanPro">
+    <meta property="og:description" content="Professional cleaning advice and industry insights for homes and businesses in the DMV region.">
+    <meta property="og:type" content="website">
+    
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/logo/just_logo.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -24,72 +29,209 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        .blog-card {
+            transition: all 0.3s ease;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .blog-card img {
+            transition: transform 0.5s ease;
+        }
+        .blog-card:hover img {
+            transform: scale(1.1);
+        }
+        .blog-img-wrapper {
+            overflow: hidden;
+            height: 250px;
+            position: relative;
+        }
+        .blog-category {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 2;
+        }
+        .blog-meta {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        .blog-meta i {
+            color: var(--primary);
+        }
+        .featured-post {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            min-height: 400px;
+        }
+        .featured-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: flex-end;
+            padding: 2rem;
+        }
+        .search-box {
+            position: relative;
+        }
+        .search-box input {
+            border-radius: 50px;
+            padding-right: 50px;
+        }
+        .search-box button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+        .category-badge {
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .category-badge:hover {
+            transform: scale(1.05);
+        }
+        .sidebar-widget {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .popular-post {
+            padding: 1rem 0;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .popular-post:last-child {
+            border-bottom: none;
+        }
+        .popular-post:hover {
+            background: #fff;
+            padding-left: 1rem;
+            transition: all 0.3s;
+        }
+        .tag-cloud .badge {
+            margin: 0.25rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .tag-cloud .badge:hover {
+            transform: scale(1.1);
+        }
+        .newsletter-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            padding: 2rem;
+            color: white;
+        }
+        .pagination-custom .page-link {
+            border-radius: 50%;
+            margin: 0 0.25rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+        }
+        .read-time {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Header Start -->
+        <!-- Header Start -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-3 bg-secondary d-none d-lg-block">
+            <div class="col-lg-3 bg-white d-none d-lg-block">
                 <a href="" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                    <h1 class="m-0 display-3 text-primary">Klean</h1>
+                    <img class="m-0 display-3 img-fluid" src="img/logo/logo_with_text.png" style="width: 200px; padding: 20px;" alt="SamstarCleanPro">
+                    <h1 ></h1>
                 </a>
             </div>
             <div class="col-lg-9">
-                <div class="row bg-dark d-none d-lg-flex">
+                <div class="row bg-dark d-none d-lg-flex top-bar">
                     <div class="col-lg-7 text-left text-white">
-                        <div class="h-100 d-inline-flex align-items-center border-right border-primary py-2 px-3">
-                            <i class="fa fa-envelope text-primary mr-2"></i>
-                            <small>info@example.com</small>
-                        </div>
-                        <div class="h-100 d-inline-flex align-items-center py-2 px-2">
-                            <i class="fa fa-phone-alt text-primary mr-2"></i>
-                            <small>+012 345 6789</small>
-                        </div>
+                        <a class="text-white" href="#">
+                            <div class="h-100 d-inline-flex align-items-center border-right border-white py-2 px-3">
+                                <i class="fa fa-envelope mr-2"></i>
+                                <small>info@samstarcleanpro.com</small>
+                            </div>
+                        </a>
+                        <a class="text-white" href="#">
+                            <div class="h-100 d-inline-flex align-items-center py-2 px-2">
+                                <i class="fa fa-phone-alt mr-2"></i>
+                                <small>+012 345 6789</small>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-lg-5 text-right">
                         <div class="d-inline-flex align-items-center pr-2">
-                            <a class="text-primary p-2" href="">
+                            <a class="text-white p-2" href="">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a class="text-primary p-2" href="">
+                            <a class="text-white p-2" href="">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a class="text-primary p-2" href="">
+                            <a class="text-white p-2" href="">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a class="text-primary p-2" href="">
+                            <a class="text-white p-2" href="">
                                 <i class="fab fa-instagram"></i>
-                            </a>
-                            <a class="text-primary p-2" href="">
-                                <i class="fab fa-youtube"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
                     <a href="" class="navbar-brand d-block d-lg-none">
-                        <h1 class="m-0 display-4 text-primary">Klean</h1>
+                    <img class="m-0 display-3 img-fluid" src="img/logo/logo_with_text.png" style="width: 120px; padding: 10px;" alt="SamstarCleanPro">
                     </a>
+
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
                             <a href="about.html" class="nav-item nav-link">About</a>
-                            <a href="service.html" class="nav-item nav-link">Service</a>
-                            <a href="project.html" class="nav-item nav-link">Project</a>
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Pages</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="blog.html" class="dropdown-item active">Latest Blog</a>
-                                    <a href="single.html" class="dropdown-item">Blog Detail</a>
+                                <a href="service.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Services</a>
+                                <div class="dropdown-menu rounded-0 m-0" aria-labelledby="servicesDropdown">
+                                    <a href="residential.html" class="dropdown-item">Residential Cleaning</a>
+                                    <a href="commercial.html" class="dropdown-item">Commercial Cleaning</a>
+                                    <a href="move-in-out.html" class="dropdown-item">Move In/Out Cleaning</a>
+                                    <a href="deep-cleaning.html" class="dropdown-item">Deep Cleaning</a>
+                                    <a href="carpet.html" class="dropdown-item">Carpet Cleaning</a>
+                                    <a href="tile-grout.html" class="dropdown-item">Tile &amp; Grout Cleaning</a>
                                 </div>
                             </div>
+                            <a href="datacenter.html" class="nav-item nav-link">Data Center Cleaning</a>
+                            <a href="blog.html" class="nav-item nav-link">Blog</a>
+
+                            
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
-                        <a href="" class="btn btn-primary mr-3 d-none d-lg-block">Get A Quote</a>
+                        <a href="quote.html" class="btn btn-primary text-white mr-3 d-none d-lg-block">Book Now</a>
                     </div>
                 </nav>
             </div>
@@ -103,11 +245,12 @@
         <div class="container py-5">
             <div class="row align-items-center py-4">
                 <div class="col-md-6 text-center text-md-left">
-                    <h1 class="display-4 mb-4 mb-md-0 text-secondary text-uppercase">Blog</h1>
+                    <h1 class="display-4 mb-4 mb-md-0 text-white">Our Blog</h1>
+                    <p class="text-white mb-0">Expert cleaning tips, insights, and industry updates</p>
                 </div>
                 <div class="col-md-6 text-center text-md-right">
                     <div class="d-inline-flex align-items-center">
-                        <a class="btn btn-sm btn-outline-light" href="">Home</a>
+                        <a class="btn btn-sm btn-outline-light" href="index.html">Home</a>
                         <i class="fas fa-angle-double-right text-light mx-2"></i>
                         <a class="btn btn-sm btn-outline-light disabled" href="">Blog</a>
                     </div>
@@ -118,165 +261,329 @@
     <!-- Page Header End -->
 
 
-    <!-- Blog Start -->
+    <!-- Featured Post Start -->
     <div class="container-fluid py-5">
         <div class="container">
-            <div class="row align-items-end mb-4">
-                <div class="col-lg-6">
-                    <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Latest Blog</h6>
-                    <h1 class="section-title mb-3">Latest Articles From Our Blog Post</h1>
-                </div>
-                <div class="col-lg-6">
-                    <h4 class="font-weight-normal text-muted mb-3">Eirmod kasd duo eos et magna, diam dolore stet sea clita sit ea erat lorem. Ipsum eos ipsum magna lorem stet</h4>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded w-100" src="img/blog-1.jpg" alt="">
-                        <div class="blog-date">
-                            <h4 class="font-weight-bold mb-n1">01</h4>
-                            <small class="text-white text-uppercase">Jan</small>
-                        </div>
-                    </div>
-                    <div class="d-flex mb-2">
-                        <a class="text-secondary text-uppercase font-weight-medium" href="">Admin</a>
-                        <span class="text-primary px-2">|</span>
-                        <a class="text-secondary text-uppercase font-weight-medium" href="">Cleaning</a>
-                    </div>
-                    <h5 class="font-weight-medium mb-2">Rebum lorem eos ipsum diam</h5>
-                    <p class="mb-4">Dolor justo sea kasd lorem clita justo no diam amet. Kasd magna dolor amet</p>
-                    <a class="btn btn-sm btn-primary py-2" href="">Read More</a>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded w-100" src="img/blog-2.jpg" alt="">
-                        <div class="blog-date">
-                            <h4 class="font-weight-bold mb-n1">01</h4>
-                            <small class="text-white text-uppercase">Jan</small>
-                        </div>
-                    </div>
-                    <div class="d-flex mb-2">
-                        <a class="text-secondary text-uppercase font-weight-medium" href="">Admin</a>
-                        <span class="text-primary px-2">|</span>
-                        <a class="text-secondary text-uppercase font-weight-medium" href="">Cleaning</a>
-                    </div>
-                    <h5 class="font-weight-medium mb-2">Rebum lorem eos ipsum diam</h5>
-                    <p class="mb-4">Dolor justo sea kasd lorem clita justo no diam amet. Kasd magna dolor amet</p>
-                    <a class="btn btn-sm btn-primary py-2" href="">Read More</a>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded w-100" src="img/blog-3.jpg" alt="">
-                        <div class="blog-date">
-                            <h4 class="font-weight-bold mb-n1">01</h4>
-                            <small class="text-white text-uppercase">Jan</small>
-                        </div>
-                    </div>
-                    <div class="d-flex mb-2">
-                        <a class="text-secondary text-uppercase font-weight-medium" href="">Admin</a>
-                        <span class="text-primary px-2">|</span>
-                        <a class="text-secondary text-uppercase font-weight-medium" href="">Cleaning</a>
-                    </div>
-                    <h5 class="font-weight-medium mb-2">Rebum lorem eos ipsum diam</h5>
-                    <p class="mb-4">Dolor justo sea kasd lorem clita justo no diam amet. Kasd magna dolor amet</p>
-                    <a class="btn btn-sm btn-primary py-2" href="">Read More</a>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded w-100" src="img/blog-2.jpg" alt="">
-                        <div class="blog-date">
-                            <h4 class="font-weight-bold mb-n1">01</h4>
-                            <small class="text-white text-uppercase">Jan</small>
-                        </div>
-                    </div>
-                    <div class="d-flex mb-2">
-                        <a class="text-secondary text-uppercase font-weight-medium" href="">Admin</a>
-                        <span class="text-primary px-2">|</span>
-                        <a class="text-secondary text-uppercase font-weight-medium" href="">Cleaning</a>
-                    </div>
-                    <h5 class="font-weight-medium mb-2">Rebum lorem eos ipsum diam</h5>
-                    <p class="mb-4">Dolor justo sea kasd lorem clita justo no diam amet. Kasd magna dolor amet</p>
-                    <a class="btn btn-sm btn-primary py-2" href="">Read More</a>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded w-100" src="img/blog-3.jpg" alt="">
-                        <div class="blog-date">
-                            <h4 class="font-weight-bold mb-n1">01</h4>
-                            <small class="text-white text-uppercase">Jan</small>
-                        </div>
-                    </div>
-                    <div class="d-flex mb-2">
-                        <a class="text-secondary text-uppercase font-weight-medium" href="">Admin</a>
-                        <span class="text-primary px-2">|</span>
-                        <a class="text-secondary text-uppercase font-weight-medium" href="">Cleaning</a>
-                    </div>
-                    <h5 class="font-weight-medium mb-2">Rebum lorem eos ipsum diam</h5>
-                    <p class="mb-4">Dolor justo sea kasd lorem clita justo no diam amet. Kasd magna dolor amet</p>
-                    <a class="btn btn-sm btn-primary py-2" href="">Read More</a>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded w-100" src="img/blog-1.jpg" alt="">
-                        <div class="blog-date">
-                            <h4 class="font-weight-bold mb-n1">01</h4>
-                            <small class="text-white text-uppercase">Jan</small>
-                        </div>
-                    </div>
-                    <div class="d-flex mb-2">
-                        <a class="text-secondary text-uppercase font-weight-medium" href="">Admin</a>
-                        <span class="text-primary px-2">|</span>
-                        <a class="text-secondary text-uppercase font-weight-medium" href="">Cleaning</a>
-                    </div>
-                    <h5 class="font-weight-medium mb-2">Rebum lorem eos ipsum diam</h5>
-                    <p class="mb-4">Dolor justo sea kasd lorem clita justo no diam amet. Kasd magna dolor amet</p>
-                    <a class="btn btn-sm btn-primary py-2" href="">Read More</a>
-                </div>
+            <div class="row mb-5">
                 <div class="col-12">
-                    <nav aria-label="Page navigation">
-                      <ul class="pagination pagination-lg justify-content-center mb-0">
-                        <li class="page-item disabled">
-                          <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                            <span class="sr-only">Previous</span>
-                          </a>
-                        </li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                          <a class="page-link" href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                            <span class="sr-only">Next</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </nav>
+                    <div class="featured-post" style="background-image: url('img/blog-featured.jpg'); background-size: cover; background-position: center;">
+                        <div class="featured-overlay">
+                            <div>
+                                <span class="badge badge-warning mb-3">FEATURED POST</span>
+                                <h1 class="text-white mb-3">The Complete Guide to Data Center Cleaning in Northern Virginia</h1>
+                                <div class="blog-meta text-white mb-3">
+                                    <span class="mr-3"><i class="far fa-calendar-alt mr-2"></i>December 1, 2024</span>
+                                    <span class="mr-3"><i class="far fa-user mr-2"></i>SamstarCleanPro Team</span>
+                                    <span><i class="far fa-clock mr-2"></i>8 min read</span>
+                                </div>
+                                <p class="text-white mb-4">Learn why proper data center cleaning is critical for protecting your mission-critical infrastructure and maintaining optimal performance in Loudoun County's Data Center Alley.</p>
+                                <a href="blog-detail.html" class="btn btn-primary text-white">Read More <i class="fa fa-arrow-right ml-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Blog End -->
+    <!-- Featured Post End -->
 
 
+    <!-- Blog Grid Start -->
+    <div class="container-fluid pb-5">
+        <div class="container">
+            <div class="row">
+                <!-- Main Content -->
+                <div class="col-lg-8">
+                    <!-- Category Filter -->
+                    <div class="mb-4">
+                        <div class="d-flex flex-wrap align-items-center">
+                            <h5 class="mr-3 mb-2">Filter by:</h5>
+                            <span class="badge badge-primary badge-pill category-badge mr-2 mb-2 px-3 py-2" data-category="all">All Posts</span>
+                            <span class="badge badge-outline-primary badge-pill category-badge mr-2 mb-2 px-3 py-2" data-category="residential">Residential</span>
+                            <span class="badge badge-outline-primary badge-pill category-badge mr-2 mb-2 px-3 py-2" data-category="commercial">Commercial</span>
+                            <span class="badge badge-outline-primary badge-pill category-badge mr-2 mb-2 px-3 py-2" data-category="datacenter">Data Center</span>
+                            <span class="badge badge-outline-primary badge-pill category-badge mr-2 mb-2 px-3 py-2" data-category="tips">Tips & Guides</span>
+                        </div>
+                    </div>
+
+                    <!-- Blog Grid -->
+                    <div class="row" id="blogGrid">
+                        <!-- Blog Post 1 -->
+                        <div class="col-md-6 mb-4 blog-item" data-category="residential">
+                            <div class="card blog-card">
+                                <div class="blog-img-wrapper">
+                                    <img src="img/blog-1.jpg" class="card-img-top" alt="Spring Cleaning Tips">
+                                    <span class="badge badge-success blog-category">Residential</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="blog-meta mb-2">
+                                        <span class="mr-3"><i class="far fa-calendar-alt mr-1"></i>Nov 28, 2024</span>
+                                        <span class="read-time"><i class="far fa-clock mr-1"></i>5 min read</span>
+                                    </div>
+                                    <h4 class="card-title mb-3">
+                                        <a href="blog-detail.html" class="text-dark">10 Spring Cleaning Tips for Your Virginia Home</a>
+                                    </h4>
+                                    <p class="card-text">Get your home ready for spring with these expert cleaning tips tailored for homes in Virginia, DC, and Maryland. From decluttering to deep cleaning...</p>
+                                    <a href="blog-detail.html" class="text-primary font-weight-bold">Read More <i class="fa fa-arrow-right ml-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Blog Post 2 -->
+                        <div class="col-md-6 mb-4 blog-item" data-category="commercial">
+                            <div class="card blog-card">
+                                <div class="blog-img-wrapper">
+                                    <img src="img/blog-2.jpg" class="card-img-top" alt="Office Cleaning">
+                                    <span class="badge badge-info blog-category">Commercial</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="blog-meta mb-2">
+                                        <span class="mr-3"><i class="far fa-calendar-alt mr-1"></i>Nov 25, 2024</span>
+                                        <span class="read-time"><i class="far fa-clock mr-1"></i>6 min read</span>
+                                    </div>
+                                    <h4 class="card-title mb-3">
+                                        <a href="blog-detail.html" class="text-dark">How Clean Offices Boost Employee Productivity</a>
+                                    </h4>
+                                    <p class="card-text">Discover the connection between workplace cleanliness and employee performance. Learn why businesses in Fairfax and Arlington invest in professional...</p>
+                                    <a href="blog-detail.html" class="text-primary font-weight-bold">Read More <i class="fa fa-arrow-right ml-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Blog Post 3 -->
+                        <div class="col-md-6 mb-4 blog-item" data-category="datacenter">
+                            <div class="card blog-card">
+                                <div class="blog-img-wrapper">
+                                    <img src="img/blog-3.jpg" class="card-img-top" alt="Data Center">
+                                    <span class="badge badge-danger blog-category">Data Center</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="blog-meta mb-2">
+                                        <span class="mr-3"><i class="far fa-calendar-alt mr-1"></i>Nov 22, 2024</span>
+                                        <span class="read-time"><i class="far fa-clock mr-1"></i>7 min read</span>
+                                    </div>
+                                    <h4 class="card-title mb-3">
+                                        <a href="blog-detail.html" class="text-dark">Contamination Control Best Practices for Data Centers</a>
+                                    </h4>
+                                    <p class="card-text">Essential contamination control strategies for data centers in Loudoun County. Learn how proper cleaning protocols protect your critical infrastructure...</p>
+                                    <a href="blog-detail.html" class="text-primary font-weight-bold">Read More <i class="fa fa-arrow-right ml-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Blog Post 4 -->
+                        <div class="col-md-6 mb-4 blog-item" data-category="tips">
+                            <div class="card blog-card">
+                                <div class="blog-img-wrapper">
+                                    <img src="img/blog-4.jpg" class="card-img-top" alt="Cleaning Tips">
+                                    <span class="badge badge-warning blog-category">Tips & Guides</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="blog-meta mb-2">
+                                        <span class="mr-3"><i class="far fa-calendar-alt mr-1"></i>Nov 20, 2024</span>
+                                        <span class="read-time"><i class="far fa-clock mr-1"></i>4 min read</span>
+                                    </div>
+                                    <h4 class="card-title mb-3">
+                                        <a href="blog-detail.html" class="text-dark">The Benefits of Eco-Friendly Cleaning Products</a>
+                                    </h4>
+                                    <p class="card-text">Why more Maryland and DC residents are choosing green cleaning solutions. Explore the health and environmental benefits of eco-friendly cleaning...</p>
+                                    <a href="blog-detail.html" class="text-primary font-weight-bold">Read More <i class="fa fa-arrow-right ml-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Blog Post 5 -->
+                        <div class="col-md-6 mb-4 blog-item" data-category="residential">
+                            <div class="card blog-card">
+                                <div class="blog-img-wrapper">
+                                    <img src="img/blog-5.jpg" class="card-img-top" alt="Move Out Cleaning">
+                                    <span class="badge badge-success blog-category">Residential</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="blog-meta mb-2">
+                                        <span class="mr-3"><i class="far fa-calendar-alt mr-1"></i>Nov 18, 2024</span>
+                                        <span class="read-time"><i class="far fa-clock mr-1"></i>5 min read</span>
+                                    </div>
+                                    <h4 class="card-title mb-3">
+                                        <a href="blog-detail.html" class="text-dark">Move-In/Move-Out Cleaning Checklist for DMV Renters</a>
+                                    </h4>
+                                    <p class="card-text">Complete checklist for move-in and move-out cleaning to ensure you get your security deposit back. Perfect for renters in Alexandria, DC, and Bethesda...</p>
+                                    <a href="blog-detail.html" class="text-primary font-weight-bold">Read More <i class="fa fa-arrow-right ml-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Blog Post 6 -->
+                        <div class="col-md-6 mb-4 blog-item" data-category="commercial">
+                            <div class="card blog-card">
+                                <div class="blog-img-wrapper">
+                                    <img src="img/blog-6.jpg" class="card-img-top" alt="Commercial Cleaning">
+                                    <span class="badge badge-info blog-category">Commercial</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="blog-meta mb-2">
+                                        <span class="mr-3"><i class="far fa-calendar-alt mr-1"></i>Nov 15, 2024</span>
+                                        <span class="read-time"><i class="far fa-clock mr-1"></i>6 min read</span>
+                                    </div>
+                                    <h4 class="card-title mb-3">
+                                        <a href="blog-detail.html" class="text-dark">Choosing the Right Cleaning Schedule for Your Business</a>
+                                    </h4>
+                                    <p class="card-text">Find the perfect cleaning frequency for your Northern Virginia business. Learn about daily, weekly, and monthly commercial cleaning schedules...</p>
+                                    <a href="blog-detail.html" class="text-primary font-weight-bold">Read More <i class="fa fa-arrow-right ml-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav aria-label="Blog pagination" class="mt-4">
+                        <ul class="pagination pagination-custom justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1"><i class="fa fa-angle-left"></i></a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><i class="fa fa-angle-right"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <!-- Search Widget -->
+                    <div class="sidebar-widget">
+                        <h4 class="mb-4">Search Articles</h4>
+                        <div class="search-box">
+                            <input type="text" class="form-control" placeholder="Search blog posts...">
+                            <button class="btn btn-primary text-white"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter Widget -->
+                    <div class="newsletter-box mb-4">
+                        <h4 class="mb-3">Subscribe to Our Newsletter</h4>
+                        <p class="mb-3 small">Get cleaning tips and exclusive offers delivered to your inbox</p>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <div class="input-group-append">
+                                <button class="btn btn-light" type="button">
+                                    <i class="fa fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categories Widget -->
+                    <div class="sidebar-widget">
+                        <h4 class="mb-4">Categories</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <a href="#" class="d-flex justify-content-between text-dark">
+                                    <span><i class="fa fa-angle-right text-primary mr-2"></i>Residential Cleaning</span>
+                                    <span class="badge badge-primary">12</span>
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="d-flex justify-content-between text-dark">
+                                    <span><i class="fa fa-angle-right text-primary mr-2"></i>Commercial Cleaning</span>
+                                    <span class="badge badge-primary">8</span>
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="d-flex justify-content-between text-dark">
+                                    <span><i class="fa fa-angle-right text-primary mr-2"></i>Data Center Cleaning</span>
+                                    <span class="badge badge-primary">6</span>
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="d-flex justify-content-between text-dark">
+                                    <span><i class="fa fa-angle-right text-primary mr-2"></i>Tips & Guides</span>
+                                    <span class="badge badge-primary">15</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex justify-content-between text-dark">
+                                    <span><i class="fa fa-angle-right text-primary mr-2"></i>Industry News</span>
+                                    <span class="badge badge-primary">5</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Popular Posts Widget -->
+                    <div class="sidebar-widget">
+                        <h4 class="mb-4">Popular Posts</h4>
+                        <div class="popular-post">
+                            <div class="d-flex">
+                                <img src="img/blog-thumb-1.jpg" alt="" style="width: 80px; height: 80px; object-fit: cover;" class="rounded mr-3">
+                                <div>
+                                    <h6><a href="blog-detail.html" class="text-dark">Data Center Cleaning Best Practices</a></h6>
+                                    <small class="text-muted"><i class="far fa-calendar-alt mr-1"></i>Nov 28, 2024</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popular-post">
+                            <div class="d-flex">
+                                <img src="img/blog-thumb-2.jpg" alt="" style="width: 80px; height: 80px; object-fit: cover;" class="rounded mr-3">
+                                <div>
+                                    <h6><a href="blog-detail.html" class="text-dark">Green Cleaning Solutions for Homes</a></h6>
+                                    <small class="text-muted"><i class="far fa-calendar-alt mr-1"></i>Nov 25, 2024</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popular-post">
+                            <div class="d-flex">
+                                <img src="img/blog-thumb-3.jpg" alt="" style="width: 80px; height: 80px; object-fit: cover;" class="rounded mr-3">
+                                <div>
+                                    <h6><a href="blog-detail.html" class="text-dark">Office Cleaning Schedule Guide</a></h6>
+                                    <small class="text-muted"><i class="far fa-calendar-alt mr-1"></i>Nov 22, 2024</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tags Widget -->
+                    <div class="sidebar-widget">
+                        <h4 class="mb-4">Popular Tags</h4>
+                        <div class="tag-cloud">
+                            <span class="badge badge-secondary">Cleaning Tips</span>
+                            <span class="badge badge-secondary">Virginia</span>
+                            <span class="badge badge-secondary">Washington DC</span>
+                            <span class="badge badge-secondary">Maryland</span>
+                            <span class="badge badge-secondary">Data Center</span>
+                            <span class="badge badge-secondary">Commercial</span>
+                            <span class="badge badge-secondary">Residential</span>
+                            <span class="badge badge-secondary">Eco-Friendly</span>
+                            <span class="badge badge-secondary">Deep Cleaning</span>
+                            <span class="badge badge-secondary">Move Out</span>
+                            <span class="badge badge-secondary">Office</span>
+                            <span class="badge badge-secondary">Home</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Widget -->
+                    <div class="sidebar-widget bg-primary text-white">
+                        <h4 class="mb-3">Need Professional Cleaning?</h4>
+                        <p class="mb-4">Get a free quote for your home or business in the DMV region</p>
+                        <a href="quote.html" class="btn btn-light text-primary btn-block">Get Free Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <!-- Blog Grid End -->  
+    
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
         <div class="row pt-5">
-            <div class="col-lg-3 col-md-6 mb-5">
-                <a href="index.html" class="navbar-brand">
-                    <h1 class="m-0 mt-n3 display-4 text-primary">Klean</h1>
-                </a>
-                <p>Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
-                <h5 class="font-weight-semi-bold text-white mb-2">Opening Hours:</h5>
-                <p class="mb-1">Mon – Sat, 8AM – 5PM</p>
-                <p class="mb-0">Sunday: Closed</p>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
+            <div class="col-lg-6 col-md-6 mb-5">
                 <h4 class="font-weight-semi-bold text-primary mb-4">Get In Touch</h4>
-                <p><i class="fa fa-map-marker-alt text-primary mr-2"></i>123 Street, New York, USA</p>
+                <p><i class="fa fa-map-marker-alt text-primary mr-2"></i>20132 Loudoun County, Virginia, USA</p>
                 <p><i class="fa fa-phone-alt text-primary mr-2"></i>+012 345 67890</p>
-                <p><i class="fa fa-envelope text-primary mr-2"></i>info@example.com</p>
+                <p><i class="fa fa-envelope text-primary mr-2"></i>info@samstarcleanpro.com</p>
                 <div class="d-flex justify-content-start mt-4">
                     <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -285,50 +592,30 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="font-weight-semi-bold text-primary mb-4">Quick Links</h4>
+                <h4 class="font-weight-semi-bold text-primary mb-4">Services</h4>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Projects</a>
-                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Commercial Cleaning</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Data Center Cleaning</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Specialized Cleaning</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="font-weight-semi-bold text-primary mb-4">Newsletter</h4>
-                <p>Rebum labore lorem dolores kasd est, et ipsum amet et at kasd, ipsum sea tempor magna tempor. Accu kasd sed ea duo ipsum.</p>
-                <div class="w-100">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-0" style="padding: 25px;" placeholder="Your Email">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary px-4">Sign Up</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <h5 class="font-weight-semi-bold text-white mb-2">Opening Hours:</h5>
+                <p class="mb-1">Mon – Sat, 8AM – 5PM</p>
+                <p class="mb-0">Sunday: Closed</p>
+                <p class="mt-3 mb-0"><small>Emergency services available 24/7</small></p>
+            </div>  
         </div>
     </div>
     <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: #3E3E4E !important;">
         <div class="row">
             <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white">&copy; <a href="#">Your Site Name</a>. All Rights Reserved. Designed by <a href="https://htmlcodex.com">HTML Codex</a>
+                <p class="m-0 text-white">Serving: <text class="text-primary">Virginia | Washington DC | Maryland</text>
                 </p>
             </div>
-            <div class="col-lg-6 text-center text-md-right">
-                <ul class="nav d-inline-flex">
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Privacy</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Terms</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">FAQs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Help</a>
-                    </li>
-                </ul>
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white">&copy; <a href="#" class="text-primary">SamstarCleanPro</a>. All Rights Reserved. Designed by <a href="https://thebrandrex.netlify.com" class="text-primary">The Brand Rex</a>
+                </p>
             </div>
         </div>
     </div>
