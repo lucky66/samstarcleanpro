@@ -97,20 +97,21 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-3 bg-white d-none d-lg-block">
-                <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                <a href="" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
                     <img class="m-0 display-3 img-fluid" src="img/logo/logo_with_text.png" style="width: 200px; padding: 20px;" alt="SamstarCleanPro">
+                    <h1 ></h1>
                 </a>
             </div>
             <div class="col-lg-9">
                 <div class="row bg-dark d-none d-lg-flex top-bar">
                     <div class="col-lg-7 text-left text-white">
-                        <a class="text-white" href="mailto:info@samstarcleanpro.com">
+                        <a class="text-white" href="#">
                             <div class="h-100 d-inline-flex align-items-center border-right border-white py-2 px-3">
                                 <i class="fa fa-envelope mr-2"></i>
                                 <small>info@samstarcleanpro.com</small>
                             </div>
                         </a>
-                        <a class="text-white" href="tel:+012345678">
+                        <a class="text-white" href="#">
                             <div class="h-100 d-inline-flex align-items-center py-2 px-2">
                                 <i class="fa fa-phone-alt mr-2"></i>
                                 <small>+012 345 6789</small>
@@ -119,44 +120,57 @@
                     </div>
                     <div class="col-lg-5 text-right">
                         <div class="d-inline-flex align-items-center pr-2">
-                            <a class="text-white p-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="text-white p-2" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="text-white p-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="text-white p-2" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="text-white p-2" href="">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="text-white p-2" href="">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="text-white p-2" href="">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a class="text-white p-2" href="">
+                                <i class="fab fa-instagram"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
-                    <a href="index.html" class="navbar-brand d-block d-lg-none">
-                        <img class="m-0 display-3 img-fluid" src="img/logo/logo_with_text.png" style="width: 120px; padding: 10px;" alt="SamstarCleanPro">
+                    <a href="" class="navbar-brand d-block d-lg-none">
+                    <img class="m-0 display-3 img-fluid" src="img/logo/logo_with_text.png" style="width: 120px; padding: 10px;" alt="SamstarCleanPro">
                     </a>
+
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
                             <a href="about.html" class="nav-item nav-link">About</a>
-                            <a href="service.html" class="nav-item nav-link">Services</a>
-                            <a href="project.html" class="nav-item nav-link">Projects</a>
-                            <a href="datacenter.html" class="nav-item nav-link">Data Center Cleaning</a>
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Resources</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="blog.html" class="dropdown-item">Latest Blog</a>
-                                    <a href="blog-detail.html" class="dropdown-item">Blog Detail</a>
+                                <a href="service.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Services</a>
+                                <div class="dropdown-menu rounded-0 m-0" aria-labelledby="servicesDropdown">
+                                    <a href="residential.html" class="dropdown-item">Residential Cleaning</a>
+                                    <a href="commercial.html" class="dropdown-item">Commercial Cleaning</a>
+                                    <a href="move-in-out.html" class="dropdown-item">Move In/Out Cleaning</a>
+                                    <a href="deep-cleaning.html" class="dropdown-item">Deep Cleaning</a>
+                                    <a href="carpet.html" class="dropdown-item">Carpet Cleaning</a>
+                                    <a href="tile-grout.html" class="dropdown-item">Tile &amp; Grout Cleaning</a>
                                 </div>
                             </div>
+                            <a href="datacenter.html" class="nav-item nav-link">Data Center Cleaning</a>
+                            <a href="blog.html" class="nav-item nav-link">Blog</a>
+
+                            
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
-                        <a href="quote.html" class="btn btn-primary text-white mr-3 d-none d-lg-block active">Get Quote</a>
+                        <a href="quote.html" class="btn btn-primary text-white mr-3 d-none d-lg-block">Book Now</a>
                     </div>
                 </nav>
             </div>
         </div>
     </div>
     <!-- Header End -->
-
 
     <!-- Page Header Start -->
     <div class="container-fluid bg-primary py-5 mb-5">
@@ -621,359 +635,389 @@
 
     <!-- Custom Quote Form Script -->
     <script>
-        // Initialize Stripe
-        const stripe = Stripe('pk_test_YOUR_PUBLISHABLE_KEY'); // Replace with your actual Stripe publishable key
-        const elements = stripe.elements();
-        const cardElement = elements.create('card');
-        
-        // Quote calculation variables
-        let quoteData = {
-            serviceType: '',
-            basePrice: 0,
-            propertySize: '',
-            sizeMultiplier: 1,
-            conditionMultiplier: 1,
-            addons: [],
-            frequency: 'onetime',
-            discount: 0,
-            total: 0
-        };
+    // Initialize Stripe
+    // 🛑 REMEMBER TO REPLACE 'pk_test_YOUR_PUBLISHABLE_KEY' with your actual Stripe publishable key
+    const stripe = Stripe('pk_test_YOUR_PUBLISHABLE_KEY'); 
+    const elements = stripe.elements();
+    const cardElement = elements.create('card');
+    
+    // Quote calculation variables
+    let quoteData = {
+        serviceType: '',
+        basePrice: 0,
+        propertySize: '',
+        sizeMultiplier: 1,
+        conditionMultiplier: 1,
+        addons: [],
+        frequency: 'onetime',
+        discount: 0, // Discount is stored as a percentage (e.g., 0.1 for 10%)
+        total: 0
+    };
 
-        // Service selection
-        document.querySelectorAll('.service-option').forEach(option => {
-            option.addEventListener('click', function() {
-                document.querySelectorAll('.service-option').forEach(opt => opt.classList.remove('selected'));
+    // --- Event Listeners ---
+
+    // Service selection
+    document.querySelectorAll('.service-option').forEach(option => {
+        option.addEventListener('click', function() {
+            document.querySelectorAll('.service-option').forEach(opt => opt.classList.remove('selected'));
+            this.classList.add('selected');
+            
+            quoteData.serviceType = this.dataset.service;
+            // FIX: Use parseFloat instead of parseInt for price to handle non-integer prices better, though base prices are usually integers.
+            quoteData.basePrice = parseFloat(this.dataset.price); 
+            
+            document.getElementById('step1Next').disabled = false;
+            updateSummary();
+        });
+    });
+
+    // Property size change
+    document.getElementById('propertySize').addEventListener('change', function() {
+        quoteData.propertySize = this.value;
+        quoteData.sizeMultiplier = parseFloat(this.options[this.selectedIndex].dataset.multiplier) || 1;
+        updateSummary();
+    });
+
+    // Property condition change
+    document.getElementById('propertyCondition').addEventListener('change', function() {
+        quoteData.conditionMultiplier = parseFloat(this.options[this.selectedIndex].dataset.multiplier) || 1;
+        updateSummary();
+    });
+
+    // Addon selection
+    document.querySelectorAll('.addon-option').forEach(addon => {
+        addon.addEventListener('click', function() {
+            const checkbox = this.querySelector('input[type="checkbox"]');
+            
+            // Toggle the checkbox state when the option div is clicked
+            checkbox.checked = !checkbox.checked;
+            
+            // Get data attributes
+            const addonName = this.dataset.addon;
+            const addonPrice = parseFloat(this.dataset.price); // FIX: Use parseFloat
+            
+            if (checkbox.checked) {
                 this.classList.add('selected');
-                
-                quoteData.serviceType = this.dataset.service;
-                quoteData.basePrice = parseInt(this.dataset.price);
-                
-                document.getElementById('step1Next').disabled = false;
-                updateSummary();
-            });
-        });
-
-        // Property size change
-        document.getElementById('propertySize').addEventListener('change', function() {
-            quoteData.propertySize = this.value;
-            quoteData.sizeMultiplier = parseFloat(this.options[this.selectedIndex].dataset.multiplier) || 1;
+                quoteData.addons.push({ name: addonName, price: addonPrice });
+            } else {
+                this.classList.remove('selected');
+                // Filter out the deselected addon by name
+                quoteData.addons = quoteData.addons.filter(a => a.name !== addonName);
+            }
+            
             updateSummary();
         });
+    });
 
-        // Property condition change
-        document.getElementById('propertyCondition').addEventListener('change', function() {
-            quoteData.conditionMultiplier = parseFloat(this.options[this.selectedIndex].dataset.multiplier) || 1;
-            updateSummary();
-        });
+    // Frequency change
+    document.getElementById('frequency').addEventListener('change', function() {
+        quoteData.frequency = this.value;
+        // Discount is stored as a decimal (e.g., 0.1 for 10%)
+        quoteData.discount = parseFloat(this.options[this.selectedIndex].dataset.discount) || 0; 
+        updateSummary();
+    });
 
-        // Addon selection
-        document.querySelectorAll('.addon-option').forEach(addon => {
-            addon.addEventListener('click', function() {
-                const checkbox = this.querySelector('input[type="checkbox"]');
-                checkbox.checked = !checkbox.checked;
-                
-                const addonName = this.dataset.addon;
-                const addonPrice = parseInt(this.dataset.price);
-                
-                if (checkbox.checked) {
-                    this.classList.add('selected');
-                    quoteData.addons.push({ name: addonName, price: addonPrice });
-                } else {
-                    this.classList.remove('selected');
-                    quoteData.addons = quoteData.addons.filter(a => a.name !== addonName);
-                }
-                
-                updateSummary();
-            });
-        });
+    // Set minimum date to today (UX improvement)
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('serviceDate').setAttribute('min', today);
 
-        // Frequency change
-        document.getElementById('frequency').addEventListener('change', function() {
-            quoteData.frequency = this.value;
-            quoteData.discount = parseFloat(this.options[this.selectedIndex].dataset.discount) || 0;
-            updateSummary();
-        });
+    // --- Core Calculation and Display Function ---
 
-        // Set minimum date to today
-        const today = new Date().toISOString().split('T')[0];
-        document.getElementById('serviceDate').setAttribute('min', today);
-
-        // Update summary function
-        function updateSummary() {
-            const serviceName = quoteData.serviceType.charAt(0).toUpperCase() + quoteData.serviceType.slice(1) + ' Cleaning';
-            const sizeText = quoteData.propertySize ? document.getElementById('propertySize').options[document.getElementById('propertySize').selectedIndex].text : '-';
-            const frequencyText = document.getElementById('frequency').options[document.getElementById('frequency').selectedIndex].text;
-            
-            // Calculate base price with multipliers
-            const calculatedBase = quoteData.basePrice * quoteData.sizeMultiplier * quoteData.conditionMultiplier;
-            
-            // Calculate addons total
-            const addonsTotal = quoteData.addons.reduce((sum, addon) => sum + addon.price, 0);
-            
-            // Calculate subtotal
-            const subtotal = calculatedBase + addonsTotal;
-            
-            // Calculate discount amount
-            const discountAmount = subtotal * quoteData.discount;
-            
-            // Calculate final total
-            quoteData.total = subtotal - discountAmount;
-            
-            // Update summary display
-            document.getElementById('summaryService').textContent = quoteData.serviceType ? serviceName : '-';
-            document.getElementById('summarySize').textContent = sizeText;
-            document.getElementById('summaryFrequency').textContent = frequencyText;
-            document.getElementById('summaryBasePrice').textContent = ' + calculatedBase.toFixed(2);
-            
-            // Display addons
-            let addonsHTML = '';
+    function updateSummary() {
+        // Prepare display text for summary
+        const serviceName = quoteData.serviceType.charAt(0).toUpperCase() + quoteData.serviceType.slice(1) + ' Cleaning';
+        const sizeText = quoteData.propertySize ? document.getElementById('propertySize').options[document.getElementById('propertySize').selectedIndex].text : '-';
+        const frequencyText = document.getElementById('frequency').options[document.getElementById('frequency').selectedIndex].text;
+        
+        // 1. Calculate base price with multipliers
+        const calculatedBase = quoteData.basePrice * quoteData.sizeMultiplier * quoteData.conditionMultiplier;
+        
+        // 2. Calculate addons total
+        const addonsTotal = quoteData.addons.reduce((sum, addon) => sum + addon.price, 0);
+        
+        // 3. Calculate subtotal (before discount)
+        const subtotal = calculatedBase + addonsTotal;
+        
+        // 4. Calculate discount amount
+        const discountAmount = subtotal * quoteData.discount;
+        
+        // 5. Calculate final total
+        quoteData.total = subtotal - discountAmount;
+        
+        // --- FIXES START HERE (Price Display) ---
+        
+        // Update summary display (Non-price fields are fine)
+        document.getElementById('summaryService').textContent = quoteData.serviceType ? serviceName : '-';
+        document.getElementById('summarySize').textContent = sizeText;
+        document.getElementById('summaryFrequency').textContent = frequencyText;
+        
+        // FIX 1: Base Price (Incorrect string concatenation)
+        document.getElementById('summaryBasePrice').textContent = `$${calculatedBase.toFixed(2)}`;
+        
+        // Display addons
+        let addonsHTML = '';
+        if (quoteData.addons.length === 0) {
+             addonsHTML = '<div class="text-muted small">No extra services selected.</div>';
+        } else {
             quoteData.addons.forEach(addon => {
+                // FIX 2: Add currency symbol and format price
                 addonsHTML += `
                     <div class="d-flex justify-content-between mb-2">
                         <span class="small">${addon.name}:</span>
-                        <span>+${addon.price}</span>
+                        <span>+$${addon.price.toFixed(2)}</span> 
                     </div>
                 `;
             });
-            document.getElementById('summaryAddons').innerHTML = addonsHTML;
-            
-            // Display discount if applicable
-            if (quoteData.discount > 0) {
-                document.getElementById('discountRow').style.display = 'flex';
-                document.getElementById('summaryDiscount').textContent = '- + discountAmount.toFixed(2);
-            } else {
-                document.getElementById('discountRow').style.display = 'none';
-            }
-            
-            document.getElementById('summaryTotal').textContent = ' + quoteData.total.toFixed(2);
         }
+        document.getElementById('summaryAddons').innerHTML = addonsHTML;
+        
+        // Display discount if applicable
+        if (quoteData.discount > 0) {
+            document.getElementById('discountRow').style.display = 'flex';
+            // FIX 3: Discount amount (Incorrect string concatenation)
+            document.getElementById('summaryDiscount').textContent = `-$${discountAmount.toFixed(2)}`;
+        } else {
+            document.getElementById('discountRow').style.display = 'none';
+        }
+        
+        // FIX 4: Final Total (Incorrect string concatenation)
+        document.getElementById('summaryTotal').textContent = `$${quoteData.total.toFixed(2)}`;
+    }
+    
+    // --- Step Navigation Functions ---
 
-        // Step navigation
-        function nextStep(stepNumber) {
-            // Validation for specific steps
-            if (stepNumber === 2 && !quoteData.serviceType) {
-                alert('Please select a service type');
+    function nextStep(stepNumber) {
+        // Validation for specific steps
+        if (stepNumber === 2 && !quoteData.serviceType) {
+            alert('Please select a service type');
+            return;
+        }
+        
+        // FIX: Ensure propertySize is not empty string (since it's a select)
+        if (stepNumber === 3 && !document.getElementById('propertySize').value) {
+            alert('Please select property size');
+            return;
+        }
+        
+        if (stepNumber === 4) {
+            if (!document.getElementById('serviceDate').value || !document.getElementById('serviceTime').value) {
+                alert('Please select service date and time');
                 return;
             }
-            
-            if (stepNumber === 3 && !document.getElementById('propertySize').value) {
-                alert('Please select property size');
-                return;
-            }
-            
-            if (stepNumber === 4) {
-                if (!document.getElementById('serviceDate').value || !document.getElementById('serviceTime').value) {
-                    alert('Please select service date and time');
-                    return;
-                }
-            }
-            
-            if (stepNumber === 5) {
-                // Validate contact information
-                const firstName = document.getElementById('firstName').value;
-                const lastName = document.getElementById('lastName').value;
-                const email = document.getElementById('email').value;
-                const phone = document.getElementById('phone').value;
-                const address = document.getElementById('address').value;
-                const city = document.getElementById('city').value;
-                const state = document.getElementById('state').value;
-                const zipcode = document.getElementById('zipcode').value;
-                
-                if (!firstName || !lastName || !email || !phone || !address || !city || !state || !zipcode) {
-                    alert('Please fill in all required contact information');
-                    return;
-                }
-                
-                // Mount Stripe card element on step 5
-                setTimeout(() => {
-                    cardElement.mount('#card-element');
-                }, 100);
-                
-                // Generate review summary
-                generateReviewSummary();
-            }
-            
-            // Hide all steps
-            document.querySelectorAll('.quote-step').forEach(step => step.classList.remove('active'));
-            
-            // Show target step
-            document.getElementById('step' + stepNumber).classList.add('active');
-            
-            // Update progress bar
-            const progress = (stepNumber / 5) * 100;
-            document.getElementById('progressBar').style.width = progress + '%';
-            
-            // Scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-
-        function prevStep(stepNumber) {
-            nextStep(stepNumber);
-        }
-
-        // Generate review summary
-        function generateReviewSummary() {
-            const serviceName = quoteData.serviceType.charAt(0).toUpperCase() + quoteData.serviceType.slice(1) + ' Cleaning';
-            const date = document.getElementById('serviceDate').value;
-            const time = document.getElementById('serviceTime').options[document.getElementById('serviceTime').selectedIndex].text;
+        
+        if (stepNumber === 5) {
+            // Validate contact information (already well-done)
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
             const address = document.getElementById('address').value;
             const city = document.getElementById('city').value;
             const state = document.getElementById('state').value;
             const zipcode = document.getElementById('zipcode').value;
             
-            let summaryHTML = `
-                <div class="row mb-3">
-                    <div class="col-md-6">
-                        <strong>Service:</strong><br>
-                        ${serviceName}
-                    </div>
-                    <div class="col-md-6">
-                        <strong>Date & Time:</strong><br>
-                        ${new Date(date).toLocaleDateString()} at ${time}
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col-12">
-                        <strong>Service Address:</strong><br>
-                        ${address}, ${city}, ${state} ${zipcode}
-                    </div>
-                </div>
-            `;
-            
-            if (quoteData.addons.length > 0) {
-                summaryHTML += `
-                    <div class="row mb-3">
-                        <div class="col-12">
-                            <strong>Add-on Services:</strong><br>
-                            <ul class="mb-0">
-                `;
-                quoteData.addons.forEach(addon => {
-                    summaryHTML += `<li>${addon.name} (+${addon.price})</li>`;
-                });
-                summaryHTML += `
-                            </ul>
-                        </div>
-                    </div>
-                `;
-            }
-            
-            const specialInstructions = document.getElementById('specialInstructions').value;
-            if (specialInstructions) {
-                summaryHTML += `
-                    <div class="row">
-                        <div class="col-12">
-                            <strong>Special Instructions:</strong><br>
-                            ${specialInstructions}
-                        </div>
-                    </div>
-                `;
-            }
-            
-            document.getElementById('reviewSummary').innerHTML = summaryHTML;
-        }
-
-        // Handle card errors
-        cardElement.on('change', function(event) {
-            const displayError = document.getElementById('card-errors');
-            if (event.error) {
-                displayError.textContent = event.error.message;
-            } else {
-                displayError.textContent = '';
-            }
-        });
-
-        // Form submission
-        document.getElementById('quoteForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            if (!document.getElementById('termsAgree').checked) {
-                alert('Please agree to the terms and conditions');
+            if (!firstName || !lastName || !email || !phone || !address || !city || !state || !zipcode) {
+                alert('Please fill in all required contact information');
                 return;
             }
             
-            const submitBtn = document.getElementById('submitBtn');
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin mr-2"></i> Processing...';
-            
-            try {
-                // Create payment method with Stripe
-                const {paymentMethod, error} = await stripe.createPaymentMethod({
-                    type: 'card',
-                    card: cardElement,
-                    billing_details: {
-                        name: document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value,
-                        email: document.getElementById('email').value,
-                        phone: document.getElementById('phone').value,
-                        address: {
-                            line1: document.getElementById('address').value,
-                            city: document.getElementById('city').value,
-                            state: document.getElementById('state').value,
-                            postal_code: document.getElementById('zipcode').value
-                        }
-                    }
-                });
-                
-                if (error) {
-                    document.getElementById('card-errors').textContent = error.message;
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = '<i class="fa fa-lock mr-2"></i> Confirm & Book Now';
-                    return;
+            // Mount Stripe card element on step 5
+            setTimeout(() => {
+                // Check if element is already mounted to prevent errors
+                if (document.getElementById('card-element').hasChildNodes() === false) {
+                    cardElement.mount('#card-element');
                 }
-                
-                // Collect all form data
-                const bookingData = {
-                    serviceType: quoteData.serviceType,
-                    propertySize: document.getElementById('propertySize').value,
-                    numRooms: document.getElementById('numRooms').value,
-                    numBathrooms: document.getElementById('numBathrooms').value,
-                    propertyCondition: document.getElementById('propertyCondition').value,
-                    addons: quoteData.addons,
-                    serviceDate: document.getElementById('serviceDate').value,
-                    serviceTime: document.getElementById('serviceTime').value,
-                    frequency: document.getElementById('frequency').value,
-                    specialInstructions: document.getElementById('specialInstructions').value,
-                    firstName: document.getElementById('firstName').value,
-                    lastName: document.getElementById('lastName').value,
+            }, 100);
+            
+            // Generate review summary
+            generateReviewSummary();
+        }
+        
+        // Hide all steps
+        document.querySelectorAll('.quote-step').forEach(step => step.classList.remove('active'));
+        
+        // Show target step
+        document.getElementById('step' + stepNumber).classList.add('active');
+        
+        // Update progress bar
+        const progress = (stepNumber / 5) * 100;
+        document.getElementById('progressBar').style.width = progress + '%';
+        
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function prevStep(stepNumber) {
+        nextStep(stepNumber);
+    }
+
+    // Generate review summary (fine as is, but added to complete script)
+    function generateReviewSummary() {
+        const serviceName = quoteData.serviceType.charAt(0).toUpperCase() + quoteData.serviceType.slice(1) + ' Cleaning';
+        const date = document.getElementById('serviceDate').value;
+        const time = document.getElementById('serviceTime').options[document.getElementById('serviceTime').selectedIndex].text;
+        const address = document.getElementById('address').value;
+        const city = document.getElementById('city').value;
+        const state = document.getElementById('state').value;
+        const zipcode = document.getElementById('zipcode').value;
+        
+        let summaryHTML = `
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <strong>Service:</strong><br>
+                    ${serviceName}
+                </div>
+                <div class="col-md-6">
+                    <strong>Date & Time:</strong><br>
+                    ${new Date(date).toLocaleDateString()} at ${time}
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-12">
+                    <strong>Service Address:</strong><br>
+                    ${address}, ${city}, ${state} ${zipcode}
+                </div>
+            </div>
+        `;
+        
+        if (quoteData.addons.length > 0) {
+            summaryHTML += `
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <strong>Add-on Services:</strong><br>
+                        <ul class="mb-0">
+            `;
+            quoteData.addons.forEach(addon => {
+                // FIX: Added dollar sign and toFixed(2) here as well for consistency
+                summaryHTML += `<li>${addon.name} (+$${addon.price.toFixed(2)})</li>`; 
+            });
+            summaryHTML += `
+                        </ul>
+                    </div>
+                </div>
+            `;
+        }
+        
+        const specialInstructions = document.getElementById('specialInstructions').value;
+        if (specialInstructions) {
+            summaryHTML += `
+                <div class="row">
+                    <div class="col-12">
+                        <strong>Special Instructions:</strong><br>
+                        ${specialInstructions}
+                    </div>
+                </div>
+            `;
+        }
+        
+        document.getElementById('reviewSummary').innerHTML = summaryHTML;
+    }
+
+    // Handle card errors
+    cardElement.on('change', function(event) {
+        const displayError = document.getElementById('card-errors');
+        if (event.error) {
+            displayError.textContent = event.error.message;
+        } else {
+            displayError.textContent = '';
+        }
+    });
+
+    // Form submission
+    document.getElementById('quoteForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        if (!document.getElementById('termsAgree').checked) {
+            alert('Please agree to the terms and conditions');
+            return;
+        }
+        
+        const submitBtn = document.getElementById('submitBtn');
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin mr-2"></i> Processing...';
+        
+        try {
+            // Create payment method with Stripe
+            const {paymentMethod, error} = await stripe.createPaymentMethod({
+                type: 'card',
+                card: cardElement,
+                billing_details: {
+                    name: document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value,
                     email: document.getElementById('email').value,
                     phone: document.getElementById('phone').value,
-                    address: document.getElementById('address').value,
-                    city: document.getElementById('city').value,
-                    state: document.getElementById('state').value,
-                    zipcode: document.getElementById('zipcode').value,
-                    total: quoteData.total,
-                    paymentMethodId: paymentMethod.id
-                };
-                
-                // Send booking data to your server
-                const response = await fetch('/api/create-booking', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(bookingData)
-                });
-                
-                const result = await response.json();
-                
-                if (result.success) {
-                    // Show success message
-                    alert('Booking confirmed! We will contact you shortly to confirm your appointment.');
-                    window.location.href = 'confirmation.html?booking=' + result.bookingId;
-                } else {
-                    throw new Error(result.message || 'Booking failed');
+                    address: {
+                        line1: document.getElementById('address').value,
+                        city: document.getElementById('city').value,
+                        state: document.getElementById('state').value,
+                        postal_code: document.getElementById('zipcode').value
+                    }
                 }
-                
-            } catch (error) {
-                alert('There was an error processing your booking. Please try again or call us at +012 345 6789');
-                console.error('Error:', error);
+            });
+            
+            if (error) {
+                document.getElementById('card-errors').textContent = error.message;
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = '<i class="fa fa-lock mr-2"></i> Confirm & Book Now';
+                return;
             }
-        });
+            
+            // Collect all form data (Looks fine, ensure numRooms/numBathrooms are available)
+            const bookingData = {
+                serviceType: quoteData.serviceType,
+                // WARNING: 'numRooms' and 'numBathrooms' IDs are referenced here but not set in event listeners. 
+                // Ensure these are correctly handled or removed if not needed for the calculation.
+                propertySize: document.getElementById('propertySize').value,
+                numRooms: document.getElementById('numRooms') ? document.getElementById('numRooms').value : null,
+                numBathrooms: document.getElementById('numBathrooms') ? document.getElementById('numBathrooms').value : null,
+                propertyCondition: document.getElementById('propertyCondition').value,
+                addons: quoteData.addons,
+                serviceDate: document.getElementById('serviceDate').value,
+                serviceTime: document.getElementById('serviceTime').value,
+                frequency: document.getElementById('frequency').value,
+                specialInstructions: document.getElementById('specialInstructions').value,
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                address: document.getElementById('address').value,
+                city: document.getElementById('city').value,
+                state: document.getElementById('state').value,
+                zipcode: document.getElementById('zipcode').value,
+                total: quoteData.total,
+                paymentMethodId: paymentMethod.id
+            };
+            
+            // Send booking data to your server
+            const response = await fetch('/api/create-booking', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(bookingData)
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                // Show success message
+                alert('Booking confirmed! We will contact you shortly to confirm your appointment.');
+                window.location.href = 'confirmation.html?booking=' + result.bookingId;
+            } else {
+                throw new Error(result.message || 'Booking failed');
+            }
+            
+        } catch (error) {
+            alert('There was an error processing your booking. Please try again or call us at +012 345 6789');
+            console.error('Error:', error);
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fa fa-lock mr-2"></i> Confirm & Book Now';
+        }
+    });
 
-        // Initialize summary on page load
-        updateSummary();
-    </script>
+    // Initialize summary on page load
+    updateSummary();
+</script>
 </body>
 
 </html>
