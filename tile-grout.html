@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tile & Grout Cleaning Services in Virginia, DC & Maryland | SamstarCleanPro</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="tile cleaning Virginia, grout cleaning DC, tile and grout cleaning Maryland, grout restoration DMV, tile floor cleaning, bathroom tile cleaning, kitchen tile cleaning, grout sealing Alexandria, tile steam cleaning Fairfax, ceramic tile cleaning Bethesda" name="keywords">
+    <meta content="Professional tile and grout cleaning services in Virginia, DC, and Maryland. Restore dingy grout to like-new condition. Deep cleaning, sealing, and restoration for all tile surfaces. Free estimates available!" name="description">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Professional Tile & Grout Cleaning Virginia, DC & Maryland">
+    <meta property="og:description" content="Restore your tile and grout to like-new condition with our professional cleaning and sealing services.">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link href="img/logo/just_logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        .before-after-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 2rem;
+        }
+        .before-after-container img {
+            width: 100%;
+            display: block;
+        }
+        .before-label, .after-label {
+            position: absolute;
+            top: 20px;
+            padding: 10px 20px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .before-label {
+            left: 20px;
+        }
+        .after-label {
+            right: 20px;
+        }
+        .problem-card {
+            background: #f8f9fa;
+            border-left: 4px solid #dc3545;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            transition: all 0.3s;
+        }
+        .problem-card:hover {
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .solution-card {
+            background: #f8f9fa;
+            border-left: 4px solid #28a745;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            transition: all 0.3s;
+        }
+        .solution-card:hover {
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .process-visual {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        .process-visual::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+        }
+        .surface-type {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s;
+            height: 100%;
+            border: 2px solid #e9ecef;
+        }
+        .surface-type:hover {
+            border-color: var(--primary);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .surface-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+        .comparison-slider {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .comparison-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .comparison-before {
+            clip-path: inset(0 50% 0 0);
+        }
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            height: 100%;
+        }
+        .rating {
+            color: #ffc107;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 2rem 1rem 1rem;
+            color: white;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Start -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 bg-white d-none d-lg-block">
+                <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <img class="m-0 display-3 img-fluid" src="img/logo/logo_with_text.png" style="width: 200px; padding: 20px;" alt="SamstarCleanPro">
+                </a>
+            </div>
+            <div class="col-lg-9">
+                <div class="row bg-dark d-none d-lg-flex top-bar">
+                    <div class="col-lg-7 text-left text-white">
+                        <a class="text-white" href="mailto:info@samstarcleanpro.com">
+                            <div class="h-100 d-inline-flex align-items-center border-right border-white py-2 px-3">
+                                <i class="fa fa-envelope mr-2"></i>
+                                <small>info@samstarcleanpro.com</small>
+                            </div>
+                        </a>
+                        <a class="text-white" href="tel:+012345678">
+                            <div class="h-100 d-inline-flex align-items-center py-2 px-2">
+                                <i class="fa fa-phone-alt mr-2"></i>
+                                <small>+012 345 6789</small>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-5 text-right">
+                        <div class="d-inline-flex align-items-center pr-2">
+                            <a class="text-white p-2" href="#" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="text-white p-2" href="#" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="text-white p-2" href="#" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a class="text-white p-2" href="#" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
+                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <img class="m-0 display-3 img-fluid" src="img/logo/logo_with_text.png" style="width: 120px; padding: 10px;" alt="SamstarCleanPro">
+                    </a>
+
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="about.html" class="nav-item nav-link">About</a>
+                            <div class="nav-item dropdown">
+                                <a href="service.html" class="nav-link dropdown-toggle active" data-toggle="dropdown">Services</a>
+                                <div class="dropdown-menu rounded-0 m-0" aria-labelledby="servicesDropdown">
+                                    <a href="residential.html" class="dropdown-item">Residential Cleaning</a>
+                                    <a href="commercial.html" class="dropdown-item">Commercial Cleaning</a>
+                                    <a href="move-in-out.html" class="dropdown-item">Move In/Out Cleaning</a>
+                                    <a href="deep-cleaning.html" class="dropdown-item">Deep Cleaning</a>
+                                    <a href="carpet.html" class="dropdown-item">Carpet Cleaning</a>
+                                    <a href="tile-grout.html" class="dropdown-item">Tile &amp; Grout Cleaning</a>
+                                </div>
+                            </div>
+                            <a href="datacenter.html" class="nav-item nav-link">Data Center Cleaning</a>
+                            <a href="blog.html" class="nav-item nav-link">Blog</a>                            
+                            <a href="quote.html" class="nav-item nav-link">Contact</a>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary text-white mr-3 d-none d-lg-block">Book Now</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5">
+        <div class="container py-5">
+            <div class="row align-items-center py-4">
+                <div class="col-md-6 text-center text-md-left">
+                    <h1 class="display-4 mb-4 mb-md-0 text-white">Tile & Grout Cleaning</h1>
+                    <p class="text-white mb-0">Professional restoration for all tile surfaces</p>
+                </div>
+                <div class="col-md-6 text-center text-md-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="btn btn-sm btn-outline-light" href="index.html">Home</a>
+                        <i class="fas fa-angle-double-right text-light mx-2"></i>
+                        <a class="btn btn-sm btn-outline-light" href="service.html">Services</a>
+                        <i class="fas fa-angle-double-right text-light mx-2"></i>
+                        <a class="btn btn-sm btn-outline-light disabled" href="">Tile & Grout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Hero Section Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Restore Your Tile</h6>
+                    <h1 class="mb-4 section-title">Transform Dingy Grout into Like-New Condition</h1>
+                    <p class="mb-4">Is your tile grout looking dingy, discolored, or stained? Professional tile and grout cleaning from SamstarCleanPro can restore your floors, walls, and surfaces to their original beauty. Serving homes and businesses throughout Virginia, Washington DC, and Maryland, we use advanced techniques and professional-grade equipment to deep clean and rejuvenate all types of tile.</p>
+                    <p class="mb-4">Our specialized tile and grout cleaning process removes years of built-up dirt, grime, mold, and mildew that regular mopping can't touch. From kitchen backsplashes to bathroom floors, from entryways to shower stalls, we bring tiles back to life across the entire DMV region.</p>
+                    <div class="row mb-4">
+                        <div class="col-6">
+                            <h5 class="text-primary mb-2"><i class="fa fa-check-circle mr-2"></i>Deep Cleaning</h5>
+                            <p class="small">Removes embedded dirt</p>
+                        </div>
+                        <div class="col-6">
+                            <h5 class="text-primary mb-2"><i class="fa fa-check-circle mr-2"></i>Grout Sealing</h5>
+                            <p class="small">Protects & preserves</p>
+                        </div>
+                        <div class="col-6">
+                            <h5 class="text-primary mb-2"><i class="fa fa-check-circle mr-2"></i>Color Restoration</h5>
+                            <p class="small">Brightens grout lines</p>
+                        </div>
+                        <div class="col-6">
+                            <h5 class="text-primary mb-2"><i class="fa fa-check-circle mr-2"></i>Mold Removal</h5>
+                            <p class="small">Eliminates bacteria</p>
+                        </div>
+                    </div>
+                    <a href="quote.html" class="btn btn-primary text-white mr-3">Get Free Estimate</a>
+                    <a href="tel:+012345678" class="btn btn-outline-primary">Call Now</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="before-after-container">
+                        <img src="img/tile-grout-before-after.jpg" alt="Tile and Grout Cleaning Before After" class="img-fluid">
+                        <span class="before-label">BEFORE</span>
+                        <span class="after-label">AFTER</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Section End -->
+
+
+    <!-- Problems & Solutions Start -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h3 class="mb-4">Common Tile & Grout Problems in DMV Homes</h3>
+                    <div class="problem-card">
+                        <div class="d-flex align-items-start">
+                            <i class="fa fa-times-circle fa-2x text-danger mr-3"></i>
+                            <div>
+                                <h5 class="mb-2">Discolored Grout Lines</h5>
+                                <p class="mb-0">Grout turns gray, brown, or black from accumulated dirt and mildew, especially in high-traffic areas and bathrooms.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="problem-card">
+                        <div class="d-flex align-items-start">
+                            <i class="fa fa-times-circle fa-2x text-danger mr-3"></i>
+                            <div>
+                                <h5 class="mb-2">Mold & Mildew Growth</h5>
+                                <p class="mb-0">Moisture-prone areas like showers and kitchen backsplashes develop unsightly and unhealthy mold in grout lines.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="problem-card">
+                        <div class="d-flex align-items-start">
+                            <i class="fa fa-times-circle fa-2x text-danger mr-3"></i>
+                            <div>
+                                <h5 class="mb-2">Embedded Dirt & Stains</h5>
+                                <p class="mb-0">Years of foot traffic, spills, and daily use create stubborn stains that regular mopping can't remove.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="problem-card">
+                        <div class="d-flex align-items-start">
+                            <i class="fa fa-times-circle fa-2x text-danger mr-3"></i>
+                            <div>
+                                <h5 class="mb-2">Dull, Lifeless Tiles</h5>
+                                <p class="mb-0">Soap scum, hard water deposits, and film buildup make tiles look dingy and lackluster.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-4">Our Professional Solutions</h3>
+                    <div class="solution-card">
+                        <div class="d-flex align-items-start">
+                            <i class="fa fa-check-circle fa-2x text-success mr-3"></i>
+                            <div>
+                                <h5 class="mb-2">High-Pressure Steam Cleaning</h5>
+                                <p class="mb-0">Our truck-mounted equipment delivers powerful, deep-penetrating steam that lifts dirt from porous grout.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="solution-card">
+                        <div class="d-flex align-items-start">
+                            <i class="fa fa-check-circle fa-2x text-success mr-3"></i>
+                            <div>
+                                <h5 class="mb-2">Professional-Grade Solutions</h5>
+                                <p class="mb-0">EPA-approved cleaners safely remove mold, mildew, and bacteria while being safe for your family and pets.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="solution-card">
+                        <div class="d-flex align-items-start">
+                            <i class="fa fa-check-circle fa-2x text-success mr-3"></i>
+                            <div>
+                                <h5 class="mb-2">Grout Sealing & Protection</h5>
+                                <p class="mb-0">After cleaning, we apply premium sealers that protect grout from future staining and make maintenance easier.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="solution-card">
+                        <div class="d-flex align-items-start">
+                            <i class="fa fa-check-circle fa-2x text-success mr-3"></i>
+                            <div>
+                                <h5 class="mb-2">Color Seal Restoration (Optional)</h5>
+                                <p class="mb-0">For severely stained grout, we can apply a color seal that gives a uniform, like-new appearance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Problems & Solutions End -->
+
+
+    <!-- Surfaces We Clean Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">All Tile Types</h6>
+                <h2 class="section-title mb-4">Surfaces We Clean Throughout the DMV Region</h2>
+                <p class="mb-0">Professional cleaning for every tile surface in your Virginia, DC, or Maryland property</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="surface-type">
+                        <div class="surface-icon">
+                            <i class="fas fa-th-large"></i>
+                        </div>
+                        <h4 class="mb-3">Ceramic & Porcelain Tile</h4>
+                        <p class="mb-0">The most common tile types in DMV homes. We restore original shine and clean grout to perfection.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="surface-type">
+                        <div class="surface-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h4 class="mb-3">Natural Stone</h4>
+                        <p class="mb-0">Marble, granite, travertine, and slate require specialized care. Our pH-neutral cleaners are stone-safe.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="surface-type">
+                        <div class="surface-icon">
+                            <i class="fas fa-border-all"></i>
+                        </div>
+                        <h4 class="mb-3">Mosaic & Glass Tile</h4>
+                        <p class="mb-0">Delicate mosaic and glass tiles get gentle yet effective cleaning that protects their finish.</p>
+                        </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="surface-type">
+                        <div class="surface-icon">
+                            <i class="fas fa-shower"></i>
+                        </div>
+                        <h4 class="mb-3">Shower & Bath Tile</h4>
+                        <p class="mb-0">Bathroom tiles and grout get deep cleaned and sanitized, removing soap scum and mildew.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="surface-type">
+                        <div class="surface-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h4 class="mb-3">Kitchen Backsplash</h4>
+                        <p class="mb-0">Remove years of grease, food stains, and grime from kitchen tile and grout lines.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="surface-type">
+                        <div class="surface-icon">
+                            <i class="fas fa-walking"></i>
+                        </div>
+                        <h4 class="mb-3">Floor Tile</h4>
+                        <p class="mb-0">High-traffic floor tiles in entryways, kitchens, and hallways get thorough deep cleaning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Surfaces We Clean End -->
+
+
+    <!-- Our Process Start -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Our Method</h6>
+                <h2 class="section-title mb-4">Professional Tile & Grout Cleaning Process</h2>
+                <p class="mb-0">How we restore your tile to like-new condition</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="process-visual text-center p-4">
+                        <div class="mb-3" style="font-size: 3rem;">1</div>
+                        <h4 class="mb-3">Inspection</h4>
+                        <p class="mb-0">We assess tile type, grout condition, and identify problem areas requiring special attention.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="process-visual text-center p-4">
+                        <div class="mb-3" style="font-size: 3rem;">2</div>
+                        <h4 class="mb-3">Pre-Treatment</h4>
+                        <p class="mb-0">Apply professional-grade cleaning solutions to break down dirt, grease, and stains.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="process-visual text-center p-4">
+                        <div class="mb-3" style="font-size: 3rem;">3</div>
+                        <h4 class="mb-3">Deep Cleaning</h4>
+                        <p class="mb-0">High-pressure steam extraction removes embedded dirt and sanitizes surfaces.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="process-visual text-center p-4">
+                        <div class="mb-3" style="font-size: 3rem;">4</div>
+                        <h4 class="mb-3">Sealing</h4>
+                        <p class="mb-0">Apply penetrating sealer to protect grout and make future cleaning easier.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Process End -->
+
+
+    <!-- Before & After Gallery Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Dramatic Results</h6>
+                <h2 class="section-title mb-4">Tile & Grout Cleaning Gallery</h2>
+                <p class="mb-0">Real before and after results from homes and businesses across Virginia, DC, and Maryland</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-lightbox="gallery" data-title="Bathroom Tile - Arlington, VA">
+                    <img src="img/tile-bathroom-before-after.jpg" alt="Bathroom Tile Cleaning">
+                    <div class="gallery-caption">
+                        <h5>Bathroom Floor Restoration</h5>
+                        <p class="mb-0 small">Arlington, VA</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-lightbox="gallery" data-title="Kitchen Backsplash - Bethesda, MD">
+                    <img src="img/tile-kitchen-before-after.jpg" alt="Kitchen Tile Cleaning">
+                    <div class="gallery-caption">
+                        <h5>Kitchen Backsplash Deep Clean</h5>
+                        <p class="mb-0 small">Bethesda, MD</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-lightbox="gallery" data-title="Shower Tile - Alexandria, VA">
+                    <img src="img/tile-shower-before-after.jpg" alt="Shower Tile Cleaning">
+                    <div class="gallery-caption">
+                        <h5>Shower Tile Restoration</h5>
+                        <p class="mb-0 small">Alexandria, VA</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-lightbox="gallery" data-title="Entryway Floor - Fairfax, VA">
+                    <img src="img/tile-entryway-before-after.jpg" alt="Entryway Tile Cleaning">
+                    <div class="gallery-caption">
+                        <h5>Entryway Floor Revival</h5>
+                        <p class="mb-0 small">Fairfax, VA</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-lightbox="gallery" data-title="Commercial Restroom - Washington DC">
+                    <img src="img/tile-commercial-before-after.jpg" alt="Commercial Tile Cleaning">
+                    <div class="gallery-caption">
+                        <h5>Commercial Restroom</h5>
+                        <p class="mb-0 small">Washington DC</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-lightbox="gallery" data-title="Pool Deck - Silver Spring, MD">
+                    <img src="img/tile-pool-before-after.jpg" alt="Pool Tile Cleaning">
+                    <div class="gallery-caption">
+                        <h5>Pool Deck Tile</h5>
+                        <p class="mb-0 small">Silver Spring, MD</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Before & After Gallery End -->
+
+
+    <!-- Pricing Start -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Affordable Rates</h6>
+                <h2 class="section-title mb-4">Tile & Grout Cleaning Pricing</h2>
+                <p class="mb-0">Transparent pricing for professional tile and grout cleaning services</p>
+            </div>  
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <h4 class="card-title mb-3">Basic Tile & Grout Cleaning</h4>
+                            <h3 class="text-primary mb-4">$1.50/sq ft</h3>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Deep Cleaning</li>
+                                <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Grout Sanitization</li>
+                                <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Standard Drying Time</li>
+                            </ul>
+                            <a href="quote.html" class="btn btn-primary text-white">Get Started</a>
+                        </div>  
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <h4 class="card-title mb-3">Premium Tile & Grout Cleaning</h4>
+                            <h3 class="text-primary mb-4">$2.50/sq ft</h3>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>All Basic Services</li>
+                                <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Grout Sealing</li>
+                                <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Faster Drying Time</li>
+                            </ul>
+                            <a href="quote.html" class="btn btn-primary text-white">Get Started</a>
+                        </div>
+                    </div>
+                </div>  
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <h4 class="card-title mb-3">Ultimate Tile & Grout Cleaning</h4> 
+                            <h3 class="text-primary mb-4">$3.50/sq ft</h3>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>All Premium Services</li>
+                                <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Color Seal Restoration</li>
+                                <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Priority Scheduling</li>  
+                            </ul>
+                            <a href="quote.html" class="btn btn-primary text-white">Get Started</a>
+                        </div>  
+                    </div>
+                </div>  
+            </div>
+        </div>      
+    </div>
+    <!-- Pricing End -->
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">What Our Clients Say</h6>
+                <h2 class="section-title mb-4">Customer Testimonials</h2>
+                <p class="mb-0">Hear from our satisfied customers across Virginia, DC, and Maryland</p>
+            </div>  
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="testimonial-card">
+                        <p class="mb-4">"SamstarCleanPro did an amazing job on my bathroom tile and grout! The grout lines look brand new, and the tiles are sparkling clean. Their team was professional, efficient, and friendly. Highly recommend their services!"</p>
+                        <h5 class="mb-1">Jessica M.</h5>
+                        <p class="mb-0"><small>Alexandria, VA</small></p>
+                        <div class="rating mt-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="testimonial-card">
+                        <p class="mb-4">"I couldn't believe the difference after SamstarCleanPro cleaned my kitchen backsplash. The grout was so stained, but now it looks fantastic! Their attention to detail and use of safe cleaning products made me feel comfortable having them in my home."</p>
+                        <h5 class="mb-1">David R.</h5>
+                        <p class="mb-0"><small>Bethesda, MD</small></p>
+                        <div class="rating mt-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </div>  
+    <!-- Testimonial End -->
+    <!-- Footer Start -->
+     <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-6 col-md-6 mb-5">
+                <h4 class="font-weight-semi-bold text-primary mb-4">Get In Touch</h4>
+                <p><i class="fa fa-map-marker-alt text-primary mr-2"></i>20132 Loudoun County, Virginia, USA</p>
+                <p><i class="fa fa-phone-alt text-primary mr-2"></i>+012 345 67890</p>
+                <p><i class="fa fa-envelope text-primary mr-2"></i>info@samstarcleanpro.com</p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-semi-bold text-primary mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                    <a class="text-white mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
+                    <a class="text-white mb-2" href="project.html"><i class="fa fa-angle-right mr-2"></i>Projects</a>
+                    <a class="text-white" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="font-weight-semi-bold text-white mb-2">Opening Hours:</h5>
+                <p class="mb-1">Mon – Sat, 8AM – 5PM</p>
+                <p class="mb-0">Sunday: Closed</p>
+                <p class="mt-3 mb-0"><small>Emergency services available 24/7</small></p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: #3E3E4E !important;">
+        <div class="row">
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white">Serving: <span class="text-primary">Virginia | Washington DC | Maryland</span></p>
+            </div>
+            <div class="col-lg-6 text-center text-md-right">
+                <p class="m-0 text-white">&copy; <a href="#" class="text-primary">SamstarCleanPro</a>. All Rights Reserved. Designed by <a href="https://thebrandrex.netlify.com" class="text-primary">The Brand Rex</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary px-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

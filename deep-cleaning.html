@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Deep Cleaning Services in Virginia, DC & Maryland | SamstarCleanPro</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="deep cleaning Virginia, deep cleaning DC, deep cleaning Maryland, spring cleaning, house deep cleaning DMV, apartment deep cleaning, post construction cleaning, intensive cleaning Alexandria, thorough cleaning Fairfax, detailed cleaning Bethesda" name="keywords">
+    <meta content="Professional deep cleaning services in Virginia, DC, and Maryland. Thorough, intensive cleaning for homes, apartments, and businesses. From baseboards to ceiling fans, we clean every corner. Book your deep clean today!" name="description">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Deep Cleaning Services Virginia, DC & Maryland | SamstarCleanPro">
+    <meta property="og:description" content="Intensive deep cleaning services for homes and businesses. We tackle dirt and grime others miss.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img/deep-cleaning-hero.jpg">
+    
+    <!-- Favicon -->
+    <link href="img/logo/just_logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Deep Cleaning Service",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "SamstarCleanPro",
+        "areaServed": ["Virginia", "Washington DC", "Maryland"]
+      },
+      "description": "Professional deep cleaning services for residential and commercial properties"
+    }
+    </script>
+    
+    <style>
+        .before-after-slider {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .before-after-slider img {
+            width: 100%;
+            display: block;
+        }
+        .before-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .slider-handle {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: white;
+            cursor: ew-resize;
+            transform: translateX(-50%);
+        }
+        .slider-handle::before {
+            content: '⟷';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--primary);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .area-card {
+            transition: all 0.3s;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        .area-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .area-card.selected {
+            border-color: var(--primary);
+            background: #e7f3ff;
+        }
+        .cleaning-level {
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s;
+            height: 100%;
+        }
+        .cleaning-level:hover {
+            border-color: var(--primary);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .cleaning-level.recommended {
+            border-color: var(--primary);
+            position: relative;
+        }
+        .cleaning-level.recommended::before {
+            content: 'RECOMMENDED';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-bottom: 1.5rem;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        .badge-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 2;
+        }
+        .seasonal-banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .seasonal-banner::before {
+            content: '🌸';
+            position: absolute;
+            font-size: 10rem;
+            opacity: 0.1;
+            right: -30px;
+            top: -30px;
+        }
+        .service-badge {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+        }
+        .modal-img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Start -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 bg-white d-none d-lg-block">
+                <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <img class="m-0 display-3 img-fluid" src="img/logo/logo_with_text.png" style="width: 200px; padding: 20px;" alt="SamstarCleanPro">
+                </a>
+            </div>
+            <div class="col-lg-9">
+                <div class="row bg-dark d-none d-lg-flex top-bar">
+                    <div class="col-lg-7 text-left text-white">
+                        <a class="text-white" href="mailto:info@samstarcleanpro.com">
+                            <div class="h-100 d-inline-flex align-items-center border-right border-white py-2 px-3">
+                                <i class="fa fa-envelope mr-2"></i>
+                                <small>info@samstarcleanpro.com</small>
+                            </div>
+                        </a>
+                        <a class="text-white" href="tel:+012345678">
+                            <div class="h-100 d-inline-flex align-items-center py-2 px-2">
+                                <i class="fa fa-phone-alt mr-2"></i>
+                                <small>+012 345 6789</small>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-5 text-right">
+                        <div class="d-inline-flex align-items-center pr-2">
+                            <a class="text-white p-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="text-white p-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="text-white p-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="text-white p-2" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
+                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <img class="m-0 display-3 img-fluid" src="img/logo/logo_with_text.png" style="width: 120px; padding: 10px;" alt="SamstarCleanPro">
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="about.html" class="nav-item nav-link">About</a>
+                            <a href="service.html" class="nav-item nav-link active">Services</a>
+                            <a href="project.html" class="nav-item nav-link">Projects</a>
+                            <a href="datacenter.html" class="nav-item nav-link">Data Center Cleaning</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Resources</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="blog.html" class="dropdown-item">Latest Blog</a>
+                                    <a href="blog-detail.html" class="dropdown-item">Blog Detail</a>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        </div>
+                        <a href="quote.html" class="btn btn-primary text-white mr-3 d-none d-lg-block">Get Free Quote</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5">
+        <div class="container py-5">
+            <div class="row align-items-center py-4">
+                <div class="col-md-6 text-center text-md-left">
+                    <h1 class="display-4 mb-4 mb-md-0 text-white">Deep Cleaning Services</h1>
+                    <p class="text-white mb-0">Intensive cleaning that goes beyond surface level</p>
+                </div>
+                <div class="col-md-6 text-center text-md-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="btn btn-sm btn-outline-light" href="index.html">Home</a>
+                        <i class="fas fa-angle-double-right text-light mx-2"></i>
+                        <a class="btn btn-sm btn-outline-light" href="service.html">Services</a>
+                        <i class="fas fa-angle-double-right text-light mx-2"></i>
+                        <a class="btn btn-sm btn-outline-light disabled" href="">Deep Cleaning</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Hero Section Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Thorough & Intensive</h6>
+                    <h1 class="mb-4 section-title">Professional Deep Cleaning Services in Virginia, DC & Maryland</h1>
+                    <p class="mb-4">When regular cleaning isn't enough, SamstarCleanPro's deep cleaning service tackles dirt, grime, and buildup that accumulates over time. Our comprehensive approach goes beyond surface cleaning to address every nook, cranny, and hard-to-reach area in your home or business throughout the DMV region.</p>
+                    <p class="mb-4">Perfect for spring cleaning, post-renovation cleanup, preparing for special events, or simply giving your space the thorough refresh it deserves. Our experienced team uses professional-grade equipment and eco-friendly products to deliver results that standard cleaning simply can't match.</p>
+                    <div class="row mb-4">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fa fa-3x fa-check-circle text-primary mr-3"></i>
+                                <div>
+                                    <h5 class="mb-0">Top to Bottom</h5>
+                                    <small>Every surface cleaned</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fa fa-3x fa-leaf text-primary mr-3"></i>
+                                <div>
+                                    <h5 class="mb-0">Eco-Friendly</h5>
+                                    <small>Safe for family & pets</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="quote.html" class="btn btn-primary text-white mr-3">Get Free Quote</a>
+                    <a href="tel:+012345678" class="btn btn-outline-primary">Call: +012 345 6789</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="img/deep-cleaning-hero.jpg" class="img-fluid rounded shadow-lg" alt="Deep Cleaning Services DMV">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Section End -->
+
+
+    <!-- What is Deep Cleaning Start -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Understanding Deep Cleaning</h6>
+                <h2 class="section-title mb-4">What Makes Deep Cleaning Different?</h2>
+                <p class="mb-0">Deep cleaning goes far beyond regular maintenance cleaning</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="cleaning-level bg-white">
+                        <div class="service-badge bg-light text-secondary">
+                            <i class="fas fa-broom"></i>
+                        </div>
+                        <h3 class="text-center mb-4">Regular Cleaning</h3>
+                        <ul class="mb-0">
+                            <li class="mb-2">Surface dusting and wiping</li>
+                            <li class="mb-2">Vacuuming and mopping floors</li>
+                            <li class="mb-2">Basic bathroom sanitizing</li>
+                            <li class="mb-2">Kitchen counter cleaning</li>
+                            <li class="mb-2">Trash removal</li>
+                            <li class="mb-2">Quick tidying up</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="cleaning-level recommended bg-white">
+                        <div class="service-badge bg-primary text-white">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3 class="text-center mb-4">Deep Cleaning</h3>
+                        <ul class="mb-0">
+                            <li class="mb-2"><strong>Everything in regular cleaning PLUS:</strong></li>
+                            <li class="mb-2">Behind and under furniture</li>
+                            <li class="mb-2">Inside appliances (oven, refrigerator, microwave)</li>
+                            <li class="mb-2">Baseboards and crown molding</li>
+                            <li class="mb-2">Light fixtures and ceiling fans</li>
+                            <li class="mb-2">Window tracks and sills</li>
+                            <li class="mb-2">Cabinet interiors and exteriors</li>
+                            <li class="mb-2">Grout and tile scrubbing</li>
+                            <li class="mb-2">Door frames and switch plates</li>
+                            <li class="mb-2">Air vent covers</li>
+                            <li class="mb-2">Detailed bathroom scrubbing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- What is Deep Cleaning End -->
+
+
+    <!-- Areas We Deep Clean Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Comprehensive Service</h6>
+                <h2 class="section-title mb-4">Areas We Deep Clean in Your Home or Business</h2>
+                <p class="mb-0">Click each area to see what's included</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="area-card bg-light p-4 rounded">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fa fa-3x fa-utensils text-primary mr-3"></i>
+                            <h4 class="mb-0">Kitchen Deep Clean</h4>
+                        </div>
+                        <ul class="small mb-0">
+                            <li>Oven interior deep scrub</li>
+                            <li>Refrigerator inside & out</li>
+                            <li>Microwave deep clean</li>
+                            <li>Dishwasher cleaning</li>
+                            <li>Cabinet fronts & handles</li>
+                            <li>Backsplash scrubbing</li>
+                            <li>Countertop deep clean</li>
+                            <li>Sink & faucet polish</li>
+                            <li>Small appliance exteriors</li>
+                            <li>Range hood degreasing</li>
+                            <li>Floor corners & edges</li>
+                            <li>Baseboard scrubbing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="area-card bg-light p-4 rounded">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fa fa-3x fa-bath text-primary mr-3"></i>
+                            <h4 class="mb-0">Bathroom Deep Clean</h4>
+                        </div>
+                        <ul class="small mb-0">
+                            <li>Shower/tub tile & grout scrub</li>
+                            <li>Toilet complete sanitization</li>
+                            <li>Sink & vanity deep clean</li>
+                            <li>Mirror & glass polishing</li>
+                            <li>Cabinet cleaning inside & out</li>
+                            <li>Exhaust fan cleaning</li>
+                            <li>Light fixture detailing</li>
+                            <li>Door & frame wiping</li>
+                            <li>Baseboard scrubbing</li>
+                            <li>Floor tile & grout cleaning</li>
+                            <li>Fixture descaling</li>
+                            <li>Mold & mildew removal</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="area-card bg-light p-4 rounded">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fa fa-3x fa-bed text-primary mr-3"></i>
+                            <h4 class="mb-0">Bedrooms & Living</h4>
+                        </div>
+                        <ul class="small mb-0">
+                            <li>Ceiling fan blade cleaning</li>
+                            <li>Light fixture dusting</li>
+                            <li>Window sill deep clean</li>
+                            <li>Window track cleaning</li>
+                            <li>Baseboard wiping</li>
+                            <li>Door frame detailing</li>
+                            <li>Closet interior vacuuming</li>
+                            <li>Behind furniture cleaning</li>
+                            <li>Under bed vacuuming</li>
+                            <li>Air vent cover wiping</li>
+                            <li>Switch plate cleaning</li>
+                            <li>Detailed carpet vacuuming</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="area-card bg-light p-4 rounded">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fa fa-3x fa-couch text-primary mr-3"></i>
+                            <h4 class="mb-0">Living Room Deep Clean</h4>
+                        </div>
+                        <ul class="small mb-0">
+                            <li>Entertainment center dusting</li>
+                            <li>Behind TV & electronics</li>
+                            <li>Under cushions vacuuming</li>
+                            <li>Picture frame dusting</li>
+                            <li>Bookshelf cleaning</li>
+                            <li>Window treatment dusting</li>
+                            <li>Coffee table detailing</li>
+                            <li>Corner cobweb removal</li>
+                            <li>Floor edge cleaning</li>
+                            <li>Wall spot cleaning</li>
+                            <li>Light switch detailing</li>
+                            <li>Vent cover cleaning</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="area-card bg-light p-4 rounded">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fa fa-3x fa-door-open text-primary mr-3"></i>
+                            <h4 class="mb-0">Common Areas</h4>
+                        </div>
+                        <ul class="small mb-0">
+                            <li>Staircase deep vacuuming</li>
+                            <li>Railing & banister wiping</li>
+                            <li>Hallway corners & edges</li>
+                            <li>Entryway detailed cleaning</li>
+                            <li>Coat closet organizing clean</li>
+                            <li>Light switch plates</li>
+                            <li>Door handles polishing</li>
+                            <li>Baseboard scrubbing</li>
+                            <li>Floor corner cleaning</li>
+                            <li>Wall scuff removal</li>
+                            <li>Ceiling corner cobwebs</li>
+                            <li>Threshold cleaning</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="area-card bg-light p-4 rounded">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fa fa-3x fa-home text-primary mr-3"></i>
+                            <h4 class="mb-0">Additional Spaces</h4>
+                        </div>
+                        <ul class="small mb-0">
+                            <li>Laundry room deep clean</li>
+                            <li>Washer & dryer exteriors</li>
+                            <li>Balcony or patio scrubbing</li>
+                            <li>Garage floor sweeping</li>
+                            <li>Utility room organizing</li>
+                            <li>Storage area tidying</li>
+                            <li>Pet area sanitizing</li>
+                            <li>Home office detailing</li>
+                            <li>Basement deep cleaning</li>
+                            <li>Attic access area</li>
+                            <li>Window exterior (optional)</li>
+                            <li>Gutter cleaning (optional)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Areas We Deep Clean End -->
+
+
+    <!-- Before & After Gallery Start -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">See The Difference</h6>
+                <h2 class="section-title mb-4">Deep Cleaning Before & After Results</h2>
+                <p class="mb-0">Real results from our deep cleaning services across Virginia, DC, and Maryland</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <span class="badge badge-primary badge-tag">Kitchen</span>
+                        <img src="img/before-after-kitchen.jpg" alt="Kitchen Deep Cleaning Before After" data-lightbox="gallery" data-title="Kitchen Deep Cleaning - Alexandria, VA">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Kitchen Transformation</h5>
+                                <p class="mb-0 small">Alexandria, VA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <span class="badge badge-info badge-tag">Bathroom</span>
+                        <img src="img/before-after-bathroom.jpg" alt="Bathroom Deep Cleaning Before After" data-lightbox="gallery" data-title="Bathroom Deep Cleaning - Bethesda, MD">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Bathroom Refresh</h5>
+                                <p class="mb-0 small">Bethesda, MD</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <span class="badge badge-success badge-tag">Living Room</span>
+                        <img src="img/before-after-living.jpg" alt="Living Room Deep Cleaning Before After" data-lightbox="gallery" data-title="Living Room Deep Cleaning - Arlington, VA">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Living Room Renewal</h5>
+                                <p class="mb-0 small">Arlington, VA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <span class="badge badge-warning badge-tag">Bedroom</span>
+                        <img src="img/before-after-bedroom.jpg" alt="Bedroom Deep Cleaning Before After" data-lightbox="gallery" data-title="Bedroom Deep Cleaning - Fairfax, VA">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Bedroom Makeover</h5>
+                                <p class="mb-0 small">Fairfax, VA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <span class="badge badge-danger badge-tag">Office</span>
+                        <img src="img/before-after-office.jpg" alt="Office Deep Cleaning Before After" data-lightbox="gallery" data-title="Office Deep Cleaning - Washington DC">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Office Restoration</h5>
+                                <p class="mb-0 small">Washington DC</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <span class="badge badge-dark badge-tag">Carpet</span>
+                        <img src="img/before-after-carpet.jpg" alt="Carpet Deep Cleaning Before After" data-lightbox="gallery" data-title="Carpet Deep Cleaning - Silver Spring, MD">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Carpet Revival</h5>
+                                <p class="mb-0 small">Silver Spring, MD</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <!-- Before & After Gallery End -->
+     
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-6 col-md-6 mb-5">
+                <h4 class="font-weight-semi-bold text-primary mb-4">Get In Touch</h4>
+                <p><i class="fa fa-map-marker-alt text-primary mr-2"></i>20132 Loudoun County, Virginia, USA</p>
+                <p><i class="fa fa-phone-alt text-primary mr-2"></i>+012 345 67890</p>
+                <p><i class="fa fa-envelope text-primary mr-2"></i>info@samstarcleanpro.com</p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-semi-bold text-primary mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                    <a class="text-white mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
+                    <a class="text-white mb-2" href="project.html"><i class="fa fa-angle-right mr-2"></i>Projects</a>
+                    <a class="text-white" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="font-weight-semi-bold text-white mb-2">Opening Hours:</h5>
+                <p class="mb-1">Mon – Sat, 8AM – 5PM</p>
+                <p class="mb-0">Sunday: Closed</p>
+                <p class="mt-3 mb-0"><small>Emergency services available 24/7</small></p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: #3E3E4E !important;">
+        <div class="row">
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white">Serving: <span class="text-primary">Virginia | Washington DC | Maryland</span></p>
+            </div>
+            <div class="col-lg-6 text-center text-md-right">
+                <p class="m-0 text-white">&copy; <a href="#" class="text-primary">SamstarCleanPro</a>. All Rights Reserved. Designed by <a href="https://thebrandrex.netlify.com" class="text-primary">The Brand Rex</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary px-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

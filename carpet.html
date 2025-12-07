@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Professional Carpet Cleaning Services in Virginia, DC & Maryland | SamstarCleanPro</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="carpet cleaning Virginia, carpet cleaning DC, carpet cleaning Maryland, area rug cleaning, upholstery cleaning, pet stain removal, steam cleaning carpet, commercial carpet cleaning DMV, residential carpet cleaning, carpet deep clean Alexandria, professional carpet Fairfax" name="keywords">
+    <meta content="Expert carpet and upholstery cleaning services in Virginia, DC, and Maryland. We eliminate deep dirt, stains, and odors using powerful steam cleaning. Safe, eco-friendly process. Book your carpet revival today!" name="description">
+    
+    <meta property="og:title" content="Carpet & Upholstery Cleaning Services Virginia, DC & Maryland | SamstarCleanPro">
+    <meta property="og:description" content="Professional steam and deep cleaning for carpets, rugs, and furniture.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img/carpet-cleaning-hero.jpg"> 
+    
+    <link href="img/logo/just_logo.png" rel="icon">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Carpet Cleaning Service",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "SamstarCleanPro",
+        "areaServed": ["Virginia", "Washington DC", "Maryland"]
+      },
+      "description": "Professional steam cleaning services for residential and commercial carpets and upholstery"
+    }
+    </script>
+    
+    <style>
+        .before-after-slider {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .before-after-slider img {
+            width: 100%;
+            display: block;
+        }
+        .before-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .slider-handle {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: white;
+            cursor: ew-resize;
+            transform: translateX(-50%);
+        }
+        .slider-handle::before {
+            content: '⟷';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--primary);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .area-card {
+            transition: all 0.3s;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        .area-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .area-card.selected {
+            border-color: var(--primary);
+            background: #e7f3ff;
+        }
+        .cleaning-level {
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s;
+            height: 100%;
+        }
+        .cleaning-level:hover {
+            border-color: var(--primary);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .cleaning-level.recommended {
+            border-color: var(--primary);
+            position: relative;
+        }
+        .cleaning-level.recommended::before {
+            content: 'POWER CLEAN'; /* MODIFIED for carpet context */
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-bottom: 1.5rem;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        .badge-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 2;
+        }
+        .service-badge {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+        }
+        .modal-img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        /* New style for the process steps */
+        .process-step {
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 1px solid #dee2e6;
+            margin-bottom: 1rem;
+            height: 100%;
+            transition: all 0.3s;
+        }
+        .process-step:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
+        .process-icon {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Start -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 bg-white d-none d-lg-block">
+                <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <img class="m-0 display-3 img-fluid" src="img/logo/logo_with_text.png" style="width: 200px; padding: 20px;" alt="SamstarCleanPro">
+                </a>
+            </div>
+            <div class="col-lg-9">
+                <div class="row bg-dark d-none d-lg-flex top-bar">
+                    <div class="col-lg-7 text-left text-white">
+                        <a class="text-white" href="mailto:info@samstarcleanpro.com">
+                            <div class="h-100 d-inline-flex align-items-center border-right border-white py-2 px-3">
+                                <i class="fa fa-envelope mr-2"></i>
+                                <small>info@samstarcleanpro.com</small>
+                            </div>
+                        </a>
+                        <a class="text-white" href="tel:+012345678">
+                            <div class="h-100 d-inline-flex align-items-center py-2 px-2">
+                                <i class="fa fa-phone-alt mr-2"></i>
+                                <small>+012 345 6789</small>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-5 text-right">
+                        <div class="d-inline-flex align-items-center pr-2">
+                            <a class="text-white p-2" href="#" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="text-white p-2" href="#" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="text-white p-2" href="#" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a class="text-white p-2" href="#" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
+                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <img class="m-0 display-3 img-fluid" src="img/logo/logo_with_text.png" style="width: 120px; padding: 10px;" alt="SamstarCleanPro">
+                    </a>
+
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="about.html" class="nav-item nav-link">About</a>
+                            <div class="nav-item dropdown">
+                                <a href="service.html" class="nav-link dropdown-toggle active" data-toggle="dropdown">Services</a>
+                                <div class="dropdown-menu rounded-0 m-0" aria-labelledby="servicesDropdown">
+                                    <a href="residential.html" class="dropdown-item">Residential Cleaning</a>
+                                    <a href="commercial.html" class="dropdown-item">Commercial Cleaning</a>
+                                    <a href="move-in-out.html" class="dropdown-item">Move In/Out Cleaning</a>
+                                    <a href="deep-cleaning.html" class="dropdown-item">Deep Cleaning</a>
+                                    <a href="carpet.html" class="dropdown-item">Carpet Cleaning</a>
+                                    <a href="tile-grout.html" class="dropdown-item">Tile &amp; Grout Cleaning</a>
+                                </div>
+                            </div>
+                            <a href="datacenter.html" class="nav-item nav-link">Data Center Cleaning</a>
+                            <a href="blog.html" class="nav-item nav-link">Blog</a>                            
+                            <a href="quote.html" class="nav-item nav-link">Contact</a>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary text-white mr-3 d-none d-lg-block">Book Now</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+    
+    <!-- Page Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5">
+        <div class="container py-5">
+            <div class="row align-items-center py-4">
+                <div class="col-md-6 text-center text-md-left">
+                    <h1 class="display-4 mb-4 mb-md-0 text-white">Professional Carpet Cleaning</h1>
+                    <p class="text-white mb-0">Deep Steam Cleaning for Carpets, Rugs, and Upholstery</p>
+                </div>
+                <div class="col-md-6 text-center text-md-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="btn btn-sm btn-outline-light" href="index.html">Home</a>
+                        <i class="fas fa-angle-double-right text-light mx-2"></i>
+                        <a class="btn btn-sm btn-outline-light" href="service.html">Services</a>
+                        <i class="fas fa-angle-double-right text-light mx-2"></i>
+                        <a class="btn btn-sm btn-outline-light disabled" href="">Carpet Cleaning</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Hero Section Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Restore & Refresh</h6>
+                    <h1 class="mb-4 section-title">Expert Carpet Cleaning Services in Virginia, DC & Maryland</h1>
+                    <p class="mb-4">Don't replace your carpets—**revive** them! SamstarCleanPro specializes in professional **Hot Water Extraction (Steam Cleaning)** to remove deeply embedded dirt, allergens, tough stains, and odors that regular vacuuming leaves behind.</p>
+                    <p class="mb-4">Serving residential and commercial clients across the DMV, our certified technicians use powerful, truck-mounted equipment and non-toxic, pet-safe solutions to ensure a deep, healthy clean. Your carpets will look brighter, feel softer, and dry faster.</p>
+                    <div class="row mb-4">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fa fa-3x fa-steam text-primary mr-3"></i>
+                                <div>
+                                    <h5 class="mb-0">Deep Steam Clean</h5>
+                                    <small>Extracts deep-seated grime</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fa fa-3x fa-paw text-primary mr-3"></i>
+                                <div>
+                                    <h5 class="mb-0">Pet & Allergen Safe</h5>
+                                    <small>Removes dander and odors</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="quote.html" class="btn btn-primary text-white mr-3">Get Carpet Quote</a>
+                    <a href="tel:+012345678" class="btn btn-outline-primary">Call: +012 345 6789</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="img/carpet-cleaning-hero.jpg" class="img-fluid rounded shadow-lg" alt="Professional Carpet Cleaning in DMV">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Section End -->
+
+    <!-- Proven Method Start -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Our Proven Method</h6>
+                <h2 class="section-title mb-4">The SamstarCleanPro 5-Step Carpet Revival Process</h2>
+                <p class="mb-0">We follow a rigorous process to ensure maximum dirt and stain removal, leaving your carpets truly clean.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="process-step">
+                        <div class="process-icon"><i class="fas fa-search"></i></div>
+                        <h5 class="mb-3">1. Inspection</h5>
+                        <p class="small mb-0">Identify carpet type, fabric, and trouble areas (heavy soiling, stains, damage).</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="process-step">
+                        <div class="process-icon"><i class="fas fa-brush"></i></div>
+                        <h5 class="mb-3">2. Pre-Treatment</h5>
+                        <p class="small mb-0">Apply eco-friendly pre-spray to break down soil and loosen oil and grease particles.</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="process-step">
+                        <div class="process-icon"><i class="fas fa-steam"></i></div>
+                        <h5 class="mb-3">3. Hot Water Extraction</h5>
+                        <p class="small mb-0">Deep rinse with powerful steam equipment, extracting dirt, water, and cleaning solution.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="process-step">
+                        <div class="process-icon"><i class="fas fa-magic"></i></div>
+                        <h5 class="mb-3">4. Spot & Stain Removal</h5>
+                        <p class="small mb-0">Target any stubborn remaining spots and apply professional-grade stain removers.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="process-step">
+                        <div class="process-icon"><i class="fas fa-wind"></i></div>
+                        <h5 class="mb-3">5. Post-Grooming</h5>
+                        <p class="small mb-0">Groom the carpet pile for uniform look and faster drying time (optional protector application).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Proven Method End -->
+
+    <!-- Beyond Carpets Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Beyond Carpets</h6>
+                <h2 class="section-title mb-4">Our Carpet & Fabric Cleaning Services</h2>
+                <p class="mb-0">We clean all types of fabrics and areas in your home or business</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="area-card bg-light p-4 rounded">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fa fa-3x fa-house-damage text-primary mr-3"></i>
+                            <h4 class="mb-0">Residential Carpet</h4>
+                        </div>
+                        <ul class="small mb-0">
+                            <li>All room sizes and traffic areas</li>
+                            <li>Staircase deep cleaning</li>
+                            <li>Hallway and entryway restoration</li>
+                            <li>Fiber-safe pre-conditioning treatment</li>
+                            <li>Specialized pet odor and urine treatment</li>
+                            <li>Teflon carpet protection (add-on)</li>
+                            <li>Safe for kids, pets, and hypoallergenic needs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="area-card bg-light p-4 rounded">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fa fa-3x fa-couch text-primary mr-3"></i>
+                            <h4 class="mb-0">Upholstery & Furniture</h4>
+                        </div>
+                        <ul class="small mb-0">
+                            <li>Sofa and sectional cleaning</li>
+                            <li>Love seats, armchairs, and recliners</li>
+                            <li>Dining room chair cushions</li>
+                            <li>Mattress cleaning and sanitization</li>
+                            <li>Fabric-specific spot cleaning</li>
+                            <li>Leather cleaning and conditioning</li>
+                            <li>Deep extraction for allergens and dust mites</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="area-card bg-light p-4 rounded">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fa fa-3x fa-rug text-primary mr-3"></i>
+                            <h4 class="mb-0">Area Rug Cleaning</h4>
+                        </div>
+                        <ul class="small mb-0">
+                            <li>Oriental and Persian rug cleaning</li>
+                            <li>Synthetic and natural fiber rugs (wool, cotton)</li>
+                            <li>In-home or off-site rug cleaning options</li>
+                            <li>Fringe cleaning and brightening</li>
+                            <li>Color-safe cleaning solutions</li>
+                            <li>Odor treatment for heavily soiled rugs</li>
+                            <li>Careful handling of antique and delicate rugs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="area-card bg-light p-4 rounded">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fa fa-3x fa-building text-primary mr-3"></i>
+                            <h4 class="mb-0">Commercial Carpet</h4>
+                        </div>
+                        <ul class="small mb-0">
+                            <li>Office building and lobby carpet</li>
+                            <li>Low-moisture commercial cleaning available</li>
+                            <li>High-traffic area stain removal</li>
+                            <li>Flexible scheduling (evenings/weekends)</li>
+                            <li>Retail space and restaurant carpet</li>
+                            <li>Apartment common area cleaning</li>
+                            <li>Long-term maintenance plans available</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="area-card bg-light p-4 rounded">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fa fa-3x fa-car text-primary mr-3"></i>
+                            <h4 class="mb-0">Vehicle Upholstery</h4>
+                        </div>
+                        <ul class="small mb-0">
+                            <li>Car seat and floor upholstery cleaning</li>
+                            <li>Boat and RV interior fabric cleaning</li>
+                            <li>Stain and spill removal</li>
+                            <li>Odor elimination for vehicle interiors</li>
+                            <li>Deep cleaning of headliners</li>
+                            <li>Safe for all interior fabric types</li>
+                            <li>Full vehicle interior detailing (add-on)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="area-card bg-light p-4 rounded">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fa fa-3x fa-box text-primary mr-3"></i>
+                            <h4 class="mb-0">Specialty Treatments</h4>
+                        </div>
+                        <ul class="small mb-0">
+                            <li>Water Damage Restoration (immediate response)</li>
+                            <li>Advanced Stain Removal (ink, wine, coffee)</li>
+                            <li>Disinfecting/Sanitizing treatment</li>
+                            <li>Odor Control (smoke, mildew)</li>
+                            <li>Fiber Protection Application</li>
+                            <li>Deodorizing and fresh scent application</li>
+                            <li>Guaranteed service for all cleanings</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Beyond Carpets End -->
+
+    <!-- Proof Start-->
+    <div class="container-fluid bg-light py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Proof of Deep Cleaning</h6>
+                <h2 class="section-title mb-4">Carpet & Upholstery Before & After Gallery</h2>
+                <p class="mb-0">See the visible transformation of dirty and stained carpets into fresh, renewed floors.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <span class="badge badge-primary badge-tag">Traffic Area</span>
+                        <img src="img/ba-carpet-traffic.jpg" alt="Dirty Carpet Traffic Area Before After" data-lightbox="gallery" data-title="High-Traffic Carpet Restoration - Fairfax, VA">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Hallway Carpet Revival</h5>
+                                <p class="mb-0 small">Fairfax, VA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <span class="badge badge-info badge-tag">Pet Stain</span>
+                        <img src="img/ba-carpet-petstain.jpg" alt="Pet Stain Removal Before After" data-lightbox="gallery" data-title="Pet Stain & Odor Treatment - Bethesda, MD">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Complete Pet Stain Removal</h5>
+                                <p class="mb-0 small">Bethesda, MD</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <span class="badge badge-success badge-tag">Upholstery</span>
+                        <img src="img/ba-upholstery-sofa.jpg" alt="Sofa Upholstery Cleaning Before After" data-lightbox="gallery" data-title="Sofa Upholstery Steam Clean - Washington DC">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Sofa Upholstery Refresh</h5>
+                                <p class="mb-0 small">Washington DC</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <span class="badge badge-warning badge-tag">Area Rug</span>
+                        <img src="img/ba-arearug-cleaning.jpg" alt="Area Rug Cleaning Before After" data-lightbox="gallery" data-title="Area Rug Deep Cleaning - Arlington, VA">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Area Rug Color Restoration</h5>
+                                <p class="mb-0 small">Arlington, VA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <span class="badge badge-danger badge-tag">Commercial</span>
+                        <img src="img/ba-commercial-carpet.jpg" alt="Commercial Carpet Cleaning Before After" data-lightbox="gallery" data-title="Commercial Office Carpet Cleaning - Rockville, MD">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Office Carpet Overhaul</h5>
+                                <p class="mb-0 small">Rockville, MD</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <span class="badge badge-dark badge-tag">Bedroom</span>
+                        <img src="img/ba-bedroom-carpet.jpg" alt="Bedroom Carpet Cleaning Before After" data-lightbox="gallery" data-title="Residential Bedroom Carpet - Alexandria, VA">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Bedroom Carpet Deep Clean</h5>
+                                <p class="mb-0 small">Alexandria, VA</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <!-- Proof End-->
+    
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-6 col-md-6 mb-5">
+                <h4 class="font-weight-semi-bold text-primary mb-4">Get In Touch</h4>
+                <p><i class="fa fa-map-marker-alt text-primary mr-2"></i>20132 Loudoun County, Virginia, USA</p>
+                <p><i class="fa fa-phone-alt text-primary mr-2"></i>+012 345 67890</p>
+                <p><i class="fa fa-envelope text-primary mr-2"></i>info@samstarcleanpro.com</p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-semi-bold text-primary mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                    <a class="text-white mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-semi-bold text-primary mb-4">Other Services</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="deep-cleaning.html"><i class="fa fa-angle-right mr-2"></i>Deep Cleaning</a>
+                    <a class="text-white mb-2" href="datacenter.html"><i class="fa fa-angle-right mr-2"></i>Data Center Cleaning</a>
+                    <a class="text-white mb-2" href="quote.html"><i class="fa fa-angle-right mr-2"></i>Get a Quote</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: #3e3e40 !important;">
+            <div class="row">
+                <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                    <p class="m-0 text-white">&copy; <a href="#">SamstarCleanPro</a>. All Rights Reserved. Designed by <a href="https://htmlcodex.com">HTML Codex</a>
+                    </p>
+                </div>
+                <div class="col-lg-6 text-center text-md-right">
+                    <ul class="nav d-inline-flex">
+                        <li class="nav-item">
+                            <a class="nav-link text-white py-0" href="#">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white py-0" href="#">Terms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white py-0" href="#">FAQs</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
