@@ -3,14 +3,14 @@
 
 <head>
     <meta charset="utf-8">
-    <title>About Us - Professional Cleaning Company in Virginia, DC & Maryland | SamstarCleanPro</title>
+    <title>Commercial Cleaning Services in Virginia, DC & Maryland | SamstarCleanPro</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="about cleaning company Virginia, professional cleaners DC, cleaning services Maryland, commercial cleaning DMV, data center cleaning specialists, cleaning company history, certified cleaners DMV" name="keywords">
-    <meta content="Learn about SamstarCleanPro, a trusted cleaning company serving Virginia, Washington DC, and Maryland for over 10 years. We specialize in commercial and data center cleaning with certified professionals." name="description">
+    <meta content="commercial cleaning Virginia, office cleaning DC, janitorial services Maryland, business cleaning DMV, commercial cleaners Northern Virginia, office janitorial Washington DC, retail cleaning Fairfax, medical office cleaning Bethesda, professional cleaning Alexandria, corporate cleaning Arlington" name="keywords">
+    <meta content="Professional commercial cleaning services for businesses in Virginia, DC, and Maryland. Office cleaning, janitorial services, retail cleaning, and more. Flexible scheduling, certified cleaners. Serving the entire DMV region since 2014." name="description">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="About SamstarCleanPro - Leading Cleaning Company in Virginia, DC & Maryland">
-    <meta property="og:description" content="Discover why businesses across the DMV region trust SamstarCleanPro for their commercial and specialized cleaning needs.">
+    <meta property="og:title" content="Commercial Cleaning Services Virginia, DC & Maryland | SamstarCleanPro">
+    <meta property="og:description" content="Trusted commercial cleaning for offices, retail, medical facilities, and more across the DMV region.">
     <meta property="og:type" content="website">
     
     <!-- Favicon -->
@@ -29,6 +29,168 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Commercial Cleaning Service",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "SamstarCleanPro",
+        "areaServed": ["Virginia", "Washington DC", "Maryland"],
+        "telephone": "+012-345-67890"
+      },
+      "description": "Professional commercial cleaning and janitorial services for businesses"
+    }
+    </script>
+    
+    <style>
+        .industry-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s;
+            height: 100%;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        .industry-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(102,126,234,0.1) 0%, transparent 70%);
+            transition: all 0.5s;
+            opacity: 0;
+        }
+        .industry-card:hover::before {
+            opacity: 1;
+        }
+        .industry-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        .industry-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: white;
+            transition: all 0.3s;
+        }
+        .industry-card:hover .industry-icon {
+            transform: scale(1.1) rotate(10deg);
+        }
+        .benefit-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+            margin-bottom: 1rem;
+            transition: all 0.3s;
+        }
+        .benefit-item:hover {
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transform: translateX(10px);
+        }
+        .stats-counter {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 3rem 2rem;
+            color: white;
+            text-align: center;
+        }
+        .stats-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .client-logo {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 120px;
+            transition: all 0.3s;
+            filter: grayscale(100%);
+            opacity: 0.7;
+        }
+        .client-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .service-feature {
+            display: flex;
+            align-items: start;
+            margin-bottom: 1.5rem;
+        }
+        .service-feature i {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-right: 1rem;
+            margin-top: 0.25rem;
+        }
+        .pricing-table {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .pricing-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        .pricing-body {
+            padding: 2rem;
+        }
+        .comparison-point {
+            padding: 1rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .comparison-point:last-child {
+            border-bottom: none;
+        }
+        .checklist-section {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        .checklist-item {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .checklist-item:last-child {
+            border-bottom: none;
+        }
+        .cta-banner {
+            background: linear-gradient(135deg, rgba(102,126,234,0.9) 0%, rgba(118,75,162,0.9) 100%), url('img/commercial-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            padding: 4rem 2rem;
+            color: white;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -52,7 +214,7 @@
                         <a class="text-white" href="tel:+012345678">
                             <div class="h-100 d-inline-flex align-items-center py-2 px-2">
                                 <i class="fa fa-phone-alt mr-2"></i>
-                                <small>+157 164 3856</small>
+                                <small>+012 345 6789</small>
                             </div>
                         </a>
                     </div>
@@ -110,43 +272,21 @@
 
 
     <!-- Page Header Start -->
-    <div class="container-fluid bg-portfolio py-5 mb-5">
+    <div class="container-fluid bg-primary py-5 mb-5">
         <div class="container py-5">
             <div class="row align-items-center py-4">
-                <div class="col-md-12 text-center text-md-left">
-                    <div class="text-center">
-                        <h2 class="display-4 mb-4 mb-md-0 text-white text-center"> COMMERCIAL CLEANING</h2>
-                        <p class="text-white mt-2">At SamstarCleanPro, we deliver top-tier Commercial Cleaning Services that keep your workplace spotless, productive, and welcoming—without disrupting your operations or your team’s focus.</p>
-
-                        <div class="row">
-                            <div class="col-lg-4 col-md-6 mb-4">
-                                <div class="p-4 rounded top-service-portfolio align-items-center">
-                                    <i class="fa fa-3x fa-home text-primary mb-4 bg-light p-3 rounded"></i>
-                                    <h4 class="mb-2 text-white"><b>A Cleaner Workspace</b></h4>
-                                    <p class="text-white">Shine in Every Area</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 mb-4">
-                                <div class="p-4 rounded top-service-portfolio">
-                                    <i class="fa fa-3x fa-brain text-primary mb-4 bg-light p-3 rounded"></i>
-                                    <h4 class="mb-2 text-white"><b>A Sharper Focus</b></h4>
-                                    <p class="text-white">Clarity Every Task</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 mb-4">
-                                <div class="p-4 rounded top-service-portfolio">
-                                    <i class="fa fa-3x fa-heart text-primary mb-4 bg-light p-3 rounded"></i>
-                                    <h4 class="mb-2 text-white"><b>A Stronger Business</b></h4>
-                                    <p class="text-white">Thrive Every Day</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    
+                <div class="col-md-6 text-center text-md-left">
+                    <h1 class="display-4 mb-4 mb-md-0 text-white">Tile & Grout Cleaning</h1>
+                    <p class="text-white mb-0">Professional restoration for all tile surfaces</p>
                 </div>
                 <div class="col-md-6 text-center text-md-right">
-                    
+                    <div class="d-inline-flex align-items-center">
+                        <a class="btn btn-sm btn-outline-light" href="index.html">Home</a>
+                        <i class="fas fa-angle-double-right text-light mx-2"></i>
+                        <a class="btn btn-sm btn-outline-light" href="service.html">Services</a>
+                        <i class="fas fa-angle-double-right text-light mx-2"></i>
+                        <a class="btn btn-sm btn-outline-light disabled" href="">Tile & Grout</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -154,99 +294,486 @@
     <!-- Page Header End -->
 
 
-    <!-- About Start -->
+    <!-- Hero Section Start -->
     <div class="container-fluid py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="d-flex flex-column align-items-center justify-content-center bg-about rounded h-100 py-5 px-3">  
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Trusted by DMV Businesses</h6>
+                    <h1 class="mb-4 section-title">Professional Commercial Cleaning Services in Virginia, DC & Maryland</h1>
+                    <p class="mb-4">Your business deserves a cleaning partner as professional as you are. SamstarCleanPro provides comprehensive commercial cleaning and janitorial services to businesses throughout Northern Virginia, Washington DC, and Maryland. From small offices in Alexandria to large corporate facilities in Tysons Corner, we deliver consistent, high-quality cleaning that helps your business shine.</p>
+                    <p class="mb-4">We understand that every business has unique needs, schedules, and standards. That's why we offer flexible cleaning plans, after-hours service, and customized solutions tailored to your industry and requirements. Our trained, background-checked professionals use eco-friendly products and proven methods to maintain clean, healthy work environments across the DMV region.</p>
+                    <div class="row mb-4">
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa fa-2x fa-certificate text-primary mr-3"></i>
+                                <div>
+                                    <h6 class="mb-0">Fully Insured & Bonded</h6>
+                                    <small class="text-muted">Comprehensive coverage</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa fa-2x fa-user-check text-primary mr-3"></i>
+                                <div>
+                                    <h6 class="mb-0">Background Checked</h6>
+                                    <small class="text-muted">Trusted professionals</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa fa-2x fa-clock text-primary mr-3"></i>
+                                <div>
+                                    <h6 class="mb-0">Flexible Scheduling</h6>
+                                    <small class="text-muted">Day, evening, weekends</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa fa-2x fa-leaf text-primary mr-3"></i>
+                                <div>
+                                    <h6 class="mb-0">Eco-Friendly Products</h6>
+                                    <small class="text-muted">Green certified cleaning</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <a href="quote.html" class="btn btn-primary text-white mr-3">Request Quote</a>
+                    <a href="tel:+012345678" class="btn btn-outline-primary">Call: +157 164 3856</a>
                 </div>
-                <div class="col-lg-7 pt-5 pt-lg-0">
-                    <h5 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Enjoy a More Productive Workday, Let Us Take Care of Your Workspace</h5>
-                    <h6 class="mb-2">Imagine a work environment where your team stays focused, your clients are impressed, and your facility runs smoothly — without you worrying about cleaning or maintenance.</h6>
-                    <p class="mb-4">With professional commercial cleaning, here’s what becomes possible:</p>
-
-                    <h6><i class="fa fa-check text-primary mr-2"></i>Your floors remain spotless, vacuumed, and mopped creating a clean, safe environment for staff and visitors.</h6>
-
-                    <h6><i class="fa fa-check text-primary mr-2 mt-2"></i>Every area stays sanitized, refreshed, and well-stocked creating  a healthier, more organized workspace that boosts productivity.</h6>
-                                        
-                    <h6><i class="fa fa-check text-primary mr-2 mt-2"></i>Your offices stay clean and presentable, even during busy seasons.</h6>
-                    
-                    <h6><i class="fa fa-check text-primary mr-2 mt-2"></i>You gain more time to focus on operations, clients, and growth not cleaning issues.</h6>
-                    
-                    <h6><i class="fa fa-check text-primary mr-2 mt-2"></i>You never have to struggle to find reliable cleaning help because trusted, trained professionals are always available.</h6>
-                    
-                    <div class="service-content-body">
-                        <h6 class="text-secondary font-weight-semi-bold text-uppercase mt-3 mb-3">If This Is the Level of Excellence You Want for Your Business, You’re in the Right Place.</h6>                    
-                        <p class="mb-3">At SamstarCleanPro, we make facility care effortless so your business can operate at its best every day.</p>
-                        
-                        <p class="mb-4 mt-0">
-                            With our reliable residential cleaning service, you never have to stress about chores again. Simply reach out to us — our trained cleaning specialists will handle every detail with precision and care.
-                        </p>
-                        <a href="service.html" class="btn btn-primary text-white mt-2">Book Us Now</a>                
-                    </div>
-                                        
-                    
+                <div class="col-lg-6">
+                    <img src="img/commercial-cleaning-hero.jpg" class="img-fluid rounded shadow-lg" alt="Commercial Cleaning Services Virginia DC Maryland">
                 </div>
             </div>
         </div>
     </div>
-    <!-- About End -->
+    <!-- Hero Section End -->
 
 
-    <!-- What We Offer in Kitchen-->
+    <!-- Stats Section Start -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stats-counter">
+                        <div class="stats-number" data-toggle="counter-up">10</div>
+                        <h5>Years in Business</h5>
+                        <p class="mb-0 small">Serving the DMV since 2014</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stats-counter">
+                        <div class="stats-number" data-toggle="counter-up">500</div>
+                        <h5>Business Clients</h5>
+                        <p class="mb-0 small">Throughout VA, DC & MD</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stats-counter">
+                        <div class="stats-number" data-toggle="counter-up">98</div>
+                        <h5>Client Satisfaction</h5>
+                        <p class="mb-0 small">Percentage rating</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stats-counter">
+                        <div class="stats-number" data-toggle="counter-up">225</div>
+                        <h5>Professional Cleaners</h5>
+                        <p class="mb-0 small">Trained & certified team</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Stats Section End -->
+
+
+    <!-- Industries We Serve Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Industry Expertise</h6>
+                <h2 class="section-title mb-4">Commercial Cleaning Services for Every Industry</h2>
+                <p class="mb-0">Specialized cleaning solutions tailored to your business needs</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Office Buildings</h4>
+                        <p class="text-center mb-3">Complete office cleaning for corporate offices, co-working spaces, and professional suites in Tysons, Arlington, and throughout the DMV.</p>
+                        <ul class="small mb-0">
+                            <li>Workstation cleaning & sanitizing</li>
+                            <li>Conference room maintenance</li>
+                            <li>Kitchen/break room cleaning</li>
+                            <li>Restroom sanitization</li>
+                            <li>Lobby & common area care</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Retail Spaces</h4>
+                        <p class="text-center mb-3">Maintain pristine shopping environments that enhance customer experience in malls, boutiques, and stores across Virginia, DC, and Maryland.</p>
+                        <ul class="small mb-0">
+                            <li>Sales floor maintenance</li>
+                            <li>Window & display cleaning</li>
+                            <li>Fitting room sanitation</li>
+                            <li>Entrance & exit care</li>
+                            <li>After-hours deep cleaning</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Medical Facilities</h4>
+                        <p class="text-center mb-3">Healthcare-grade cleaning for medical offices, dental practices, and clinics throughout Bethesda, Silver Spring, and the DMV.</p>
+                        <ul class="small mb-0">
+                            <li>Exam room disinfection</li>
+                            <li>Waiting area sanitization</li>
+                            <li>Medical-grade protocols</li>
+                            <li>HIPAA-compliant service</li>
+                            <li>Biohazard waste handling</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Fitness Centers</h4>
+                        <p class="text-center mb-3">Specialized cleaning for gyms, yoga studios, and fitness facilities that prioritize member health and safety.</p>
+                        <ul class="small mb-0">
+                            <li>Equipment sanitization</li>
+                            <li>Locker room deep cleaning</li>
+                            <li>Shower & sauna maintenance</li>
+                            <li>Floor mat cleaning</li>
+                            <li>Odor elimination</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Educational Facilities</h4>
+                        <p class="text-center mb-3">Clean, safe learning environments for schools, daycares, and training centers across Northern Virginia and Maryland.</p>
+                        <ul class="small mb-0">
+                            <li>Classroom cleaning</li>
+                            <li>Cafeteria sanitation</li>
+                            <li>Child-safe products</li>
+                            <li>High-touch surface focus</li>
+                            <li>Floor care & maintenance</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Restaurants & Hospitality</h4>
+                        <p class="text-center mb-3">Food-safe cleaning for restaurants, hotels, and hospitality venues throughout the DMV region.</p>
+                        <ul class="small mb-0">
+                            <li>Dining area maintenance</li>
+                            <li>Kitchen deep cleaning</li>
+                            <li>Restroom sanitation</li>
+                            <li>Food-safe practices</li>
+                            <li>Health code compliance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Industries We Serve End -->
+
+
+    <!-- Services Included Start -->
     <div class="container-fluid bg-light py-5">
         <div class="container py-5">
             <div class="text-center mb-5">
-                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">What We Offer</h6>
-                <h1 class="section-title mb-3">See what sets us apart.</h1>
-                <p class="mb-0">Our commercial cleaning solutions are designed for offices, facilities, retail spaces, and organizations that value a spotless, safe, and professionally maintained environment.</p>
+                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Comprehensive Solutions</h6>
+                <h2 class="section-title mb-4">What's Included in Our Commercial Cleaning Service</h2>
             </div>
-            <div class="row mb-5">
-                <div class="col-lg-5">
-                    <div class="d-flex flex-column align-items-center justify-content-center bg-office rounded h-100 py-5 px-3">  
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="checklist-section">
+                        <h4 class="mb-4"><i class="fa fa-broom text-primary mr-2"></i>Daily/Regular Cleaning</h4>
+                        <div class="checklist-item">
+                            <i class="fa fa-check text-primary mr-2"></i>Empty trash and replace liners
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fa fa-check text-primary mr-2"></i>Vacuum carpets and rugs
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fa fa-check text-primary mr-2"></i>Sweep and mop hard floors
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fa fa-check text-primary mr-2"></i>Dust all surfaces and furniture
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fa fa-check text-primary mr-2"></i>Clean and sanitize restrooms
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fa fa-check text-primary mr-2"></i>Wipe down desks and workstations
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fa fa-check text-primary mr-2"></i>Clean break room and kitchenette
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fa fa-check text-primary mr-2"></i>Disinfect high-touch surfaces
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-7 pt-5 pt-lg-0">
-                    <h5 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Our Comprehensive Commercial Cleaning Solutions</h5>
-
-                    <h6><i class="fa fa-check text-primary mr-2 mt-2"></i>Full-Service Janitorial & Green Cleaning</h6>
-
-                    <h6><i class="fa fa-check text-primary mr-2"></i>Major Floor Services (Stripping, Waxing, Carpet Cleaning, etc.)</h6>
-                                        
-                    <h6><i class="fa fa-check text-primary mr-2 mt-2"></i>General Disinfection, Cleaning, Sanitizing & Restocking</h6>
-                    
-                    <h6><i class="fa fa-check text-primary mr-2 mt-2"></i>High-Pressure Cleaning of Pathways, Aisles & Parking Areas</h6>
-                    
-                    <h6><i class="fa fa-check text-primary mr-2 mt-2"></i>Handyman & Maintenance Services</h6>
-
-                    <h6><i class="fa fa-check text-primary mr-2 mt-2"></i>Window & Blind Cleaning</h6>
-
-                    <h6><i class="fa fa-check text-primary mr-2 mt-2"></i>Odor Control</h6>
-
-                    <h6><i class="fa fa-check text-primary mr-2 mt-2"></i>Cleaning of Light Fixtures & Baseboards</h6>
-
-                    <h6><i class="fa fa-check text-primary mr-2 mt-2"></i>Pest Control & Fumigation</h6>
-
-                    <h6><i class="fa fa-check text-primary mr-2 mt-2"></i>Trash Collection & Removal</h6>
-
-                    <h6><i class="fa fa-check text-primary mr-2 mt-2"></i>Emergency Cleaning Services</h6>
-                    
-                    <h6 class="text-secondary font-weight-semi-bold text-uppercase mt-3 mb-3">Let’s Make Your Office pristine!</h6>                                        
+                <div class="col-lg-6 mb-4">
+                    <div class="checklist-section">
+                        <h4 class="mb-4"><i class="fa fa-sparkles text-primary mr-2"></i>Deep/Periodic Cleaning</h4>
+                        <div class="checklist-item">
+                            <i class="fa fa-check text-primary mr-2"></i>Window washing (interior & exterior)
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fa fa-check text-primary mr-2"></i>Carpet deep cleaning & extraction
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fa fa-check text-primary mr-2"></i>Floor stripping & waxing
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fa fa-check text-primary mr-2"></i>Upholstery and furniture cleaning
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fa fa-check text-primary mr-2"></i>Light fixture cleaning
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fa fa-check text-primary mr-2"></i>Blind and vent cleaning
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fa fa-check text-primary mr-2"></i>Baseboard and trim detailing
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fa fa-check text-primary mr-2"></i>Post-construction cleanup
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- What We Offer in Kitchen End -->
+    <!-- Services Included End -->
 
+
+    <!-- Why Choose Us Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">The SamstarCleanPro Advantage</h6>
+                <h2 class="section-title mb-4">Why DMV Businesses Choose Us</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="benefit-item">
+                        <div class="service-feature">
+                            <i class="fas fa-handshake"></i>
+                            <div>
+                                <h5 class="mb-2">Reliability You Can Count On</h5>
+                                <p class="mb-0">Our team shows up on time, every time. We understand that consistency is crucial for your business operations across Virginia, DC, and Maryland.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="benefit-item">
+                        <div class="service-feature">
+                            <i class="fas fa-cogs"></i>
+                            <div>
+                                <h5 class="mb-2">Customized Cleaning Plans</h5>
+                                <p class="mb-0">No two businesses are alike. We create tailored cleaning schedules and protocols that match your specific needs and budget.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="benefit-item">
+                        <div class="service-feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h5 class="mb-2">Comprehensive Insurance</h5>
+                                <p class="mb-0">Fully insured and bonded for your protection. We carry comprehensive liability coverage for all our commercial cleaning services.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="benefit-item">
+                        <div class="service-feature">
+                            <i class="fas fa-user-graduate"></i>
+                            <div>
+                                <h5 class="mb-2">Trained & Certified Staff</h5>
+                                <p class="mb-0">Our cleaners undergo rigorous training and certification to ensure they meet the highest industry standards.</p>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="benefit-item">
+                        <div class="service-feature">
+                            <i class="fas fa-leaf"></i>
+                            <div>
+                                <h5 class="mb-2">Eco-Friendly Practices</h5>
+                                <p class="mb-0">We prioritize green cleaning products and sustainable methods to minimize our environmental impact while keeping your workspace safe.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="benefit-item">
+                        <div class="service-feature">
+                            <i class="fas fa-headset"></i>
+                            <div>
+                                <h5 class="mb-2">Exceptional Customer Service</h5>
+                                <p class="mb-0">Our dedicated customer support team is always available to address your questions, concerns, and feedback promptly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <!-- Why Choose Us End -->      
+    <!-- Client Logos Start -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Our Valued Clients</h6>
+                <h2 class="section-title mb-4">Trusted by Businesses Across the DMV</h2>
+            </div>
+            <div class="row text-center">
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="client-logo">
+                        <img src="img/clients/client1.png" alt="Client 1" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="client-logo">
+                        <img src="img/clients/client2.png" alt="Client 2" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="client-logo">
+                        <img src="img/clients/client3.png" alt="Client 3" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="client-logo">
+                        <img src="img/clients/client4.png" alt="Client 4" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="client-logo">
+                        <img src="img/clients/client5.png" alt="Client 5" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="client-logo">
+                        <img src="img/clients/client6.png" alt="Client 6" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Client Logos End -->
+    <!-- Pricing Comparison Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Transparent Pricing</h6>
+                <h2 class="section-title mb-4">Commercial Cleaning Pricing Comparison</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="pricing-table">
+                        <div class="pricing-header">
+                            <h3 class="mb-0">Standard vs. Premium Cleaning Plans</h3>
+                            <p class="mb-0">Choose the plan that best fits your business needs</p>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="comparison-point d-flex justify-content-between align-items-center">
+                                <span>Basic Cleaning Services</span>
+                                <span>Included in Both Plans</span>
+                            </div>
+
+                            <div class="comparison-point d-flex justify-content-between align-items-center">
+                                <span>Restroom Sanitization</span>
+                                <span>Included in Both Plans</span>
+                            </div>
+                            <div class="comparison-point d-flex justify-content-between align-items-center">
+                                <span>Floor Sweeping & Mopping</span>
+                                <span>Included in Both Plans</span>
+                            </div>
+                            <div class="comparison-point d-flex justify-content-between align-items-center">
+                                <span>Window Cleaning</span>
+                                <span>Premium Only</span>
+                            </div>
+                            <div class="comparison-point d-flex justify-content-between align-items-center">
+                                <span>Carpet Deep Cleaning</span>
+                                <span>Premium Only</span>
+                            </div>
+                            <div class="comparison -point d-flex justify-content-between align-items-center">
+                                <span>Upholstery Cleaning</span>
+                                <span>Premium Only</span>
+                            </div>
+                            <div class="comparison-point d-flex justify-content-between align-items-center">
+                                <span>Floor Stripping & Waxing</span>
+                                <span>Premium Only</span>
+                            </div>
+                            <div class="comparison-point d-flex justify-content-between align-items-center">
+                                <span>Light Fixture Cleaning</span>
+                                <span>Premium Only</span>
+                            </div>
+                        </div>
+                        <div class="pricing-footer text-center">
+                            <a href="quote.html" class="btn btn-primary text-white">Get a Custom Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pricing Comparison End -->
+    
+    <!-- Call to Action Start -->
+    <div class="container-fluid bg-primary py-5">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 text-center">
+                    <h1 class="text-white mb-4">Ready to Experience the SamstarCleanPro Difference?</h1>
+                    <a href="quote.html" class="btn btn-lg btn-light text-primary mr-3">Request a Free Quote</a>
+                    <a href="tel:+1571643856" class="btn btn-lg btn-outline-light">Call: +157 164 3856</a>  
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Call to Action End -->
+     
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-md-5">
+    <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
         <div class="row pt-5">
             <div class="col-lg-6 col-md-6 mb-5">
                 <h4 class="font-weight-semi-bold text-primary mb-4">Get In Touch</h4>
                 <p><i class="fa fa-map-marker-alt text-primary mr-2"></i>20132 Loudoun County, Virginia, USA</p>
-                <p><i class="fa fa-phone-alt text-primary mr-2"></i>+012 345 67890</p>
+                <p><i class="fa fa-phone-alt text-primary mr-2"></i>+157 164 3856</p>
                 <p><i class="fa fa-envelope text-primary mr-2"></i>info@samstarcleanpro.com</p>
                 <div class="d-flex justify-content-start mt-4">
                     <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
@@ -261,7 +788,7 @@
                     <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
                     <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About Us</a>
                     <a class="text-white mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
-                    <a class="text-white mb-2" href="project.html"><i class="fa fa-angle-right mr-2"></i>Projects</a>
+                    <a class="text-white mb-2" href="data-center.html"><i class="fa fa-angle-right mr-2"></i>Data Center Cleaning</a>
                     <a class="text-white" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
                 </div>
             </div>
@@ -270,16 +797,18 @@
                 <p class="mb-1">Mon – Sat, 8AM – 5PM</p>
                 <p class="mb-0">Sunday: Closed</p>
                 <p class="mt-3 mb-0"><small>Emergency services available 24/7</small></p>
-            </div>
+            </div>  
         </div>
     </div>
     <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: #3E3E4E !important;">
         <div class="row">
             <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white">Serving: <span class="text-primary">Virginia | Washington DC | Maryland</span></p>
+                <p class="m-0 text-white">Serving: <text class="text-primary">Virginia | Washington DC | Maryland</text>
+                </p>
             </div>
-            <div class="col-lg-6 text-center text-md-right">
-                <p class="m-0 text-white">&copy; <a href="#" class="text-primary">SamstarCleanPro</a>. All Rights Reserved. Designed by <a href="https://thebrandrex.netlify.com" class="text-primary">The Brand Rex</a></p>
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white">&copy; <a href="#" class="text-primary">SamstarCleanPro</a>. All Rights Reserved. Designed by <a href="https://thebrandrex.netlify.com" class="text-primary">The Brand Rex</a>
+                </p>
             </div>
         </div>
     </div>
@@ -300,8 +829,13 @@
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
 
 </html>
+                                           
