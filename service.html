@@ -3,11 +3,16 @@
 
 <head>
     <meta charset="utf-8">
+    <title>Professional Cleaning Services in Virginia, DC & Maryland | SamstarCleanPro</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="description" content="Professional cleaning services in Virginia, Washington DC, and Maryland. Residential and commercial cleaning with eco-friendly products. Serving the DMV area with excellence.">
-    <meta name="keywords" content="cleaning service Virginia, cleaning service DC, cleaning service Maryland, house cleaning DMV, commercial cleaning, residential cleaning, data-center cleaning, maid service">
-    <title>Professional Cleaning Services | Virginia, DC & Maryland | SamstarCleanPro</title>
-
+    <meta content="cleaning services Virginia, cleaning services DC, cleaning services Maryland, residential cleaning, commercial cleaning, move out cleaning, deep cleaning, carpet cleaning, tile grout cleaning, professional cleaners DMV, janitorial services Alexandria, cleaning company Fairfax, house cleaning Bethesda" name="keywords">
+    <meta content="Complete cleaning services in Virginia, DC, and Maryland. Residential, commercial, move in/out, deep cleaning, carpet cleaning, and tile & grout services. Professional cleaners serving the entire DMV region. Free quotes available!" name="description">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Professional Cleaning Services Virginia, DC & Maryland | SamstarCleanPro">
+    <meta property="og:description" content="Comprehensive cleaning solutions for homes and businesses throughout the DMV region. Expert service, affordable rates.">
+    <meta property="og:type" content="website">
+    
     <!-- Favicon -->
     <link href="img/logo/just_logo.png" rel="icon">
 
@@ -24,6 +29,181 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Cleaning Services",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "SamstarCleanPro",
+        "areaServed": ["Virginia", "Washington DC", "Maryland"],
+        "telephone": "+012-345-67890"
+      },
+      "description": "Professional residential and commercial cleaning services"
+    }
+    </script>
+    
+    <style>
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            height: 100%;
+            margin-bottom: 2rem;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        .service-image {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .service-card:hover .service-image img {
+            transform: scale(1.1);
+        }
+        .service-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            z-index: 2;
+        }
+        .service-content {
+            padding: 2rem;
+        }
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #34bbfa 0%,#092085 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: -35px auto 1.5rem;
+            position: relative;
+            z-index: 1;
+            font-size: 1.8rem;
+            color: white;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+        .feature-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+        }
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        .feature-list li i {
+            color: var(--primary);
+            margin-right: 0.75rem;
+            font-size: 0.9rem;
+        }
+        .price-tag {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 1rem 0;
+        }
+        .price-tag .price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        .hero-services {
+            background: linear-gradient(135deg, rgba(102,126,234,0.9) 0%, rgba(118,75,162,0.9) 100%), url('img/services-hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 5rem 0;
+            color: white;
+            position: relative;
+        }
+        .stats-section {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 0;
+            border-radius: 15px;
+            margin: 3rem 0;
+        }
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+        }
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .process-section {
+            background: #f8f9fa;
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+        .process-step {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        .process-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+        .comparison-table {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .comparison-table th {
+            background: var(--primary);
+            color: white;
+            padding: 1rem;
+        }
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+        @media (max-width: 768px) {
+            .service-image {
+                height: 200px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -48,7 +228,7 @@
                         <a class="text-white" href="#">
                             <div class="h-100 d-inline-flex align-items-center py-2 px-2">
                                 <i class="fa fa-phone-alt mr-2"></i>
-                                <small>+012 345 6789</small>
+                                <small>+157 164 3856</small>
                             </div>
                         </a>
                     </div>
@@ -92,8 +272,8 @@
                                     <a href="tile-grout.html" class="dropdown-item">Tile &amp; Grout Cleaning</a>
                                 </div>
                             </div>
-                            <a href="project.html" class="nav-item nav-link">Data Center Cleaning</a>
-                            <a href="service.html" class="nav-item nav-link">Blog</a>
+                            <a href="data-center.html" class="nav-item nav-link">Data Center Cleaning</a>
+                            <a href="blog.html" class="nav-item nav-link">Blog</a>
 
                             
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -106,67 +286,353 @@
     </div>
     <!-- Header End -->
 
-
-    <!-- Page Header Start -->
-    <div class="container-fluid bg-primary py-5 mb-5">
-        <div class="container py-5">
-            <div class="row align-items-center py-4">
-                <div class="col-md-6 text-center text-md-left">
-                    <h1 class="display-4 mb-4 mb-md-0 text-secondary text-uppercase">Service</h1>
-                </div>
-                <div class="col-md-6 text-center text-md-right">
-                    <div class="d-inline-flex align-items-center">
-                        <a class="btn btn-sm btn-outline-light" href="">Home</a>
-                        <i class="fas fa-angle-double-right text-light mx-2"></i>
-                        <a class="btn btn-sm btn-outline-light disabled" href="">Service</a>
-                    </div>
-                </div>
-            </div>
+    <!-- Hero Section Start -->
+    <div class="text-center bg-commercial p-5">
+        <div class="container">
+            <h6 class="text-white text-uppercase mb-3">Complete Cleaning Solutions</h6>
+            <h1 class="display-4 text-white mb-4">Professional Cleaning Services in Virginia, DC & Maryland</h1>
+            <p class="lead text-white mb-4">From residential homes to commercial facilities, we deliver exceptional cleaning services throughout the DMV region</p>
+            <a href="quote.html" class="btn btn-primary btn-lg text-white px-5 mr-3">Get Free Quote</a>
+            <a href="tel:+1571643856" class="btn btn-outline-light btn-lg px-5">Call: +157 164 3856</a>
         </div>
     </div>
-    <!-- Page Header End -->
+    <!-- Hero Section End -->
 
-
-    <!-- Services Start -->
+    <!-- Services Grid Start -->
     <div class="container-fluid py-5">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Our Services</h6>
-                    <h1 class="mb-4 section-title">Awesome Cleaning Services For You</h1>
-                    <p>Invidunt lorem justo clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum</p>
-                    <a href="" class="btn btn-primary mt-3 py-2 px-4">More Services</a>
+            <div class="text-center mb-5">
+                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Our Services</h6>
+                <h2 class="section-title mb-4">Complete Cleaning Solutions for Every Need</h2>
+                <p class="mb-0">Professional cleaning services tailored to homes and businesses throughout Virginia, Washington DC, and Maryland</p>
+            </div>
+
+            <!-- Service 1: Residential Cleaning -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="img/portfolio-1.jpeg" alt="Residential Cleaning Services Virginia DC Maryland">
+                            <span class="service-badge">POPULAR</span>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h3 class="text-center mb-3">Residential Cleaning</h3>
+                            <p class="text-center mb-4">Professional home cleaning services for houses, apartments, and condos throughout the DMV region. Keep your home spotless with our reliable residential cleaning.</p>
+                            
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check-circle"></i>Kitchen deep cleaning & sanitizing</li>
+                                <li><i class="fas fa-check-circle"></i>Bathroom scrubbing & disinfection</li>
+                                <li><i class="fas fa-check-circle"></i>Living areas & bedrooms</li>
+                                <li><i class="fas fa-check-circle"></i>Floor vacuuming & mopping</li>
+                                <li><i class="fas fa-check-circle"></i>Dusting all surfaces</li>
+                                <li><i class="fas fa-check-circle"></i>Flexible scheduling options</li>
+                            </ul>
+
+                            <div class="price-tag">
+                                <div class="price">Starting at $120</div>
+                                <small class="text-muted">per cleaning session</small>
+                            </div>
+
+                            <a href="residential.html" class="btn btn-primary text-white btn-block">Learn More</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-6 pt-5 pt-lg-0">
-                    <div class="owl-carousel service-carousel position-relative">
-                        <div class="d-flex flex-column align-items-center text-center bg-light rounded overflow-hidden pt-4">
-                            <div class="icon-box bg-light text-secondary shadow mt-2 mb-4">
-                                <i class="fa fa-2x fa-hotel"></i>
-                            </div>
-                            <h5 class="font-weight-bold mb-4 px-4">Home Cleaning</h5>
-                            <img src="img/blog-1.jpg" alt="">
+                <div class="col-lg-6">
+                    <div class="pl-lg-4">
+                        <h4 class="mb-3">Perfect For:</h4>
+                        <ul class="mb-4">
+                            <li class="mb-2">Busy families in Alexandria, Arlington, and Fairfax</li>
+                            <li class="mb-2">Working professionals across DC and Maryland</li>
+                            <li class="mb-2">Homeowners seeking consistent cleanliness</li>
+                            <li class="mb-2">Rental property maintenance</li>
+                        </ul>
+
+                        <h4 class="mb-3">Service Areas:</h4>
+                        <p class="mb-3">Serving all of Northern Virginia (Alexandria, Arlington, Fairfax, Loudoun County), Washington DC (all quadrants), and Maryland (Montgomery County, Prince George's County, Bethesda, Silver Spring, Rockville).</p>
+
+                        <div class="bg-light p-3 rounded">
+                            <h5 class="mb-2"><i class="fas fa-star text-warning mr-2"></i>Why Choose Our Residential Service?</h5>
+                            <p class="mb-0 small">Background-checked cleaners, eco-friendly products, 100% satisfaction guarantee, and flexible scheduling to fit your lifestyle.</p>
                         </div>
-                        <div class="d-flex flex-column align-items-center text-center bg-light rounded overflow-hidden pt-4">
-                            <div class="icon-box bg-light text-secondary shadow mt-2 mb-4">
-                                <i class="fa fa-2x fa-city"></i>
-                            </div>
-                            <h5 class="font-weight-bold mb-4 px-4">Window Cleaning</h5>
-                            <img src="img/blog-3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2: Commercial Cleaning -->
+            <div class="row align-items-center mb-5 flex-lg-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="img/blog-23.jpeg" alt="Commercial Cleaning Services Virginia DC Maryland">
+                            <span class="service-badge">BUSINESS</span>
                         </div>
-                        <div class="d-flex flex-column align-items-center text-center bg-light rounded overflow-hidden pt-4">
-                            <div class="icon-box bg-light text-secondary shadow mt-2 mb-4">
-                                <i class="fa fa-2x fa-spa"></i>
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-building"></i>
                             </div>
-                            <h5 class="font-weight-bold mb-4 px-4">Carpet Cleaning</h5>
-                            <img src="img/blog-2.jpg" alt="">
+                            <h3 class="text-center mb-3">Commercial Cleaning</h3>
+                            <p class="text-center mb-4">Professional janitorial services for offices, retail spaces, medical facilities, and businesses across Virginia, DC, and Maryland.</p>
+                            
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check-circle"></i>Office and workspace cleaning</li>
+                                <li><i class="fas fa-check-circle"></i>Restroom sanitization</li>
+                                <li><i class="fas fa-check-circle"></i>Break room & kitchen areas</li>
+                                <li><i class="fas fa-check-circle"></i>Floor care & maintenance</li>
+                                <li><i class="fas fa-check-circle"></i>Window cleaning services</li>
+                                <li><i class="fas fa-check-circle"></i>After-hours scheduling</li>
+                            </ul>
+
+                            <div class="price-tag">
+                                <div class="price">Starting at $250</div>
+                                <small class="text-muted">per month</small>
+                            </div>
+
+                            <a href="commercial.html" class="btn btn-primary text-white btn-block">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="pr-lg-4">
+                        <h4 class="mb-3">Perfect For:</h4>
+                        <ul class="mb-4">
+                            <li class="mb-2">Corporate offices in Tysons Corner and Downtown DC</li>
+                            <li class="mb-2">Retail stores and shopping centers</li>
+                            <li class="mb-2">Medical and dental practices in Bethesda</li>
+                            <li class="mb-2">Educational facilities and fitness centers</li>
+                        </ul>
+
+                        <h4 class="mb-3">Industries We Serve:</h4>
+                        <p class="mb-3">Office buildings, retail spaces, medical facilities, educational institutions, fitness centers, restaurants, and more across the entire DMV region.</p>
+
+                        <div class="bg-light p-3 rounded">
+                            <h5 class="mb-2"><i class="fas fa-shield-alt text-primary mr-2"></i>Fully Insured & Bonded</h5>
+                            <p class="mb-0 small">Comprehensive insurance coverage, certified cleaning professionals, and customized cleaning plans for your business needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3: Move In/Out Cleaning -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="img/portfolio-6.jpeg" alt="Move In Out Cleaning Virginia DC Maryland">
+                            <span class="service-badge">GUARANTEED</span>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-truck-moving"></i>
+                            </div>
+                            <h3 class="text-center mb-3">Move In/Out Cleaning</h3>
+                            <p class="text-center mb-4">Comprehensive cleaning for tenants and homeowners moving in or out of properties across Virginia, DC, and Maryland. Get your deposit back!</p>
+                            
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check-circle"></i>Deep clean all rooms</li>
+                                <li><i class="fas fa-check-circle"></i>Inside appliances (oven, fridge)</li>
+                                <li><i class="fas fa-check-circle"></i>Cabinet interiors & exteriors</li>
+                                <li><i class="fas fa-check-circle"></i>Detailed bathroom scrubbing</li>
+                                <li><i class="fas fa-check-circle"></i>Baseboards & trim cleaning</li>
+                                <li><i class="fas fa-check-circle"></i>Deposit-back guarantee</li>
+                            </ul>
+
+                            <div class="price-tag">
+                                <div class="price">Starting at $199</div>
+                                <small class="text-muted">per property</small>
+                            </div>
+
+                            <a href="moveinout.html" class="btn btn-primary text-white btn-block">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="pl-lg-4">
+                        <h4 class="mb-3">Perfect For:</h4>
+                        <ul class="mb-4">
+                            <li class="mb-2">Renters moving in/out of apartments in Arlington and DC</li>
+                            <li class="mb-2">Homeowners selling properties in Fairfax County</li>
+                            <li class="mb-2">Property managers in Montgomery County</li>
+                            <li class="mb-2">Real estate agents throughout the DMV</li>
+                        </ul>
+
+                        <h4 class="mb-3">Our Promise:</h4>
+                        <p class="mb-3">Same-day service available, thorough cleaning that meets landlord standards, and if your landlord isn't satisfied, we'll re-clean for free.</p>
+
+                        <div class="bg-light p-3 rounded">
+                            <h5 class="mb-2"><i class="fas fa-certificate text-success mr-2"></i>100% Deposit-Back Guarantee</h5>
+                            <p class="mb-0 small">We guarantee your property will pass final inspection or we'll re-clean the areas in question at no additional charge.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4: Deep Cleaning -->
+            <div class="row align-items-center mb-5 flex-lg-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="img/blog-23.jpeg" alt="Deep Cleaning Services Virginia DC Maryland">
+                            <span class="service-badge">INTENSIVE</span>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-broom"></i>
+                            </div>
+                            <h3 class="text-center mb-3">Deep Cleaning</h3>
+                            <p class="text-center mb-4">Intensive, thorough cleaning that goes beyond regular maintenance. Perfect for spring cleaning, post-renovation, or when your space needs extra attention.</p>
+                            
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check-circle"></i>Behind & under furniture</li>
+                                <li><i class="fas fa-check-circle"></i>Baseboards & crown molding</li>
+                                <li><i class="fas fa-check-circle"></i>Light fixtures & ceiling fans</li>
+                                <li><i class="fas fa-check-circle"></i>Window tracks & sills</li>
+                                <li><i class="fas fa-check-circle"></i>Cabinet cleaning (inside/out)</li>
+                                <li><i class="fas fa-check-circle"></i>Detailed grout scrubbing</li>
+                            </ul>
+
+                            <div class="price-tag">
+                                <div class="price">Starting at $249</div>
+                                <small class="text-muted">per session</small>
+                            </div>
+
+                            <a href="deepcleaning.html" class="btn btn-primary text-white btn-block">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="pr-lg-4">
+                        <h4 class="mb-3">Perfect For:</h4>
+                        <ul class="mb-4">
+                            <li class="mb-2">Spring or seasonal deep cleaning throughout DMV</li>
+                            <li class="mb-2">Post-renovation cleanup in Northern Virginia</li>
+                            <li class="mb-2">Preparing homes for special events</li>
+                            <li class="mb-2">When regular cleaning isn't enough</li>
+                        </ul>
+
+                        <h4 class="mb-3">What's Included:</h4>
+                        <p class="mb-3">Everything in regular cleaning PLUS detailed attention to areas often overlooked - baseboards, light fixtures, inside appliances, window tracks, and more throughout your Virginia, DC, or Maryland property.</p>
+
+                        <div class="bg-light p-3 rounded">
+                            <h5 class="mb-2"><i class="fas fa-sparkles text-warning mr-2"></i>Recommended Frequency</h5>
+                            <p class="mb-0 small">Deep cleaning is recommended 2-4 times per year, or whenever your space needs a thorough refresh beyond regular maintenance cleaning.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 5: Carpet Cleaning -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="img/blog-11.jpeg" alt="Carpet Cleaning Services Virginia DC Maryland">
+                            <span class="service-badge">SPECIALIZED</span>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-couch"></i>
+                            </div>
+                            <h3 class="text-center mb-3">Carpet Cleaning</h3>
+                            <p class="text-center mb-4">Professional steam cleaning and stain removal for carpets and upholstery. Remove dirt, allergens, and odors from carpets throughout your DMV property.</p>
+                            
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check-circle"></i>Hot water extraction cleaning</li>
+                                <li><i class="fas fa-check-circle"></i>Stain & odor removal</li>
+                                <li><i class="fas fa-check-circle"></i>Pet stain treatment</li>
+                                <li><i class="fas fa-check-circle"></i>Upholstery cleaning</li>
+                                <li><i class="fas fa-check-circle"></i>Fast drying time</li>
+                                <li><i class="fas fa-check-circle"></i>Eco-friendly solutions</li>
+                            </ul>
+
+                            <div class="price-tag">
+                                <div class="price">$99</div>
+                                <small class="text-muted">per room</small>
+                            </div>
+
+                            <a href="quote.html" class="btn btn-primary text-white btn-block">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="pl-lg-4">
+                        <h4 class="mb-3">Perfect For:</h4>
+                        <ul class="mb-4">
+                            <li class="mb-2">Homes with pets in Alexandria and Bethesda</li>
+                            <li class="mb-2">High-traffic areas in Fairfax offices</li>
+                            <li class="mb-2">Allergy sufferers throughout the DMV</li>
+                            <li class="mb-2">Preparing carpets for sale or showing</li>
+                        </ul>
+
+                        <h4 class="mb-3">Our Process:</h4>
+                        <p class="mb-3">We use professional-grade hot water extraction (steam cleaning) that removes deep-seated dirt and allergens. Our eco-friendly solutions are safe for children and pets while being tough on stains.</p>
+
+                        <div class="bg-light p-3 rounded">
+                            <h5 class="mb-2"><i class="fas fa-clock text-info mr-2"></i>Quick Drying</h5>
+                            <p class="mb-0 small">Advanced equipment ensures carpets dry within 2-4 hours, minimizing downtime for your home or business.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+
+            <!-- Service 6: Tile & Grout Cleaning -->
+             <div class="row align-items-center mb-5 flex-lg-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="img/tile-cleaning.jpg" alt="Tile and Grout Cleaning Services Virginia DC Maryland">
+                            <span class="service-badge">RESTORATIVE</span>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-border-all"></i>
+                            </div>
+                            <h3 class="text-center mb-3">Tile & Grout Cleaning</h3>
+                            <p class="text-center mb-4">Restore the original beauty of your floors. We remove stubborn dirt, grime, and mold from porous grout lines that regular mopping can't reach.</p>
+                            
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check-circle"></i>High-pressure extraction</li>
+                                <li><i class="fas fa-check-circle"></i>Deep grout line scrubbing</li>
+                                <li><i class="fas fa-check-circle"></i>Protective clear sealing</li>
+                                <li><i class="fas fa-check-circle"></i>Mold & mildew treatment</li>
+                                <li><i class="fas fa-check-circle"></i>Kitchens, baths & foyers</li>
+                                <li><i class="fas fa-check-circle"></i>Safe for stone & ceramic</li>
+                            </ul>
+
+                            <div class="price-tag">
+                                <div class="price">Starting at $149</div>
+                                <small class="text-muted">per area</small>
+                            </div>
+
+                            <a href="tile-grout.html" class="btn btn-primary text-white btn-block">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="pr-lg-4">
+                        <h4 class="mb-3">Perfect For:</h4>
+                        <ul class="mb-4">
+                            <li class="mb-2">Kitchen floors in busy restaurants</li>
+                            <li class="mb-2">Discolored bathroom grout in homes</li>
+                            <li class="mb-2">High-traffic office lobbies and hallways</li>
+                            <li class="mb-2">Removing years of built-up grime</li>
+                        </ul>
+
+                        <h4 class="mb-3">The Problem with Mops:</h4>
+                        <p class="mb-3">Regular mopping often pushes dirt into grout lines rather than removing it, causing discoloration over time. Our specialized equipment extracts dirt from deep within the pores, instantly brightening your space.</p>
+
+                        <div class="bg-light p-3 rounded">
+                            <h5 class="mb-2"><i class="fas fa-shield-alt text-secondary mr-2"></i>Long-Lasting Protection</h5>
+                            <p class="mb-0 small">We apply a premium impregnating sealer after cleaning to create a barrier against future spills, stains, and dirt accumulation.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Services End -->
-
+    <!-- Services Grid End -->  
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
@@ -174,7 +640,7 @@
             <div class="col-lg-6 col-md-6 mb-5">
                 <h4 class="font-weight-semi-bold text-primary mb-4">Get In Touch</h4>
                 <p><i class="fa fa-map-marker-alt text-primary mr-2"></i>20132 Loudoun County, Virginia, USA</p>
-                <p><i class="fa fa-phone-alt text-primary mr-2"></i>+012 345 67890</p>
+                <p><i class="fa fa-phone-alt text-primary mr-2"></i>+157 164 3856</p>
                 <p><i class="fa fa-envelope text-primary mr-2"></i>info@samstarcleanpro.com</p>
                 <div class="d-flex justify-content-start mt-4">
                     <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
@@ -184,17 +650,20 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="font-weight-semi-bold text-primary mb-4">Services</h4>
+                <h4 class="font-weight-semi-bold text-primary mb-4">Quick Links</h4>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Commercial Cleaning</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Data Center Cleaning</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Specialized Cleaning</a>
+                    <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                    <a class="text-white mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
+                    <a class="text-white mb-2" href="data-center.html"><i class="fa fa-angle-right mr-2"></i>Data Center Cleaning</a>
+                    <a class="text-white" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h5 class="font-weight-semi-bold text-white mb-2">Opening Hours:</h5>
                 <p class="mb-1">Mon – Sat, 8AM – 5PM</p>
                 <p class="mb-0">Sunday: Closed</p>
+                <p class="mt-3 mb-0"><small>Emergency services available 24/7</small></p>
             </div>  
         </div>
     </div>
