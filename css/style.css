@@ -10001,13 +10001,18 @@ h6,
   opacity: 1;
 }
 
+.bg-home {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/portfolio-6.jpeg), no-repeat center center;
+  background-size: cover;
+}
+
 .bg-about {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/about.jpeg), no-repeat center center;
   background-size: cover;
 }
 
 .bg-service {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/portfolio-6.jpeg), no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(../img/portfolio-6.jpeg), no-repeat center center;
   background-size: cover;
 }
 
@@ -10266,4 +10271,90 @@ h6,
 .service-content-body a{
   position: relative;
   left: 100px;
+}
+
+.video-section {
+    position: relative;
+    width: 100% ;
+    height: 100%; /* full screen height */
+    overflow: hidden;
+}
+
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    filter: blur(2px);
+    z-index: 1;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.video-content {
+    position: relative;
+    z-index: 3; /* text stays above everything */
+}
+
+/* Service Cards */
+.service-card-modern {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.service-card-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.service-card-modern:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+.service-card-modern:hover::before {
+  transform: scaleX(1);
+}
+
+.service-icon-modern {
+  width: 90px;
+  height: 90px;
+  background: #012390;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2.5rem;
+  color: white;
+  transition: all 0.3s;
+}
+
+.service-card-modern:hover .service-icon-modern {
+  transform: rotateY(360deg);
 }

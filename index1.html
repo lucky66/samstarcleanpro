@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>SamstarCleanPro | Professional Cleaning Services in Virginia, DC & Maryland</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="professional cleaning services Virginia, cleaning company DC, cleaning services Maryland, residential cleaning DMV, commercial cleaning Northern Virginia, house cleaning Alexandria, office cleaning Tysons, cleaning service near me" name="keywords">
+    <meta content="SamstarCleanPro provides premium residential and commercial cleaning services throughout Virginia, DC, and Maryland. Expert cleaners, eco-friendly products, 100% satisfaction guaranteed. Serving the DMV region since 2014." name="description">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="SamstarCleanPro | Professional Cleaning Services Virginia, DC & Maryland">
+    <meta property="og:description" content="Premium cleaning services for homes and businesses. Expert cleaners, eco-friendly products, 100% satisfaction guaranteed.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link href="img/logo/just_logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "SamstarCleanPro",
+      "image": "img/logo/logo_with_text.png",
+      "@id": "",
+      "url": "https://samstarcleanpro.com",
+      "telephone": "+012-345-67890",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "20132 Loudoun County",
+        "addressLocality": "Virginia",
+        "addressRegion": "VA",
+        "postalCode": "20132",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.0438,
+        "longitude": -77.4874
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/samstarcleanpro",
+        "https://www.twitter.com/samstarcleanpro",
+        "https://www.linkedin.com/company/samstarcleanpro"
+      ],
+      "priceRange": "$$"
+    }
+    </script>
+    
+    <style>
+        /* Hero Section Enhancements */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            background: linear-gradient(135deg, rgba(102,126,234,0.95) 0%, rgba(118,75,162,0.95) 100%), url('img/hero-background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+            animation: float 20s linear infinite;
+        }
+        @keyframes float {
+            from { transform: translateY(0); }
+            to { transform: translateY(-100px); }
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+        .cta-button {
+            padding: 18px 45px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        /* Trust Badges */
+        .trust-badge {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .trust-badge:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
+        }
+        
+        /* Service Cards */
+        .service-card-modern {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+        .service-card-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+        .service-card-modern:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        .service-card-modern:hover::before {
+            transform: scaleX(1);
+        }
+        .service-icon-modern {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2.5rem;
+            color: white;
+            transition: all 0.3s;
+        }
+        .service-card-modern:hover .service-icon-modern {
+            transform: rotateY(360deg);
+        }
+        
+        /* Why Choose Us Section */
+        .feature-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            color: white;
+            height: 100%;
+            transition: all 0.3s;
+        }
+        .feature-box:hover {
+            transform: scale(1.05);
+        }
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        /* Before/After Gallery */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+            display: flex;
+            align-items: flex-end;
+            padding: 2rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        .before-after-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--primary);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            z-index: 2;
+        }
+        
+        /* Testimonials */
+        .testimonial-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            height: 100%;
+            position: relative;
+        }
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 6rem;
+            color: rgba(102,126,234,0.1);
+            font-family: Georgia, serif;
+        }
+        .rating {
+            color: #ffc107;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .client-info {
+            display: flex;
+            align-items: center;
+            margin-top: 2rem;
+        }
+        .client-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+        
+        /* Stats Counter */
+        .stats-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+        }
+        .stat-box {
+            text-align: center;
+            color: white;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* CTA Banner */
+        .cta-banner {
+            background: linear-gradient(135deg, rgba(102,126,234,0.95) 0%, rgba(118,75,162,0.95) 100%), url('img/cta-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            border-radius: 30px;
+            padding: 5rem 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Start -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 bg-white d-none d-lg-block">
+                <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <img class="m-0 display-3 img-fluid" src="img/logo/logo_with_text.png" style="width: 200px; padding: 20px;" alt="SamstarCleanPro - Professional Cleaning Services">
+                </a>
+            </div>
+            <div class="col-lg-9">
+                <div class="row bg-dark d-none d-lg-flex top-bar">
+                    <div class="col-lg-7 text-left text-white">
+                        <a class="text-white" href="mailto:info@samstarcleanpro.com">
+                            <div class="h-100 d-inline-flex align-items-center border-right border-white py-2 px-3">
+                                <i class="fa fa-envelope mr-2"></i>
+                                <small>info@samstarcleanpro.com</small>
+                            </div>
+                        </a>
+                        <a class="text-white" href="tel:+012345678">
+                            <div class="h-100 d-inline-flex align-items-center py-2 px-2">
+                                <i class="fa fa-phone-alt mr-2"></i>
+                                <small>+012 345 6789</small>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-5 text-right">
+                        <div class="d-inline-flex align-items-center pr-2">
+                            <a class="text-white p-2" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a class="text-white p-2" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a class="text-white p-2" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="text-white p-2" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
+                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <img class="m-0 display-3 img-fluid" src="img/logo/logo_with_text.png" style="width: 120px; padding: 10px;" alt="SamstarCleanPro">
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="about.html" class="nav-item nav-link">About</a>
+                            <a href="service.html" class="nav-item nav-link">Services</a>
+                            <a href="project.html" class="nav-item nav-link">Projects</a>
+                            <a href="datacenter.html" class="nav-item nav-link">Data Center</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Resources</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="blog.html" class="dropdown-item">Blog</a>
+                                    <a href="blog-detail.html" class="dropdown-item">Articles</a>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        </div>
+                        <a href="quote.html" class="btn btn-primary text-white mr-3 d-none d-lg-block">Get Free Quote</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Hero Section Start -->
+    <div class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="hero-content text-white">
+                        <h6 class="text-uppercase mb-3" style="letter-spacing: 2px; font-weight: 500;">Premium Cleaning Services</h6>
+                        <h1 class="hero-title mb-4">Experience the Cleanest Spaces in Virginia, DC & Maryland</h1>
+                        <p class="hero-subtitle mb-5">Professional cleaning services for homes and businesses. Trusted by over 1,000 satisfied clients throughout the DMV region since 2014.</p>
+                        <div class="mb-5">
+                            <a href="quote.html" class="cta-button btn btn-light text-primary mr-3 mb-3">Get Free Quote <i class="fa fa-arrow-right ml-2"></i></a>
+                            <a href="tel:+012345678" class="cta-button btn btn-outline-light mb-3">Call: +012 345 6789</a>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-md-4 mb-3">
+                                <div class="trust-badge">
+                                    <i class="fas fa-certificate fa-3x mb-3"></i>
+                                    <h5>10+ Years</h5>
+                                    <p class="mb-0 small">Expert Experience</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="trust-badge">
+                                    <i class="fas fa-shield-alt fa-3x mb-3"></i>
+                                    <h5>100% Insured</h5>
+                                    <p class="mb-0 small">Bonded & Certified</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="trust-badge">
+                                    <i class="fas fa-smile fa-3x mb-3"></i>
+                                    <h5>Satisfaction</h5>
+                                    <p class="mb-0 small">100% Guaranteed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Section End -->
+
+
+    <!-- Services Section Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Our Services</h6>
+                <h2 class="section-title mb-4" style="font-size: 2.5rem;">Comprehensive Cleaning Solutions for Every Need</h2>
+                <p class="lead mb-0">From residential homes to commercial facilities, we deliver exceptional results</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card-modern">
+                        <div class="service-icon-modern">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Residential Cleaning</h4>
+                        <p class="text-center mb-4">Professional home cleaning services for houses, apartments, and condos throughout Virginia, DC, and Maryland.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i>Regular & Deep Cleaning</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i>Eco-Friendly Products</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i>Flexible Scheduling</li>
+                        </ul>
+                        <a href="residential.html" class="btn btn-outline-primary btn-block">Learn More <i class="fa fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card-modern">
+                        <div class="service-icon-modern">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Commercial Cleaning</h4>
+                        <p class="text-center mb-4">Janitorial services for offices, retail spaces, and businesses across the DMV region with customized solutions.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i>Office & Retail Spaces</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i>After-Hours Available</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i>Fully Insured</li>
+                        </ul>
+                        <a href="commercial.html" class="btn btn-outline-primary btn-block">Learn More <i class="fa fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card-modern">
+                        <div class="service-icon-modern">
+                            <i class="fas fa-truck-moving"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Move In/Out Cleaning</h4>
+                        <p class="text-center mb-4">Thorough cleaning for tenants and homeowners moving throughout Virginia, DC, and Maryland properties.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i>Deposit-Back Guarantee</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i>Same-Day Available</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i>Complete Deep Clean</li>
+                        </ul>
+                        <a href="moveinout.html" class="btn btn-outline-primary btn-block">Learn More <i class="fa fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card-modern">
+                        <div class="service-icon-modern">
+                            <i class="fas fa-broom"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Deep Cleaning</h4>
+                        <p class="text-center mb-4">Intensive cleaning that goes beyond regular maintenance for homes and businesses in the DMV area.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i>Top to Bottom Clean</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i>Behind Furniture</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i>Detailed Scrubbing</li>
+                        </ul>
+                        <a href="deepcleaning.html" class="btn btn-outline-primary btn-block">Learn More <i class="fa fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card-modern">
+                        <div class="service-icon-modern">
+                            <i class="fas fa-couch"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Carpet Cleaning</h4>
+                        <p class="text-center mb-4">Professional steam cleaning and stain removal for carpets and upholstery throughout Virginia, DC, MD.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i>Steam Extraction</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i>Stain & Odor Removal</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i>Fast Drying</li>
+                        </ul>
+                        <a href="service.html" class="btn btn-outline-primary btn-block">Learn More <i class="fa fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card-modern">
+                        <div class="service-icon-modern">
+                            <i class="fas fa-th-large"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Tile & Grout Cleaning</h4>
+                        <p class="text-center mb-4">Restore tile and grout to like-new condition with professional cleaning and sealing services.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i>Grout Restoration</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i>Professional Sealing</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary mr-2"></i>All Tile Types</li>
+                        </ul>
+                        <a href="tile-grout.html" class="btn btn-outline-primary btn-block">Learn More <i class="fa fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services Section End -->
+
+
+    <!-- Why Choose Us Start -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Why Choose Us</h6>
+                <h2 class="section-title mb-4" style="font-size: 2.5rem;">The SamstarCleanPro Difference</h2>
+                <p class="lead mb-0">What makes us the trusted choice for cleaning services across the DMV region</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-box text-center">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h4 class="mb-3">Trained Professionals</h4>
+                        <p class="mb-0">All cleaners are thoroughly trained, background-checked, and certified in professional cleaning standards.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-box text-center">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4 class="mb-3">Eco-Friendly</h4>
+                        <p class="mb-0">We use green, EPA-approved cleaning products that are safe for your family, pets, and the environment.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-box text-center">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4 class="mb-3">Flexible Scheduling</h4>
+                        <p class="mb-0">We work around your schedule with same-day, weekend, and after-hours cleaning options available.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-box text-center">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <h4 class="mb-3">Satisfaction Guaranteed</h4>
+                        <p class="mb-0">We stand behind our work with a 100% satisfaction guarantee. If you're not happy, we'll make it right.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Why Choose Us End -->
+    <!-- Before/After Gallery Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Our Work</h6>
+                <h2 class="section-title mb-4" style="font-size: 2.5rem;">Before & After Cleaning Transformations</h2>
+                <p class="lead mb-0">See the dramatic difference our professional cleaning services can make</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="gallery-item">
+                        <div class="before-after-badge">Before</div>
+                        <img src="img/gallery/before1.jpg" alt="Before Cleaning">
+                        <div class="gallery-overlay">
+                            <h5>Living Room Deep Clean</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="gallery-item">
+                        <div class="before-after-badge">After</div>
+                        <img src="img/gallery/after1.jpg" alt="After Cleaning">
+                        <div class="gallery-overlay">
+                            <h5>Living Room Deep Clean</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="gallery-item">
+                        <div class="before-after-badge">Before</div>
+                        <img src="img/gallery/before2.jpg" alt="Before Cleaning">
+                        <div class="gallery-overlay">
+                            <h5>Office Carpet Cleaning</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="gallery-item">
+                        <div class="before-after-badge">After</div>
+                        <img src="img/gallery/after2.jpg" alt="After Cleaning">
+                        <div class="gallery-overlay">
+                            <h5>Office Carpet Cleaning</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="gallery-item">
+                        <div class="before-after-badge">Before</div>
+                        <img src="img/gallery/before3.jpg" alt="Before Cleaning">
+                        <div class="gallery-overlay">
+                            <h5>Kitchen Tile & Grout</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="gallery-item">
+                        <div class="before-after-badge">After</div>
+                        <img src="img/gallery/after3.jpg" alt="After Cleaning">
+                        <div class="gallery-overlay">
+                            <h5>Kitchen Tile & Grout</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Before/After Gallery End -->
+    <!-- Testimonials Start -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Testimonials</h6>
+                <h2 class="section-title mb-4" style="font-size: 2.5rem;">What Our Clients Say</h2>
+                <p class="lead mb-0">Hear from our satisfied customers across Virginia, DC, and Maryland</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="rating mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>"SamstarCleanPro transformed my home! Their team was professional, thorough, and used eco-friendly products. Highly recommend!"</p>
+                        <div class="client-info mt-4">
+                            <div class="client-avatar">
+                                A
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Alice Johnson</h5>
+                                <small>Homeowner, Arlington, VA</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="rating mb-3">   
+                        </div>  
+
+                    </div>
+                        <p>"Our office has never looked better! The SamstarCleanPro team is reliable, efficient, and pays attention to every detail."</p>
+                        <div class="client-info mt-4">
+                            <div class="client-avatar">
+                                M
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Michael Smith</h5>
+                                <small>Office Manager, Washington, DC</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="rating mb-3">
+                            </div>
+                        <p>"I needed a last-minute move-out cleaning, and SamstarCleanPro came through! They did an amazing job, and I got my full deposit back."</p>
+                        <div class="client-info mt-4">
+                            <div class="client-avatar">
+                                S
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Sarah Lee</h5>
+                                <small>Tenant, Bethesda, MD</small>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonials End -->
+    <!-- Stats Counter Start -->
+    <div class="container-fluid stats-section py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-box">
+                        <div class="stat-number" data-toggle="counter-up">1500+</div>
+                        <p class="mb-0">Satisfied Clients</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-box">
+                        <div class="stat-number" data-toggle="counter-up">5000+</div>
+                        <p class="mb-0">Completed Cleanings</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-box">
+                        <div class="stat-number" data-toggle="counter-up">10+</div>
+                        <p class="mb-0">Years of Experience</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-box">
+                        <div class="stat-number" data-toggle="counter-up">100%</div>
+                        <p class="mb-0">Satisfaction Guarantee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Stats Counter End -->
+    <!-- CTA Banner Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="cta-banner text-center text-white">
+                <h2 class="mb-4" style="font-size: 2.5rem;">Ready for a Spotless Home or Office?</h2>
+                <p class="mb-4 lead">Contact SamstarCleanPro today for a free quote and experience the difference of professional cleaning services.</p>
+                <a href="quote.html" class="btn btn-light text-primary mr-3 mb-3">Get Free Quote <i class="fa fa-arrow-right ml-2"></i></a>
+                <a href="tel:+012345678" class="btn btn-outline-light mb-3">Call: +012 345 6789</a>
+            </div>
+        </div>
+    </div>
+    <!-- CTA Banner End -->
+     <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-6 col-md-6 mb-5">
+                <h4 class="font-weight-semi-bold text-primary mb-4">Get In Touch</h4>
+                <p><i class="fa fa-map-marker-alt text-primary mr-2"></i>20132 Loudoun County, Virginia, USA</p>
+                <p><i class="fa fa-phone-alt text-primary mr-2"></i>+157 164 3856</p>
+                <p><i class="fa fa-envelope text-primary mr-2"></i>info@samstarcleanpro.com</p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-semi-bold text-primary mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                    <a class="text-white mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
+                    <a class="text-white mb-2" href="data-center.html"><i class="fa fa-angle-right mr-2"></i>Data Center Cleaning</a>
+                    <a class="text-white" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="font-weight-semi-bold text-white mb-2">Opening Hours:</h5>
+                <p class="mb-1">Mon – Sat, 8AM – 5PM</p>
+                <p class="mb-0">Sunday: Closed</p>
+                <p class="mt-3 mb-0"><small>Emergency services available 24/7</small></p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: #3E3E4E !important;">
+        <div class="row">
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white">Serving: <span class="text-primary">Virginia | Washington DC | Maryland</span></p>
+            </div>
+            <div class="col-lg-6 text-center text-md-right">
+                <p class="m-0 text-white">&copy; <a href="#" class="text-primary">SamstarCleanPro</a>. All Rights Reserved. Designed by <a href="https://thebrandrex.netlify.com" class="text-primary">The Brand Rex</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary px-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
