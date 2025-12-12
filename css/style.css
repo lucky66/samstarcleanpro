@@ -2598,13 +2598,13 @@ fieldset:disabled a.btn {
 }
 
 .btn-light:hover {
-  color: #212529;
+  color: #012390;
   background-color: #e2e2e2;
   border-color: gainsboro;
 }
 
 .btn-light:focus, .btn-light.focus {
-  color: #212529;
+  color: #012390;
   background-color: #e2e2e2;
   border-color: gainsboro;
   box-shadow: 0 0 0 0.2rem rgba(213, 214, 214, 0.5);
@@ -10002,7 +10002,7 @@ h6,
 }
 
 .bg-home {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/portfolio-6.jpeg), no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/portfolio-6.jpeg), no-repeat center center;
   background-size: cover;
 }
 
@@ -10031,7 +10031,7 @@ h6,
   background-size: cover;
 }
 
-.bg-commercial {
+.bg-commercial1 {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/blog-34.jpeg), no-repeat center center;
   background-size: cover;
 }
@@ -10327,7 +10327,7 @@ h6,
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #34bbfa 0%, #092085 100%);
   transform: scaleX(0);
   transition: transform 0.3s;
 }
