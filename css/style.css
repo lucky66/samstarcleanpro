@@ -10036,6 +10036,11 @@ h6,
   background-size: cover;
 }
 
+.bg-carpet {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/carpet-1.jpeg), no-repeat center center;
+  background-size: cover;
+}
+
 .bg-kitchen1 {
   background: url(../img/kitchen-1.jpg), no-repeat center center;
   background-size: cover;
@@ -10081,9 +10086,18 @@ h6,
   background-size: cover;
 }
 
+.bg-tile-and-grout {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(../img/tile-and-grout-1.jpeg), no-repeat center center;
+  background-size: cover;
+}
 
 .bg-office {
   background:  url(../img/office.jpg), no-repeat center center;
+  background-size: cover;
+}
+
+.bg-carpet1 {
+  background: url(../img/carpet-2.jpeg), no-repeat center center;
   background-size: cover;
 }
 
