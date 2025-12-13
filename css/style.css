@@ -10026,6 +10026,11 @@ h6,
   background-size: cover;
 }
 
+.bg-residential {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/portfolio-4.jpeg), no-repeat center center;
+  background-size: cover;
+}
+
 .bg-commercial {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/blog-23.jpeg), no-repeat center center;
   background-size: cover;
